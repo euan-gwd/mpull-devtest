@@ -4,19 +4,19 @@ import styled from 'styled-components';
 
 const NavItems = () => {
   return (
-    <NavigationItems>
+    <NavItemsList>
       <NavItem link="/">Solutions</NavItem>
       <NavItem link="/">Cases</NavItem>
       <NavItem link="/">Insights</NavItem>
       <NavItem link="/">About Us</NavItem>
       <NavItem link="/">Contact</NavItem>
-    </NavigationItems>
+    </NavItemsList>
   );
 };
 
 export default NavItems;
 
-const NavigationItems = styled.ul`
+const NavItemsList = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;

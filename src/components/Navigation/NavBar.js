@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import NavItemsList from './NavItemsList';
+
 import logo from '../../assets/logo.svg';
 import burger from '../../assets/burger.svg';
 // import cross from '../../assets/cross.svg';
 import language from '../../assets/language.svg';
 import search from '../../assets/search.svg';
-import styled from 'styled-components';
-import NavItems from './NavItems';
 
 class NavBar extends Component {
   render() {
@@ -16,7 +17,7 @@ class NavBar extends Component {
         </MobileMenu>
         <img src={logo} className="logo" alt="logo" />
         <NavMenu>
-          <NavItems />
+          <NavItemsList />
         </NavMenu>
         <NavActions>
           <a href="/">
@@ -43,6 +44,7 @@ const ToolBar = styled.header`
   height: 45px;
   width: 100vw;
   border-bottom: 1px solid #a0a5aa;
+  z-index: 5;
 `;
 
 const NavMenu = styled.nav`
