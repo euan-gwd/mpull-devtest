@@ -33,15 +33,14 @@ class NavBar extends Component {
 export default NavBar;
 
 const ToolBar = styled.header`
-  margin: 0;
+  margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   height: 45px;
-  width: 100vw;
-  /* border-bottom: 1px solid #a0a5aa; */
+  max-width: 1024px;
   z-index: 5;
 
   @media screen and (min-width: 768px) {
@@ -61,7 +60,7 @@ const Logo = styled.img`
 
   @media screen and (min-width: 768px) {
     grid-column: 1;
-    justify-self: end;
+    justify-self: start;
   }
 `;
 
