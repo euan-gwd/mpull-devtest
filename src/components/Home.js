@@ -16,7 +16,7 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
-        <NavBar handleMenuToggle={this.handleMenuToggle} />
+        <NavBar open={this.state.showSideMenu} handleMenuToggle={this.handleMenuToggle} />
         <hr />
         <SideMenu open={this.state.showSideMenu} />
       </Fragment>

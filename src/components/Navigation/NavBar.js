@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import DesktopNavItems from './DesktopNavItems';
 import burger from './assets/burger.svg';
-// import cross from './assets/cross.svg';
+import cross from './assets/cross.svg';
 
 import logo from './assets/logo.svg';
 
@@ -14,7 +14,11 @@ class NavBar extends Component {
     return (
       <ToolBar>
         <MobileMenu>
-          <img src={burger} alt="open navigation" onClick={this.props.handleMenuToggle} />
+          <img
+            src={this.props.open ? cross : burger}
+            alt="open navigation"
+            onClick={this.props.handleMenuToggle}
+          />
         </MobileMenu>
         <Logo src={logo} className="logo" alt="logo" />
         <NavMenu>
