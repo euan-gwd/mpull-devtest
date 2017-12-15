@@ -1,17 +1,27 @@
 import React from 'react';
 import NavItem from './NavItem';
-import './NavItems.css';
+import styled from 'styled-components';
 
 const NavItems = () => {
   return (
-    <ul className="NavigationItems">
+    <NavigationItems>
       <NavItem link="/">Solutions</NavItem>
       <NavItem link="/">Cases</NavItem>
       <NavItem link="/">Insights</NavItem>
       <NavItem link="/">About Us</NavItem>
       <NavItem link="/">Contact</NavItem>
-    </ul>
+    </NavigationItems>
   );
 };
 
 export default NavItems;
+
+const NavigationItems = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+`;
