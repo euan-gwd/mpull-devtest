@@ -3,6 +3,7 @@ import logo from '../../assets/logo.svg';
 import burger from '../../assets/burger.svg';
 // import cross from '../../assets/cross.svg';
 import language from '../../assets/language.svg';
+import search from '../../assets/search.svg';
 import styled from 'styled-components';
 import NavItems from './NavItems';
 
@@ -10,16 +11,21 @@ class NavBar extends Component {
   render() {
     return (
       <ToolBar>
-        <a href="/">
+        <MobileMenu href="/">
           <img src={burger} alt="open navigation" />
-        </a>
+        </MobileMenu>
         <img src={logo} className="logo" alt="logo" />
-        <nav id="nav">
+        <NavMenu>
           <NavItems />
-        </nav>
-        <a href="/">
-          <img src={language} alt="language" />
-        </a>
+        </NavMenu>
+        <NavActions>
+          <a href="/">
+            <img src={language} alt="language" />
+          </a>
+          <Search href="/">
+            <img src={search} alt="search" />
+          </Search>
+        </NavActions>
       </ToolBar>
     );
   }
@@ -37,4 +43,34 @@ const ToolBar = styled.header`
   height: 45px;
   width: 100vw;
   border-bottom: 1px solid #a0a5aa;
+`;
+
+const NavMenu = styled.nav`
+  @media screen and (max-width: 599px) {
+    display: none;
+  }
+`;
+
+const MobileMenu = styled.a`
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+`;
+
+const NavActions = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+
+  a {
+    margin: 0;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+`;
+
+const Search = styled.a`
+  @media screen and (max-width: 599px) {
+    display: none;
+  }
 `;
