@@ -23,7 +23,7 @@ const NavigationItem = styled.li`
   a {
     color: #000;
     text-decoration: none;
-    padding: 16px 10px;
+    padding: 16px 1rem;
     box-sizing: border-box;
     display: block;
   }
