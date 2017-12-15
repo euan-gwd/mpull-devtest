@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './Navigation/NavBar';
+import SideMenu from './Navigation/SideMenu/SideMenu';
 import styled from 'styled-components';
 
 class Home extends Component {
@@ -7,6 +8,7 @@ class Home extends Component {
     return (
       <Container>
         <NavBar />
+        <SideMenu />
       </Container>
     );
   }

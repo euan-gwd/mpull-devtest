@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import NavItemsList from './NavItemsList';
+import NavItems from './NavItems';
 
 import logo from '../../assets/logo.svg';
 import burger from '../../assets/burger.svg';
@@ -17,7 +17,7 @@ class NavBar extends Component {
         </MobileMenu>
         <img src={logo} className="logo" alt="logo" />
         <NavMenu>
-          <NavItemsList />
+          <NavItems />
         </NavMenu>
         <NavActions>
           <a href="/">

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import NavItems from '../NavItems';
+import './SideMenu.css';
 
 const SideMenu = props => {
   return (
-    <div>
-      <p>test</p>
-      test
-    </div>
+    <Fragment>
+      <nav>
+        <NavItems />
+      </nav>
+    </Fragment>
   );
 };
 
