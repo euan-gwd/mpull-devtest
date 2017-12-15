@@ -1,21 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import NavBar from './Navigation/NavBar';
 import SideMenu from './Navigation/SideMenu/SideMenu';
-import styled from 'styled-components';
 
 class Home extends Component {
   render() {
     return (
-      <Container>
+      <Fragment>
         <NavBar />
+        <hr />
         <SideMenu />
-      </Container>
+      </Fragment>
     );
   }
 }
 
 export default Home;
-
-const Container = styled.div`
-  max-width: 1200px;
-`;

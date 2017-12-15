@@ -19,14 +19,12 @@ class NavBar extends Component {
         <NavMenu>
           <DesktopNavItems />
         </NavMenu>
-        <NavActions>
-          <a>
-            <img src={language} alt="language" />
-          </a>
-          <Search>
-            <img src={search} alt="search" />
-          </Search>
-        </NavActions>
+        <Language>
+          <img src={language} alt="language" />
+        </Language>
+        <Search>
+          <img src={search} alt="search" />
+        </Search>
       </ToolBar>
     );
   }
@@ -36,19 +34,22 @@ export default NavBar;
 
 const ToolBar = styled.header`
   margin: 0;
-  padding: 0;
+  padding: 0 1rem;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   height: 45px;
   width: 100vw;
-  border-bottom: 1px solid #a0a5aa;
+  /* border-bottom: 1px solid #a0a5aa; */
   z-index: 5;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 `;
 
 const MobileMenu = styled.a`
-  padding: 0 1rem;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -60,6 +61,7 @@ const Logo = styled.img`
 
   @media screen and (min-width: 768px) {
     grid-column: 1;
+    justify-self: end;
   }
 `;
 
@@ -69,26 +71,30 @@ const NavMenu = styled.nav`
   }
 
   @media screen and (min-width: 768px) {
-    justify-self: center;
-    grid-column: span 2;
+    justify-self: end;
+    grid-column: span 3;
   }
 `;
 
-const NavActions = styled.div`
-  grid-column: 4/4;
-  display: flex;
-  justify-content: space-evenly;
-  box-sizing: border-box;
+const Language = styled.a`
+  @media screen and (max-width: 767px) {
+    display: block;
+    justify-self: end;
+  }
 
-  a {
-    margin: 0;
-    padding: 0 2rem;
-    box-sizing: border-box;
+  @media screen and (min-width: 768px) {
+    justify-self: end;
+    grid-column: 5 / 6;
   }
 `;
 
 const Search = styled.a`
   @media screen and (max-width: 767px) {
     display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-self: center;
+    grid-column: 6 / 6;
   }
 `;
