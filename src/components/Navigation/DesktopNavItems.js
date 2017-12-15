@@ -1,30 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import downarrow from '../../assets/down-caret.svg';
 
-const NavItems = () => {
+const DesktopNavItems = () => {
   return (
     <NavItemsList>
       <NavigationItem>
         <a>Solutions</a>
-        <a>
-          <img src={downarrow} alt="dropdown menu" />
-        </a>
       </NavigationItem>
       <NavigationItem>
         <a>Cases</a>
       </NavigationItem>
       <NavigationItem>
         <a>Insights</a>
-        <a>
-          <img src={downarrow} alt="dropdown menu" />
-        </a>
       </NavigationItem>
       <NavigationItem>
         <a>About Us</a>
-        <a>
-          <img src={downarrow} alt="dropdown menu" />
-        </a>
       </NavigationItem>
       <NavigationItem>
         <a>Contact</a>
@@ -33,7 +23,7 @@ const NavItems = () => {
   );
 };
 
-export default NavItems;
+export default DesktopNavItems;
 
 const NavItemsList = styled.ul`
   margin: 0;
@@ -42,7 +32,7 @@ const NavItemsList = styled.ul`
   display: grid;
   grid-row-gap: 1rem;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -85,7 +75,7 @@ const NavigationItem = styled.li`
     cursor: pointer;
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     margin: 0;
     box-sizing: border-box;
     display: flex;

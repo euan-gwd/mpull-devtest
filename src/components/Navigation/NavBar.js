@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import NavItems from './NavItems';
+import DesktopNavItems from './DesktopNavItems';
 
 import logo from '../../assets/logo.svg';
 import burger from '../../assets/burger.svg';
@@ -15,9 +15,9 @@ class NavBar extends Component {
         <MobileMenu>
           <img src={burger} alt="open navigation" />
         </MobileMenu>
-        <img src={logo} className="logo" alt="logo" />
+        <Logo src={logo} className="logo" alt="logo" />
         <NavMenu>
-          <NavItems />
+          <DesktopNavItems />
         </NavMenu>
         <NavActions>
           <a>
@@ -38,8 +38,8 @@ const ToolBar = styled.header`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   height: 45px;
   width: 100vw;
@@ -47,19 +47,35 @@ const ToolBar = styled.header`
   z-index: 5;
 `;
 
-const NavMenu = styled.nav`
-  @media screen and (max-width: 599px) {
+const MobileMenu = styled.a`
+  padding: 0 1rem;
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `;
 
-const MobileMenu = styled.a`
-  @media screen and (min-width: 600px) {
+const Logo = styled.img`
+  justify-self: center;
+  grid-column: span 2;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1;
+  }
+`;
+
+const NavMenu = styled.nav`
+  @media screen and (max-width: 767px) {
     display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-self: center;
+    grid-column: span 2;
   }
 `;
 
 const NavActions = styled.div`
+  grid-column: 4/4;
   display: flex;
   justify-content: space-evenly;
   box-sizing: border-box;
@@ -72,7 +88,7 @@ const NavActions = styled.div`
 `;
 
 const Search = styled.a`
-  @media screen and (max-width: 599px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 `;

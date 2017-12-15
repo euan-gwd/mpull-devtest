@@ -18,7 +18,4 @@ export default Home;
 
 const Container = styled.div`
   max-width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 10px;
 `;

@@ -1,5 +1,5 @@
 import React from 'react';
-import NavItems from '../NavItems';
+import MobileNavItems from '../MobileNavItems';
 import styled from 'styled-components';
 import search from '../../../assets/search.svg';
 
@@ -8,7 +8,7 @@ import './SideMenu.css';
 const SideMenu = props => {
   return (
     <MobileNav>
-      <NavItems />
+      <MobileNavItems />
       <SearchBar>
         <input type="search" placeholder="Type to search..." id="" />
         <a>
@@ -24,6 +24,7 @@ export default SideMenu;
 const MobileNav = styled.nav`
   position: fixed;
   width: 280px;
+  min-width: 190px;
   max-width: 60%;
   height: 100%;
   min-height: 100vh;
@@ -44,7 +45,7 @@ const MobileNav = styled.nav`
     transform: translateX(-100%);
   }
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 `;
