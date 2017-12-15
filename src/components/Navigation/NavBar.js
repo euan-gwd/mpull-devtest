@@ -16,7 +16,7 @@ class NavBar extends Component {
         <MobileMenu>
           <img
             src={this.props.open ? cross : burger}
-            alt="open navigation"
+            alt="mobile navigation menu"
             onClick={this.props.handleMenuToggle}
           />
         </MobileMenu>
@@ -25,7 +25,7 @@ class NavBar extends Component {
           <DesktopNavItems />
         </NavMenu>
         <Language>
-          <img src={language} alt="language" />
+          <img src={language} alt="change language" />
         </Language>
         <Search>
           <img src={search} alt="search" />
