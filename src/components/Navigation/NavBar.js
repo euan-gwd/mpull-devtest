@@ -12,7 +12,7 @@ class NavBar extends Component {
   render() {
     return (
       <ToolBar>
-        <MobileMenu href="/">
+        <MobileMenu>
           <img src={burger} alt="open navigation" />
         </MobileMenu>
         <img src={logo} className="logo" alt="logo" />
@@ -20,10 +20,10 @@ class NavBar extends Component {
           <NavItems />
         </NavMenu>
         <NavActions>
-          <a href="/">
+          <a>
             <img src={language} alt="language" />
           </a>
-          <Search href="/">
+          <Search>
             <img src={search} alt="search" />
           </Search>
         </NavActions>
