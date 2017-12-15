@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../../assets/logo.svg';
+import burger from '../../assets/burger.svg';
+import cross from '../../assets/cross.svg';
+import language from '../../assets/language.svg';
 import './Navigation.css';
 
 class Navigation extends Component {
   render() {
     return (
       <header>
-        <img src={logo} className="App-logo" alt="logo" />
+        <a className={`toggle open`} href="#nav">
+          <img src={burger} alt="open navigation" />
+        </a>
+        <a className={`toggle close`} href="#">
+          <img src={cross} alt="close navigation" />
+        </a>
+        <img src={logo} className="logo" alt="logo" />
         <nav id="nav">
           <ul>
             <li>
@@ -26,6 +35,9 @@ class Navigation extends Component {
             </li>
           </ul>
         </nav>
+        <a className="" href="#">
+          <img src={language} alt="language" />
+        </a>
       </header>
     );
   }

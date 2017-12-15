@@ -5,7 +5,7 @@ import './Home.css';
 class Home extends Component {
   render() {
     return (
-      <div className="Container">
+      <div className="container">
         <Navigation />
       </div>
     );
