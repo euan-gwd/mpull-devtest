@@ -14,7 +14,7 @@ class NavBar extends Component {
     return (
       <ToolBar>
         <MobileMenu>
-          <img src={burger} alt="open navigation" onClick={this.props.handleMenuClicked} />
+          <img src={burger} alt="open navigation" onClick={this.props.handleMenuToggle} />
         </MobileMenu>
         <Logo src={logo} className="logo" alt="logo" />
         <NavMenu>
