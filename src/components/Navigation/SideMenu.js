@@ -2,11 +2,10 @@ import React from 'react';
 import MobileNavItems from './MobileNavItems';
 import styled from 'styled-components';
 import search from './assets/search.svg';
-import './SideMenu.css';
 
 const SideMenu = props => {
   return (
-    <nav className={props.open ? `mobileNav open` : `mobileNav close`}>
+    <NavMenu className={props.open ? `open` : `close`}>
       <MobileNavItems />
       <SearchBar>
         <input type="search" placeholder="Type to search..." id="" />
@@ -14,11 +13,40 @@ const SideMenu = props => {
           <img src={search} alt="dropdown menu" />
         </a>
       </SearchBar>
-    </nav>
+    </NavMenu>
   );
 };
 
 export default SideMenu;
+
+const NavMenu = styled.nav`
+  position: fixed;
+  width: 280px;
+  min-width: 190px;
+  max-width: 70%;
+  height: 100%;
+  min-height: 100vh;
+  top: 54px;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+  border-right: 1px solid black;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  &.close {
+    transform: translateX(-100%);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
 
 const SearchBar = styled.div`
   margin-top: 3rem;
