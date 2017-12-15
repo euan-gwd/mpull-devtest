@@ -3,26 +3,38 @@ import logo from '../../assets/logo.svg';
 import burger from '../../assets/burger.svg';
 // import cross from '../../assets/cross.svg';
 import language from '../../assets/language.svg';
-// import styled from 'styled-components';
-import NavItem from './NavItem';
+import styled from 'styled-components';
+import NavItems from './NavItems';
 
 class NavBar extends Component {
   render() {
     return (
-      <header>
-        <button>
+      <ToolBar>
+        <a href="/">
           <img src={burger} alt="open navigation" />
-        </button>
+        </a>
         <img src={logo} className="logo" alt="logo" />
         <nav id="nav">
-          <NavItem />
+          <NavItems />
         </nav>
-        <button>
+        <a href="/">
           <img src={language} alt="language" />
-        </button>
-      </header>
+        </a>
+      </ToolBar>
     );
   }
 }
 
 export default NavBar;
+
+const ToolBar = styled.header`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 45px;
+  width: 100vw;
+  border-bottom: 1px solid #a0a5aa;
+`;

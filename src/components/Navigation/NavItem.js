@@ -1,26 +1,12 @@
 import React from 'react';
-// import styled from 'styled-components';
+import './NavItem.css';
 
-const NavItems = () => {
+const NavItem = props => {
   return (
-    <ul>
-      <li>
-        <a href="#">Solutions</a>
-      </li>
-      <li>
-        <a href="#">Cases</a>
-      </li>
-      <li>
-        <a href="#">Insights</a>
-      </li>
-      <li>
-        <a href="#">About Us</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-    </ul>
+    <li>
+      <a href="/">{props.name}</a>
+    </li>
   );
 };
 
-export default NavItems;
+export default NavItem;

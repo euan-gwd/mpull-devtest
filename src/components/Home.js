@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import NavBar from './Navigation/NavBar';
-import './Home.css';
+import styled from 'styled-components';
 
 class Home extends Component {
   render() {
     return (
-      <div className="container">
+      <Container>
         <NavBar />
-      </div>
+      </Container>
     );
   }
 }
 
 export default Home;
+
+const Container = styled.div`
+  max-width: 1200px;
+`;
