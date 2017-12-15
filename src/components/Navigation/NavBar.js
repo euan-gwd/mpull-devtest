@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import DesktopNavItems from './DesktopNavItems';
+import burger from './assets/burger.svg';
+// import cross from './assets/cross.svg';
 
-import logo from '../../assets/logo.svg';
-import burger from '../../assets/burger.svg';
-// import cross from '../../assets/cross.svg';
-import language from '../../assets/language.svg';
-import search from '../../assets/search.svg';
+import logo from './assets/logo.svg';
+
+import language from './assets/language.svg';
+import search from './assets/search.svg';
 
 class NavBar extends Component {
   render() {
     return (
       <ToolBar>
         <MobileMenu>
-          <img src={burger} alt="open navigation" />
+          <img src={burger} alt="open navigation" onClick={this.props.handleMenuClicked} />
         </MobileMenu>
         <Logo src={logo} className="logo" alt="logo" />
         <NavMenu>
