@@ -48,7 +48,7 @@ class NavBar extends Component {
   render() {
     return (
       <ToolBar>
-        <Container>
+        <MainNavigation>
           <MobileMenu>
             <img
               src={this.props.open ? cross : burger}
@@ -75,13 +75,46 @@ class NavBar extends Component {
           <NavigationItem>
             <a href="/">Contact</a>
           </NavigationItem>
-          <Language>
+          <LanguageBtn>
             <img src={language} alt="change language" />
-          </Language>
-          <Search>
+          </LanguageBtn>
+          <SearchBtn>
             <img src={search} alt="search" />
-          </Search>
-        </Container>
+          </SearchBtn>
+        </MainNavigation>
+        <NavigationLanguage>
+          <NavLangLogo src={logo} className="logo" alt="logo" />
+          <LanguageIcon>
+            <img src={language} alt="change language" />
+          </LanguageIcon>
+          <NavigationItem>
+            <a>UK</a>
+          </NavigationItem>
+          <NavigationItem>
+            <a>DK</a>
+          </NavigationItem>
+          <NavigationItem>
+            <a>NO</a>
+          </NavigationItem>
+          <NavigationItem>
+            <a>SE</a>
+          </NavigationItem>
+          <CloseNavBtn>
+            <img src={cross} alt="Back to Main Navigation" />
+          </CloseNavBtn>
+        </NavigationLanguage>
+        <NavigationSearch>
+          <Logo src={logo} className="logo" alt="logo" />
+          <SearchIcon>
+            <img src={search} alt="Search Bar" />
+          </SearchIcon>
+          <SearchBar>
+            <input type="search" placeholder="Type to search..." id="" />
+          </SearchBar>
+          <CloseNavBtn>
+            <img src={cross} alt="Back to Main Navigation" />
+          </CloseNavBtn>
+        </NavigationSearch>
       </ToolBar>
     );
   }
@@ -93,7 +126,7 @@ const ToolBar = styled.header`
   box-shadow: 0px 1px 2px 0px rgba(160, 165, 170, 0.75);
 `;
 
-const Container = styled.div`
+const MainNavigation = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
@@ -126,7 +159,6 @@ const Logo = styled.img`
   @media screen and (min-width: 768px) {
     grid-column: 1;
     justify-self: start;
-    max-width: 383px;
   }
 `;
 
@@ -159,7 +191,7 @@ const NavigationItem = styled.div`
   }
 `;
 
-const Language = styled.a`
+const LanguageBtn = styled.a`
   @media screen and (max-width: 767px) {
     display: block;
     justify-self: end;
@@ -171,9 +203,108 @@ const Language = styled.a`
   }
 `;
 
-const Search = styled.a`
+const SearchBtn = styled.a`
   @media screen and (max-width: 767px) {
     display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-self: center;
+    grid-column: 8 / 8;
+  }
+`;
+
+const NavigationLanguage = styled.div`
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  height: 45px;
+  z-index: 5;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(8, 1fr);
+    align-items: start;
+    padding: 1rem 0;
+    max-width: 1024px;
+    z-index: 10;
+  }
+`;
+
+const NavLangLogo = styled.img`
+  justify-self: center;
+  grid-column: 1;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1;
+    justify-self: start;
+  }
+`;
+
+const LanguageIcon = styled.a`
+  @media screen and (max-width: 767px) {
+    /* display: block; */
+    justify-self: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-self: center;
+    grid-column: 2;
+  }
+`;
+
+const NavigationSearch = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: start;
+    padding: 1rem 0;
+    height: 45px;
+    max-width: 1024px;
+    z-index: 5;
+  }
+`;
+
+const SearchBar = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    grid-column: span 5;
+
+    input {
+      border: none;
+      outline: none;
+    }
+  }
+`;
+
+const SearchIcon = styled.a`
+  @media screen and (max-width: 767px) {
+    display: block;
+    justify-self: end;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-self: center;
+    grid-column: 2;
+  }
+`;
+
+const CloseNavBtn = styled.a`
+  @media screen and (max-width: 767px) {
+    grid-column: 8 / 8;
+    justify-self: end;
   }
 
   @media screen and (min-width: 768px) {
