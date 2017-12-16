@@ -49,7 +49,9 @@ const ToolBar = styled.header`
   z-index: 5;
 
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    align-items: start;
+    padding: 1rem 0;
   }
 `;
 
@@ -75,8 +77,8 @@ const NavMenu = styled.nav`
   }
 
   @media screen and (min-width: 768px) {
-    justify-self: end;
-    grid-column: span 3;
+    grid-column: 2 / span 4;
+    display: block;
   }
 `;
 
@@ -88,7 +90,7 @@ const Language = styled.a`
 
   @media screen and (min-width: 768px) {
     justify-self: end;
-    grid-column: 5 / 6;
+    grid-column: 6 / 7;
   }
 `;
 
@@ -99,6 +101,6 @@ const Search = styled.a`
 
   @media screen and (min-width: 768px) {
     justify-self: center;
-    grid-column: 6 / 6;
+    grid-column: 7 / 7;
   }
 `;
