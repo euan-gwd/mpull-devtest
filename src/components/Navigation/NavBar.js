@@ -76,26 +76,28 @@ class NavBar extends Component {
             <Logo href="/">
               <img src={logo} className="logo" alt="logo" />
             </Logo>
-            <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
-              <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
-              <DropDownMenu show={this.state.showSolutionsDropMenu} />
-            </NavigationItem>
-            <NavigationItem>
-              <a href="/">Cases</a>
-              <div />
-            </NavigationItem>
-            <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
-              <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
-              <DropDownMenu show={this.state.showInsightsDropMenu} />
-            </NavigationItem>
-            <NavigationItem onMouseLeave={this.handleAboutUsDropMenuClose}>
-              <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
-              <DropDownMenu show={this.state.showAboutUsDropMenu} />
-            </NavigationItem>
-            <NavigationItem>
-              <a href="/">Contact</a>
-              <div />
-            </NavigationItem>
+            <NavigationItems>
+              <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
+                <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
+                <DropDownMenu show={this.state.showSolutionsDropMenu} />
+              </NavigationItem>
+              <NavigationItem>
+                <a href="/">Cases</a>
+                <div />
+              </NavigationItem>
+              <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
+                <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
+                <DropDownMenu show={this.state.showInsightsDropMenu} />
+              </NavigationItem>
+              <NavigationItem onMouseLeave={this.handleAboutUsDropMenuClose}>
+                <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
+                <DropDownMenu show={this.state.showAboutUsDropMenu} />
+              </NavigationItem>
+              <NavigationItem>
+                <a href="/">Contact</a>
+                <div />
+              </NavigationItem>
+            </NavigationItems>
             <LanguageBtn onClick={this.handleLanguageBtnClick}>
               <img src={language} alt="change language" />
             </LanguageBtn>
@@ -137,7 +139,7 @@ const MainNavigation = styled.div`
     padding: 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     align-items: center;
     height: 45px;
     max-width: 1024px;
@@ -168,16 +170,29 @@ const Logo = styled.a`
   }
 `;
 
+const NavigationItems = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    grid-column-start: 3;
+    grid-column-end: 9;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-row: column;
+    align-items: center;
+  }
+`;
+
 const NavigationItem = styled.div`
   display: none;
 
   @media screen and (min-width: 768px) {
     margin: 0;
-    padding: 0;
+    padding: 1rem 0;
     box-sizing: border-box;
     align-self: start;
     justify-self: center;
-    padding: 1rem 0;
     text-align: center;
     display: block;
 
@@ -205,7 +220,7 @@ const LanguageBtn = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    grid-column: 7 / 8;
+    grid-column: 9 / 10;
     justify-self: end;
     align-self: start;
     padding: 1rem 0;
@@ -218,7 +233,7 @@ const SearchBtn = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    grid-column: 8 / 8;
+    grid-column: 10 / 10;
     justify-self: center;
     align-self: start;
     padding: 1rem 0;

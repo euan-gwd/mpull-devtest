@@ -30,17 +30,19 @@ export default NavBarSeek;
 
 const NavigationSearch = styled.div`
   margin: 0 auto;
-  padding: 0;
+  padding: 0 1rem;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
   height: 45px;
-  display: none;
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 1fr;
     align-items: center;
     height: 45px;
@@ -53,41 +55,52 @@ const Logo = styled.a`
   padding: 0;
   box-sizing: border-box;
   justify-self: center;
-  grid-column: 2 / span 2;
+  display: none;
 
   @media screen and (min-width: 768px) {
     grid-column: 1;
     justify-self: center;
     align-self: start;
     padding: 1rem 0;
+    display: block;
   }
 `;
 
 const SearchIcon = styled.a`
-  display: none;
+  @media screen and (max-width: 767px) {
+    justify-self: start;
+  }
 
   @media screen and (min-width: 768px) {
-    display: block;
     justify-self: center;
     align-self: center;
-    grid-column: 2;
+    grid-column: 3;
   }
 `;
 
 const SearchNavItem = styled.div`
+  grid-column: 2 / 4;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: none;
+
+  input[type='search'] {
+    border: 0;
+    width: 100%;
+    min-width: 100%;
+    display: inline;
+    box-sizing: border-box;
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+  }
 
   @media screen and (min-width: 768px) {
+    grid-column: 4 / 9;
     align-self: center;
     justify-self: start;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    grid-column: 3 / 7;
-    display: inline-block;
 
     input[type='search'] {
       border: 0;
@@ -110,7 +123,7 @@ const CloseNavBtn = styled.a`
 
   @media screen and (min-width: 768px) {
     justify-self: center;
-    grid-column: 8 / 8;
+    grid-column: 10 / 10;
     cursor: pointer;
   }
 `;

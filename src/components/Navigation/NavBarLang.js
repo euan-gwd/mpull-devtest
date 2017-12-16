@@ -53,7 +53,7 @@ const NavigationLanguage = styled.div`
     padding: 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     align-items: center;
     height: 45px;
     max-width: 1024px;
@@ -83,7 +83,7 @@ const LanguageIcon = styled.a`
 
   @media screen and (min-width: 768px) {
     justify-self: center;
-    grid-column: 2;
+    grid-column: 3;
   }
 `;
 
@@ -152,7 +152,7 @@ const CloseNavBtn = styled.a`
 
   @media screen and (min-width: 768px) {
     justify-self: center;
-    grid-column: 8 / 8;
+    grid-column: 10 / 10;
     cursor: pointer;
   }
 `;
