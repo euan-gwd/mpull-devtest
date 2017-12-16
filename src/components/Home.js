@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import NavBar from './Navigation/NavBar';
 import SideMenu from './Navigation/SideMenu';
+// import styled from 'styled-components';
 
 class Home extends Component {
   state = {
@@ -17,7 +18,6 @@ class Home extends Component {
     return (
       <Fragment>
         <NavBar open={this.state.showSideMenu} handleMenuToggle={this.handleMenuToggle} />
-        <hr />
         <SideMenu open={this.state.showSideMenu} />
       </Fragment>
     );

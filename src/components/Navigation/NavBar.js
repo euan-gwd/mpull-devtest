@@ -36,38 +36,40 @@ class NavBar extends Component {
   render() {
     return (
       <ToolBar>
-        <MobileMenu>
-          <img
-            src={this.props.open ? cross : burger}
-            alt="mobile navigation menu"
-            onClick={this.props.handleMenuToggle}
-          />
-        </MobileMenu>
-        <Logo src={logo} className="logo" alt="logo" />
-        <NavigationItem className="NavigationItem">
-          <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
-          <DropDownMenu show={this.state.showSolutionsDropMenu} />
-        </NavigationItem>
-        <NavigationItem className="NavigationItem">
-          <a>Cases</a>
-        </NavigationItem>
-        <NavigationItem className="NavigationItem">
-          <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
-          <DropDownMenu show={this.state.showInsightsDropMenu} />
-        </NavigationItem>
-        <NavigationItem className="NavigationItem">
-          <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
-          <DropDownMenu show={this.state.showAboutUsDropMenu} />
-        </NavigationItem>
-        <NavigationItem className="NavigationItem">
-          <a>Contact</a>
-        </NavigationItem>
-        <Language>
-          <img src={language} alt="change language" />
-        </Language>
-        <Search>
-          <img src={search} alt="search" />
-        </Search>
+        <Container>
+          <MobileMenu>
+            <img
+              src={this.props.open ? cross : burger}
+              alt="mobile navigation menu"
+              onClick={this.props.handleMenuToggle}
+            />
+          </MobileMenu>
+          <Logo src={logo} className="logo" alt="logo" />
+          <NavigationItem className="NavigationItem">
+            <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
+            <DropDownMenu show={this.state.showSolutionsDropMenu} />
+          </NavigationItem>
+          <NavigationItem className="NavigationItem">
+            <a>Cases</a>
+          </NavigationItem>
+          <NavigationItem className="NavigationItem">
+            <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
+            <DropDownMenu show={this.state.showInsightsDropMenu} />
+          </NavigationItem>
+          <NavigationItem className="NavigationItem">
+            <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
+            <DropDownMenu show={this.state.showAboutUsDropMenu} />
+          </NavigationItem>
+          <NavigationItem className="NavigationItem">
+            <a>Contact</a>
+          </NavigationItem>
+          <Language>
+            <img src={language} alt="change language" />
+          </Language>
+          <Search>
+            <img src={search} alt="search" />
+          </Search>
+        </Container>
       </ToolBar>
     );
   }
@@ -76,6 +78,10 @@ class NavBar extends Component {
 export default NavBar;
 
 const ToolBar = styled.header`
+  box-shadow: 0px 1px 2px 0px rgba(160, 165, 170, 0.75);
+`;
+
+const Container = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
@@ -83,7 +89,6 @@ const ToolBar = styled.header`
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   height: 45px;
-  max-width: 1024px;
   z-index: 5;
 
   @media screen and (min-width: 768px) {
@@ -91,6 +96,8 @@ const ToolBar = styled.header`
     grid-template-rows: 1fr 1fr;
     align-items: start;
     padding: 1rem 0;
+    max-width: 1024px;
+    z-index: 10;
   }
 `;
 

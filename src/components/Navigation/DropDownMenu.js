@@ -7,11 +7,9 @@ const DropDownMenu = props => {
       <DropMenu>
         <li>
           <a href="/">Employee Experience</a>
-          <hr />
         </li>
         <li>
           <a href="/">Customer Experience</a>
-          <hr />
         </li>
       </DropMenu>
     </NavMenu>
@@ -25,10 +23,11 @@ const NavMenu = styled.nav`
   width: 100px;
   top: 0;
   left: 10px;
-  background-color: #fff;
+  background-color: #ffffff90;
   padding: 0;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
+  border-top: 1px solid black;
 
   &.open {
     transform: translateY(0);
@@ -40,40 +39,31 @@ const NavMenu = styled.nav`
 `;
 
 const DropMenu = styled.ul`
-  margin: 0;
-  padding: 2rem 1rem;
+  margin: 1rem;
+  padding: 0;
   box-sizing: border-box;
   list-style: none;
   display: grid;
   grid-gap: 1rem;
   height: 100px;
-  border-top: 1px solid black;
   text-align: center;
   font-size: 0.8rem;
-  background-color: #fff;
+  background-color: #ffffff;
 
   a {
     margin: 0;
     padding: 0;
     color: #000;
+    background-color: #ffffff;
     box-sizing: border-box;
     text-decoration: none;
     display: block;
     text-align: center;
     cursor: pointer;
+    border-bottom: 1px solid transparent;
   }
 
-  hr {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  a + hr {
-    display: none;
-  }
-
-  a:hover + hr {
-    display: block;
+  a:hover {
+    border-bottom: 1px solid black;
   }
 `;
