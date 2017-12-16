@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import DropDownMenu from './DropDownMenu';
 
-import burger from './assets/burger.svg';
-import cross from './assets/cross.svg';
-
-import logo from './assets/logo.svg';
-
-import language from './assets/language.svg';
-import search from './assets/search.svg';
+import burger from './images/burger.svg';
+import cross from './images/cross.svg';
+import logo from './images/logo.svg';
+import language from './images/language.svg';
+import search from './images/search.svg';
 
 class NavBar extends Component {
   state = {
