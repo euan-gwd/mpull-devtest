@@ -49,13 +49,17 @@ const NavigationSearch = styled.div`
 `;
 
 const Logo = styled.a`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   justify-self: center;
-  grid-column: span 2;
+  grid-column: 2 / span 2;
 
   @media screen and (min-width: 768px) {
     grid-column: 1;
-    align-self: center;
-    justify-self: start;
+    justify-self: center;
+    align-self: start;
+    padding: 1rem 0;
   }
 `;
 
@@ -64,7 +68,7 @@ const SearchIcon = styled.a`
 
   @media screen and (min-width: 768px) {
     display: block;
-    justify-self: end;
+    justify-self: center;
     align-self: center;
     grid-column: 2;
   }

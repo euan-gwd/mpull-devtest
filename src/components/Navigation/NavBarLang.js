@@ -89,6 +89,7 @@ const LanguageIcon = styled.a`
 
 const LanguageNavItemList = styled.div`
   grid-column: span 2;
+  align-self: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
