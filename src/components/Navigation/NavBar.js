@@ -176,15 +176,43 @@ const NavigationItem = styled.div`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    align-self: start;
+    justify-self: center;
+    padding: 1rem 0;
+    text-align: center;
+    display: block;
+
+    a {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #000;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:active,
+    a:visited {
+      border-bottom: 1px solid black;
+    }
+  }
+`;
+
+const NavigationDropDownItem = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-grid;
+    /* grid-template-rows: repeat(2, 1fr); */
     align-items: center;
 
     a {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      grid-row: 1;
       color: #000;
       text-decoration: none;
       text-align: center;
@@ -206,9 +234,10 @@ const LanguageBtn = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    justify-self: end;
     grid-column: 7 / 8;
-    cursor: pointer;
+    justify-self: end;
+    align-self: start;
+    padding: 1rem 0;
   }
 `;
 
@@ -218,8 +247,9 @@ const SearchBtn = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    justify-self: center;
     grid-column: 8 / 8;
-    cursor: pointer;
+    justify-self: center;
+    align-self: start;
+    padding: 1rem 0;
   }
 `;

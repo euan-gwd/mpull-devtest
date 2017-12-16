@@ -21,8 +21,8 @@ export default DropDownMenu;
 const NavMenu = styled.nav`
   position: relative;
   width: 100px;
-  top: 0;
-  left: 10px;
+  top: 1px;
+  left: 0;
   background-color: #ffffff90;
   padding: 0;
   box-sizing: border-box;
