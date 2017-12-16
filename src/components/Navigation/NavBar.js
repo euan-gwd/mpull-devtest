@@ -60,22 +60,6 @@ class NavBar extends Component {
 
   render() {
     const { showNavOption } = this.state;
-
-    switch (showNavOption) {
-      case 2: {
-        console.log(showNavOption);
-        break;
-      }
-      case 3: {
-        console.log(showNavOption);
-        break;
-      }
-
-      default: {
-        console.log(showNavOption);
-        break;
-      }
-    }
     return (
       <ToolBar>
         {showNavOption === 1 && (
