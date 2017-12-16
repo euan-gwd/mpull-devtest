@@ -87,18 +87,18 @@ class NavBar extends Component {
           <LanguageIcon>
             <img src={language} alt="change language" />
           </LanguageIcon>
-          <NavigationItem>
+          <LanguageNavItem>
             <a>UK</a>
-          </NavigationItem>
-          <NavigationItem>
+          </LanguageNavItem>
+          <LanguageNavItem>
             <a>DK</a>
-          </NavigationItem>
-          <NavigationItem>
+          </LanguageNavItem>
+          <LanguageNavItem>
             <a>NO</a>
-          </NavigationItem>
-          <NavigationItem>
+          </LanguageNavItem>
+          <LanguageNavItem>
             <a>SE</a>
-          </NavigationItem>
+          </LanguageNavItem>
           <CloseNavBtn>
             <img src={cross} alt="Back to Main Navigation" />
           </CloseNavBtn>
@@ -108,9 +108,9 @@ class NavBar extends Component {
           <SearchIcon>
             <img src={search} alt="Search Bar" />
           </SearchIcon>
-          <SearchBar>
-            <input type="search" placeholder="Type to search..." id="" />
-          </SearchBar>
+          <SearchNavItem>
+            <input type="search" placeholder="Type to search..." />
+          </SearchNavItem>
           <CloseNavBtn>
             <img src={cross} alt="Back to Main Navigation" />
           </CloseNavBtn>
@@ -126,6 +126,7 @@ const ToolBar = styled.header`
   box-shadow: 0px 1px 2px 0px rgba(160, 165, 170, 0.75);
 `;
 
+//Main Navigation Styles
 const MainNavigation = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
@@ -155,10 +156,12 @@ const MobileMenu = styled.a`
 const Logo = styled.img`
   justify-self: center;
   grid-column: span 2;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     grid-column: 1;
     justify-self: start;
+    cursor: pointer;
   }
 `;
 
@@ -214,6 +217,8 @@ const SearchBtn = styled.a`
   }
 `;
 
+//Navigation Language Styles
+
 const NavigationLanguage = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
@@ -234,18 +239,18 @@ const NavigationLanguage = styled.div`
 `;
 
 const NavLangLogo = styled.img`
-  justify-self: center;
-  grid-column: 1;
+  display: none;
 
   @media screen and (min-width: 768px) {
+    display: grid;
     grid-column: 1;
     justify-self: start;
+    cursor: pointer;
   }
 `;
 
 const LanguageIcon = styled.a`
   @media screen and (max-width: 767px) {
-    /* display: block; */
     justify-self: center;
   }
 
@@ -255,6 +260,56 @@ const LanguageIcon = styled.a`
   }
 `;
 
+const LanguageNavItem = styled.div`
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+
+    a {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      box-sizing: border-box;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    grid-rows: span 2;
+
+    a {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      box-sizing: border-box;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+//Search Navigation Styles
+
 const NavigationSearch = styled.div`
   display: none;
 
@@ -263,7 +318,8 @@ const NavigationSearch = styled.div`
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    align-items: start;
+    grid-template-rows: 1fr;
+    align-items: center;
     padding: 1rem 0;
     height: 45px;
     max-width: 1024px;
@@ -271,31 +327,38 @@ const NavigationSearch = styled.div`
   }
 `;
 
-const SearchBar = styled.div`
+const SearchNavItem = styled.div`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   display: none;
 
   @media screen and (min-width: 768px) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: grid;
     align-items: center;
-    grid-column: span 5;
+    grid-column: 3 / 7;
+    display: inline-block;
 
-    input {
-      border: none;
-      outline: none;
+    input[type='search'] {
+      border: 0;
+      min-width: 100%;
+      display: block;
+      box-sizing: border-box;
+      font-size: 0.75rem;
+      line-height: 1.5rem;
     }
   }
 `;
 
 const SearchIcon = styled.a`
   @media screen and (max-width: 767px) {
-    display: block;
-    justify-self: end;
+    display: none;
   }
 
   @media screen and (min-width: 768px) {
+    display: block;
     justify-self: center;
     grid-column: 2;
   }
