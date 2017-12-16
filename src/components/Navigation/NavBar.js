@@ -21,16 +21,28 @@ class NavBar extends Component {
     });
   };
 
+  handleSolutionsDropMenuClose = () => {
+    this.setState({ showSolutionsDropMenu: false });
+  };
+
   handleInsightsDropMenuToggle = () => {
     this.setState(prevState => {
       return { showInsightsDropMenu: !prevState.showInsightsDropMenu };
     });
   };
 
+  handleInsightsDropMenuClose = () => {
+    this.setState({ showInsightsDropMenu: false });
+  };
+
   handleAboutUsDropMenuToggle = () => {
     this.setState(prevState => {
       return { showAboutUsDropMenu: !prevState.showAboutUsDropMenu };
     });
+  };
+
+  handleAboutUsDropMenuClose = () => {
+    this.setState({ showAboutUsDropMenu: false });
   };
 
   render() {
@@ -45,32 +57,23 @@ class NavBar extends Component {
             />
           </MobileMenu>
           <Logo src={logo} className="logo" alt="logo" />
-          <NavigationItem
-            className="NavigationItem"
-            onMouseLeave={this.handleSolutionsDropMenuToggle}
-          >
+          <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
             <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
             <DropDownMenu show={this.state.showSolutionsDropMenu} />
           </NavigationItem>
-          <NavigationItem className="NavigationItem">
+          <NavigationItem>
             <a>Cases</a>
           </NavigationItem>
-          <NavigationItem
-            className="NavigationItem"
-            onMouseLeave={this.handleInsightsDropMenuToggle}
-          >
+          <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
             <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
             <DropDownMenu show={this.state.showInsightsDropMenu} />
           </NavigationItem>
-          <NavigationItem
-            className="NavigationItem"
-            onMouseLeave={this.handleAboutUsDropMenuToggle}
-          >
+          <NavigationItem onMouseLeave={this.handleAboutUsDropMenuClose}>
             <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
             <DropDownMenu show={this.state.showAboutUsDropMenu} />
           </NavigationItem>
-          <NavigationItem className="NavigationItem">
-            <a>Contact</a>
+          <NavigationItem>
+            <a href="/">Contact</a>
           </NavigationItem>
           <Language>
             <img src={language} alt="change language" />
@@ -146,6 +149,11 @@ const NavigationItem = styled.div`
       display: block;
       text-align: center;
       cursor: pointer;
+    }
+    a:hover,
+    a:active,
+    a:visited {
+      border-bottom: 1px solid black;
     }
   }
 `;
