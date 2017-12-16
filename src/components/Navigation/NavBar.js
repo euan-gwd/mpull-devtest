@@ -87,18 +87,20 @@ class NavBar extends Component {
           <LanguageIcon>
             <img src={language} alt="change language" />
           </LanguageIcon>
-          <LanguageNavItem>
-            <a>UK</a>
-          </LanguageNavItem>
-          <LanguageNavItem>
-            <a>DK</a>
-          </LanguageNavItem>
-          <LanguageNavItem>
-            <a>NO</a>
-          </LanguageNavItem>
-          <LanguageNavItem>
-            <a>SE</a>
-          </LanguageNavItem>
+          <LanguageNavItemList>
+            <LanguageNavItem>
+              <a>UK</a>
+            </LanguageNavItem>
+            <LanguageNavItem>
+              <a>DK</a>
+            </LanguageNavItem>
+            <LanguageNavItem>
+              <a>NO</a>
+            </LanguageNavItem>
+            <LanguageNavItem>
+              <a>SE</a>
+            </LanguageNavItem>
+          </LanguageNavItemList>
           <CloseNavBtn>
             <img src={cross} alt="Back to Main Navigation" />
           </CloseNavBtn>
@@ -224,7 +226,7 @@ const NavigationLanguage = styled.div`
   padding: 0 1rem;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   height: 45px;
   z-index: 5;
@@ -251,13 +253,20 @@ const NavLangLogo = styled.img`
 
 const LanguageIcon = styled.a`
   @media screen and (max-width: 767px) {
-    justify-self: center;
+    justify-self: start;
   }
 
   @media screen and (min-width: 768px) {
     justify-self: center;
     grid-column: 2;
   }
+`;
+
+const LanguageNavItemList = styled.div`
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
 `;
 
 const LanguageNavItem = styled.div`
@@ -366,7 +375,7 @@ const SearchIcon = styled.a`
 
 const CloseNavBtn = styled.a`
   @media screen and (max-width: 767px) {
-    grid-column: 8 / 8;
+    grid-column: 4 / 4;
     justify-self: end;
   }
 
