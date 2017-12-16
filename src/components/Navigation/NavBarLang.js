@@ -8,7 +8,9 @@ import language from './images/language.svg';
 const NavBarLang = props => {
   return (
     <NavigationLanguage>
-      <NavLangLogo src={logo} className="logo" alt="logo" />
+      <Logo href="/">
+        <img src={logo} className="logo" alt="logo" />
+      </Logo>
       <LanguageIcon>
         <img src={language} alt="change language" />
       </LanguageIcon>
@@ -58,14 +60,19 @@ const NavigationLanguage = styled.div`
   }
 `;
 
-const NavLangLogo = styled.img`
+const Logo = styled.a`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  justify-self: center;
   display: none;
 
   @media screen and (min-width: 768px) {
-    display: grid;
     grid-column: 1;
-    justify-self: start;
-    cursor: pointer;
+    justify-self: center;
+    align-self: start;
+    padding: 1rem 0;
+    display: block;
   }
 `;
 

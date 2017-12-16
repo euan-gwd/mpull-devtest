@@ -15,7 +15,7 @@ class NavBar extends Component {
     showSolutionsDropMenu: false,
     showInsightsDropMenu: false,
     showAboutUsDropMenu: false,
-    showNavOption: 1
+    showNav: 1
   };
 
   handleSolutionsDropMenuToggle = () => {
@@ -49,22 +49,22 @@ class NavBar extends Component {
   };
 
   handleLanguageBtnClick = () => {
-    this.setState({ showNavOption: 2 });
+    this.setState({ showNav: 2 });
   };
 
   handleSearchBtnClick = () => {
-    this.setState({ showNavOption: 3 });
+    this.setState({ showNav: 3 });
   };
 
   handleCloseBtnClick = () => {
-    this.setState({ showNavOption: 1 });
+    this.setState({ showNav: 1 });
   };
 
   render() {
-    const { showNavOption } = this.state;
+    const { showNav } = this.state;
     return (
       <ToolBar>
-        {showNavOption === 1 && (
+        {showNav === 1 && (
           <MainNavigation>
             <MobileMenu>
               <img
@@ -104,8 +104,8 @@ class NavBar extends Component {
             </SearchBtn>
           </MainNavigation>
         )}
-        {showNavOption === 2 && <NavBarLang handleCloseBtnClick={this.handleCloseBtnClick} />}
-        {showNavOption === 3 && <NavBarSeek handleCloseBtnClick={this.handleCloseBtnClick} />}
+        {showNav === 2 && <NavBarLang handleCloseBtnClick={this.handleCloseBtnClick} />}
+        {showNav === 3 && <NavBarSeek handleCloseBtnClick={this.handleCloseBtnClick} />}
       </ToolBar>
     );
   }
@@ -138,7 +138,6 @@ const MainNavigation = styled.div`
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    /* grid-template-rows: repeat(2, 1fr); */
     align-items: center;
     height: 45px;
     max-width: 1024px;
@@ -188,34 +187,6 @@ const NavigationItem = styled.div`
       box-sizing: border-box;
       color: #000;
       text-decoration: none;
-    }
-
-    a:hover,
-    a:active,
-    a:visited {
-      border-bottom: 1px solid black;
-    }
-  }
-`;
-
-const NavigationDropDownItem = styled.div`
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: inline-grid;
-    /* grid-template-rows: repeat(2, 1fr); */
-    align-items: center;
-
-    a {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      color: #000;
-      text-decoration: none;
-      text-align: center;
     }
 
     a:hover,
