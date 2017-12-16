@@ -1,8 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import SolutionsDropDownMenu from './DropDowns/SolutionsDropDownMenu';
-import InsightsDropDownMenu from './DropDowns/InsightsDropDownMenu';
-import AboutUsDropDownMenu from './DropDowns/AboutUsDropDownMenu';
+import DropDownMenu from './DropDownMenu';
 
 import burger from './assets/burger.svg';
 import cross from './assets/cross.svg';
@@ -50,18 +48,18 @@ class NavBar extends Component {
         <Logo src={logo} className="logo" alt="logo" />
         <NavigationItem className="NavigationItem">
           <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
-          <SolutionsDropDownMenu show={this.state.showSolutionsDropMenu} />
+          <DropDownMenu show={this.state.showSolutionsDropMenu} />
         </NavigationItem>
         <NavigationItem className="NavigationItem">
           <a>Cases</a>
         </NavigationItem>
         <NavigationItem className="NavigationItem">
           <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
-          <InsightsDropDownMenu show={this.state.showInsightsDropMenu} />
+          <DropDownMenu show={this.state.showInsightsDropMenu} />
         </NavigationItem>
         <NavigationItem className="NavigationItem">
           <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
-          <AboutUsDropDownMenu show={this.state.showAboutUsDropMenu} />
+          <DropDownMenu show={this.state.showAboutUsDropMenu} />
         </NavigationItem>
         <NavigationItem className="NavigationItem">
           <a>Contact</a>

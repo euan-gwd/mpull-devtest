@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const AboutUsDropDownMenu = props => {
+const DropDownMenu = props => {
   return (
     <NavMenu className={props.show ? `open` : `close`}>
       <DropMenu>
@@ -16,12 +16,13 @@ const AboutUsDropDownMenu = props => {
   );
 };
 
-export default AboutUsDropDownMenu;
+export default DropDownMenu;
 
 const NavMenu = styled.nav`
+  position: relative;
   width: 100px;
   top: 0;
-  left: 0;
+  left: 10px;
   z-index: 2;
   background-color: #fff;
   padding: 0;
