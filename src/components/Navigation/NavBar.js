@@ -45,18 +45,27 @@ class NavBar extends Component {
             />
           </MobileMenu>
           <Logo src={logo} className="logo" alt="logo" />
-          <NavigationItem className="NavigationItem">
+          <NavigationItem
+            className="NavigationItem"
+            onMouseLeave={this.handleSolutionsDropMenuToggle}
+          >
             <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
             <DropDownMenu show={this.state.showSolutionsDropMenu} />
           </NavigationItem>
           <NavigationItem className="NavigationItem">
             <a>Cases</a>
           </NavigationItem>
-          <NavigationItem className="NavigationItem">
+          <NavigationItem
+            className="NavigationItem"
+            onMouseLeave={this.handleInsightsDropMenuToggle}
+          >
             <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
             <DropDownMenu show={this.state.showInsightsDropMenu} />
           </NavigationItem>
-          <NavigationItem className="NavigationItem">
+          <NavigationItem
+            className="NavigationItem"
+            onMouseLeave={this.handleAboutUsDropMenuToggle}
+          >
             <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
             <DropDownMenu show={this.state.showAboutUsDropMenu} />
           </NavigationItem>
