@@ -1,7 +1,7 @@
 import React from 'react';
 import MobileNavItems from './MobileNavItems';
 import styled from 'styled-components';
-import search from './assets/search.svg';
+import search from './images/search.svg';
 
 const SideMenu = props => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import downarrow from './assets/down-caret.svg';
+import downarrow from './images/down-caret.svg';
 
 const NavItem = props => {
   return (
