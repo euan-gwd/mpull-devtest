@@ -12,7 +12,8 @@ class NavBar extends Component {
   state = {
     showSolutionsDropMenu: false,
     showInsightsDropMenu: false,
-    showAboutUsDropMenu: false
+    showAboutUsDropMenu: false,
+    showNavOption: 1
   };
 
   handleSolutionsDropMenuToggle = () => {
@@ -45,82 +46,117 @@ class NavBar extends Component {
     this.setState({ showAboutUsDropMenu: false });
   };
 
+  handleLanguageBtnClick = () => {
+    this.setState({ showNavOption: 2 });
+  };
+
+  handleSearchBtnClick = () => {
+    this.setState({ showNavOption: 3 });
+  };
+
+  handleCloseBtnClick = () => {
+    this.setState({ showNavOption: 1 });
+  };
+
   render() {
+    const { showNavOption } = this.state;
+
+    switch (showNavOption) {
+      case 2: {
+        console.log(showNavOption);
+        break;
+      }
+      case 3: {
+        console.log(showNavOption);
+        break;
+      }
+
+      default: {
+        console.log(showNavOption);
+        break;
+      }
+    }
     return (
       <ToolBar>
-        <MainNavigation>
-          <MobileMenu>
-            <img
-              src={this.props.open ? cross : burger}
-              alt="mobile navigation menu"
-              onClick={this.props.handleMenuToggle}
-            />
-          </MobileMenu>
-          <Logo href="/">
-            <img src={logo} className="logo" alt="logo" />
-          </Logo>
-          <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
-            <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
-            <DropDownMenu show={this.state.showSolutionsDropMenu} />
-          </NavigationItem>
-          <NavigationItem>
-            <a>Cases</a>
-          </NavigationItem>
-          <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
-            <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
-            <DropDownMenu show={this.state.showInsightsDropMenu} />
-          </NavigationItem>
-          <NavigationItem onMouseLeave={this.handleAboutUsDropMenuClose}>
-            <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
-            <DropDownMenu show={this.state.showAboutUsDropMenu} />
-          </NavigationItem>
-          <NavigationItem>
-            <a href="/">Contact</a>
-          </NavigationItem>
-          <LanguageBtn>
-            <img src={language} alt="change language" />
-          </LanguageBtn>
-          <SearchBtn>
-            <img src={search} alt="search" />
-          </SearchBtn>
-        </MainNavigation>
-        <NavigationLanguage>
-          <NavLangLogo src={logo} className="logo" alt="logo" />
-          <LanguageIcon>
-            <img src={language} alt="change language" />
-          </LanguageIcon>
-          <LanguageNavItemList>
-            <LanguageNavItem>
-              <a>UK</a>
-            </LanguageNavItem>
-            <LanguageNavItem>
-              <a>DK</a>
-            </LanguageNavItem>
-            <LanguageNavItem>
-              <a>NO</a>
-            </LanguageNavItem>
-            <LanguageNavItem>
-              <a>SE</a>
-            </LanguageNavItem>
-          </LanguageNavItemList>
-          <CloseNavBtn>
-            <img src={cross} alt="Back to Main Navigation" />
-          </CloseNavBtn>
-        </NavigationLanguage>
-        <NavigationSearch>
-          <Logo href="/">
-            <img src={logo} className="logo" alt="logo" />
-          </Logo>
-          <SearchIcon>
-            <img src={search} alt="Search Bar" />
-          </SearchIcon>
-          <SearchNavItem>
-            <input type="search" placeholder="Type to search..." />
-          </SearchNavItem>
-          <CloseNavBtn>
-            <img src={cross} alt="Back to Main Navigation" />
-          </CloseNavBtn>
-        </NavigationSearch>
+        {showNavOption === 1 && (
+          <MainNavigation>
+            <MobileMenu>
+              <img
+                src={this.props.open ? cross : burger}
+                alt="mobile navigation menu"
+                onClick={this.props.handleMenuToggle}
+              />
+            </MobileMenu>
+            <Logo href="/">
+              <img src={logo} className="logo" alt="logo" />
+            </Logo>
+            <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
+              <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
+              <DropDownMenu show={this.state.showSolutionsDropMenu} />
+            </NavigationItem>
+            <NavigationItem>
+              <a>Cases</a>
+            </NavigationItem>
+            <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
+              <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
+              <DropDownMenu show={this.state.showInsightsDropMenu} />
+            </NavigationItem>
+            <NavigationItem onMouseLeave={this.handleAboutUsDropMenuClose}>
+              <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
+              <DropDownMenu show={this.state.showAboutUsDropMenu} />
+            </NavigationItem>
+            <NavigationItem>
+              <a href="/">Contact</a>
+            </NavigationItem>
+            <LanguageBtn onClick={this.handleLanguageBtnClick}>
+              <img src={language} alt="change language" />
+            </LanguageBtn>
+            <SearchBtn onClick={this.handleSearchBtnClick}>
+              <img src={search} alt="search" />
+            </SearchBtn>
+          </MainNavigation>
+        )}
+        {showNavOption === 2 && (
+          <NavigationLanguage>
+            <NavLangLogo src={logo} className="logo" alt="logo" />
+            <LanguageIcon>
+              <img src={language} alt="change language" />
+            </LanguageIcon>
+            <LanguageNavItemList>
+              <LanguageNavItem>
+                <a>UK</a>
+              </LanguageNavItem>
+              <LanguageNavItem>
+                <a>DK</a>
+              </LanguageNavItem>
+              <LanguageNavItem>
+                <a>NO</a>
+              </LanguageNavItem>
+              <LanguageNavItem>
+                <a>SE</a>
+              </LanguageNavItem>
+            </LanguageNavItemList>
+            <CloseNavBtn onClick={this.handleCloseBtnClick}>
+              <img src={cross} alt="Back to Main Navigation" />
+            </CloseNavBtn>
+          </NavigationLanguage>
+        )}
+        {showNavOption === 3 && (
+          <NavigationSearch>
+            <Logo href="/">
+              <img src={logo} className="logo" alt="logo" />
+            </Logo>
+            <SearchIcon>
+              <img src={search} alt="Search Bar" />
+            </SearchIcon>
+            <SearchNavItem>
+              <input type="search" placeholder="Type to search..." />
+            </SearchNavItem>
+            <CloseNavBtn onClick={this.handleCloseBtnClick}>
+              <img src={cross} alt="Back to Main Navigation" />
+            </CloseNavBtn>
+          </NavigationSearch>
+        )}
       </ToolBar>
     );
   }
