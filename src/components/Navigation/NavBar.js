@@ -126,6 +126,7 @@ const Logo = styled.img`
   @media screen and (min-width: 768px) {
     grid-column: 1;
     justify-self: start;
+    max-width: 383px;
   }
 `;
 
