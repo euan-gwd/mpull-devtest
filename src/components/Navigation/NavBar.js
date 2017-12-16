@@ -150,6 +150,7 @@ const MainNavigation = styled.div`
 `;
 
 const MobileMenu = styled.a`
+  display: block;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -205,6 +206,7 @@ const LanguageBtn = styled.a`
   @media screen and (min-width: 768px) {
     justify-self: end;
     grid-column: 7 / 8;
+    cursor: pointer;
   }
 `;
 
@@ -216,6 +218,7 @@ const SearchBtn = styled.a`
   @media screen and (min-width: 768px) {
     justify-self: center;
     grid-column: 8 / 8;
+    cursor: pointer;
   }
 `;
 
