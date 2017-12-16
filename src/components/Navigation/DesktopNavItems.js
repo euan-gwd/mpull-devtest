@@ -1,27 +1,61 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
+import SolutionsDropDownMenu from './DropDowns/SolutionsDropDownMenu';
+import InsightsDropDownMenu from './DropDowns/InsightsDropDownMenu';
+import AboutUsDropDownMenu from './DropDowns/AboutUsDropDownMenu';
 
-const DesktopNavItems = props => {
-  return (
-    <NavItemsList>
-      <NavigationItem className="NavigationItem">
-        <a onClick={props.handleSolutionsDropMenuToggle}>Solutions</a>
-      </NavigationItem>
-      <NavigationItem className="NavigationItem">
-        <a>Cases</a>
-      </NavigationItem>
-      <NavigationItem className="NavigationItem">
-        <a onClick={props.handleInsightsDropMenuToggle}>Insights</a>
-      </NavigationItem>
-      <NavigationItem className="NavigationItem">
-        <a onClick={props.handleAboutUsDropMenuToggle}>About Us</a>
-      </NavigationItem>
-      <NavigationItem className="NavigationItem">
-        <a>Contact</a>
-      </NavigationItem>
-    </NavItemsList>
-  );
-};
+class DesktopNavItems extends Component {
+  state = {
+    showSolutionsDropMenu: false,
+    showInsightsDropMenu: false,
+    showAboutUsDropMenu: false
+  };
+
+  handleSolutionsDropMenuToggle = () => {
+    this.setState(prevState => {
+      return { showSolutionsDropMenu: !prevState.showSolutionsDropMenu };
+    });
+  };
+
+  handleInsightsDropMenuToggle = () => {
+    this.setState(prevState => {
+      return { showInsightsDropMenu: !prevState.showInsightsDropMenu };
+    });
+  };
+
+  handleAboutUsDropMenuToggle = () => {
+    this.setState(prevState => {
+      return { showAboutUsDropMenu: !prevState.showAboutUsDropMenu };
+    });
+  };
+
+  render() {
+    return (
+      <Fragment>
+        <NavItemsList>
+          <NavigationItem className="NavigationItem">
+            <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
+          </NavigationItem>
+          <NavigationItem className="NavigationItem">
+            <a>Cases</a>
+          </NavigationItem>
+          <NavigationItem className="NavigationItem">
+            <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
+          </NavigationItem>
+          <NavigationItem className="NavigationItem">
+            <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
+          </NavigationItem>
+          <NavigationItem className="NavigationItem">
+            <a>Contact</a>
+          </NavigationItem>
+        </NavItemsList>
+        <SolutionsDropDownMenu show={this.state.showSolutionsDropMenu} />
+        <InsightsDropDownMenu show={this.state.showInsightsDropMenu} />
+        <AboutUsDropDownMenu show={this.state.showAboutUsDropMenu} />
+      </Fragment>
+    );
+  }
+}
 
 export default DesktopNavItems;
 
@@ -41,7 +75,7 @@ const NavItemsList = styled.ul`
   }
 `;
 
-const NavigationItem = styled.li`
+const NavigationItem = styled.div`
   display: none;
 
   @media screen and (min-width: 768px) {

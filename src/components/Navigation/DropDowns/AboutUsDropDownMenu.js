@@ -21,7 +21,7 @@ export default AboutUsDropDownMenu;
 const NavMenu = styled.nav`
   width: 100px;
   top: 0;
-  left: 62%;
+  left: 0;
   z-index: 2;
   background-color: #fff;
   padding: 0;
@@ -33,7 +33,7 @@ const NavMenu = styled.nav`
   }
 
   &.close {
-    transform: translateY(-100%);
+    transform: translateY(-200px);
   }
 `;
 

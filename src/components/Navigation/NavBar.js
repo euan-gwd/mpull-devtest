@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
-import DesktopNavItems from './DesktopNavItems';
 import SolutionsDropDownMenu from './DropDowns/SolutionsDropDownMenu';
 import InsightsDropDownMenu from './DropDowns/InsightsDropDownMenu';
 import AboutUsDropDownMenu from './DropDowns/AboutUsDropDownMenu';
@@ -49,16 +48,24 @@ class NavBar extends Component {
           />
         </MobileMenu>
         <Logo src={logo} className="logo" alt="logo" />
-        <NavMenu>
-          <DesktopNavItems
-            handleSolutionsDropMenuToggle={this.handleSolutionsDropMenuToggle}
-            handleInsightsDropMenuToggle={this.handleInsightsDropMenuToggle}
-            handleAboutUsDropMenuToggle={this.handleAboutUsDropMenuToggle}
-          />
+        <NavigationItem className="NavigationItem">
+          <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
           <SolutionsDropDownMenu show={this.state.showSolutionsDropMenu} />
+        </NavigationItem>
+        <NavigationItem className="NavigationItem">
+          <a>Cases</a>
+        </NavigationItem>
+        <NavigationItem className="NavigationItem">
+          <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
           <InsightsDropDownMenu show={this.state.showInsightsDropMenu} />
+        </NavigationItem>
+        <NavigationItem className="NavigationItem">
+          <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
           <AboutUsDropDownMenu show={this.state.showAboutUsDropMenu} />
-        </NavMenu>
+        </NavigationItem>
+        <NavigationItem className="NavigationItem">
+          <a>Contact</a>
+        </NavigationItem>
         <Language>
           <img src={language} alt="change language" />
         </Language>
@@ -84,7 +91,8 @@ const ToolBar = styled.header`
   z-index: 5;
 
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 1fr;
     align-items: start;
     padding: 1rem 0;
   }
@@ -106,14 +114,27 @@ const Logo = styled.img`
   }
 `;
 
-const NavMenu = styled.nav`
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+const NavigationItem = styled.div`
+  display: none;
 
   @media screen and (min-width: 768px) {
-    grid-column: 2 / span 4;
-    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+    grid-rows: span 2;
+
+    a {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      box-sizing: border-box;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -125,7 +146,7 @@ const Language = styled.a`
 
   @media screen and (min-width: 768px) {
     justify-self: end;
-    grid-column: 6 / 7;
+    grid-column: 7 / 8;
   }
 `;
 
@@ -136,6 +157,6 @@ const Search = styled.a`
 
   @media screen and (min-width: 768px) {
     justify-self: center;
-    grid-column: 7 / 7;
+    grid-column: 8 / 8;
   }
 `;
