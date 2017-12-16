@@ -56,7 +56,9 @@ class NavBar extends Component {
               onClick={this.props.handleMenuToggle}
             />
           </MobileMenu>
-          <Logo src={logo} className="logo" alt="logo" />
+          <Logo href="/">
+            <img src={logo} className="logo" alt="logo" />
+          </Logo>
           <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
             <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
             <DropDownMenu show={this.state.showSolutionsDropMenu} />
@@ -106,7 +108,9 @@ class NavBar extends Component {
           </CloseNavBtn>
         </NavigationLanguage>
         <NavigationSearch>
-          <Logo src={logo} className="logo" alt="logo" />
+          <Logo href="/">
+            <img src={logo} className="logo" alt="logo" />
+          </Logo>
           <SearchIcon>
             <img src={search} alt="Search Bar" />
           </SearchIcon>
@@ -151,20 +155,20 @@ const MainNavigation = styled.div`
 
 const MobileMenu = styled.a`
   display: block;
+  cursor: pointer;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 `;
 
-const Logo = styled.img`
+const Logo = styled.a`
   justify-self: center;
   grid-column: span 2;
-  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     grid-column: 1;
     justify-self: start;
-    cursor: pointer;
   }
 `;
 
@@ -201,6 +205,7 @@ const LanguageBtn = styled.a`
   @media screen and (max-width: 767px) {
     display: block;
     justify-self: end;
+    cursor: pointer;
   }
 
   @media screen and (min-width: 768px) {
@@ -380,10 +385,12 @@ const CloseNavBtn = styled.a`
   @media screen and (max-width: 767px) {
     grid-column: 4 / 4;
     justify-self: end;
+    cursor: pointer;
   }
 
   @media screen and (min-width: 768px) {
     justify-self: center;
     grid-column: 8 / 8;
+    cursor: pointer;
   }
 `;
