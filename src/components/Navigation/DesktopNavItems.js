@@ -1,15 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import DesktopNavItem from './DesktopNavItem';
 
 const DesktopNavItems = () => {
   return (
     <NavItemsList>
-      <DesktopNavItem link="Solutions" drop />
-      <DesktopNavItem link="Cases" />
-      <DesktopNavItem link="Insights" drop />
-      <DesktopNavItem link="About Us" drop />
-      <DesktopNavItem link="Contact" />
+      <NavigationItem className="NavigationItem">
+        <a href="/">Solutions</a>
+      </NavigationItem>
+      <NavigationItem className="NavigationItem">
+        <a href="/">Cases</a>
+      </NavigationItem>
+      <NavigationItem className="NavigationItem">
+        <a href="/">Insights</a>
+      </NavigationItem>
+      <NavigationItem className="NavigationItem">
+        <a href="/">About Us</a>
+      </NavigationItem>
+      <NavigationItem className="NavigationItem">
+        <a href="/">Contact</a>
+      </NavigationItem>
     </NavItemsList>
   );
 };
@@ -29,5 +38,27 @@ const NavItemsList = styled.ul`
     grid-auto-flow: column;
     align-items: center;
     box-sizing: border-box;
+  }
+`;
+
+const NavigationItem = styled.li`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    align-items: center;
+
+    a {
+      margin: 0;
+      padding: 0;
+      color: #000;
+      box-sizing: border-box;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
   }
 `;

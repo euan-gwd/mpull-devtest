@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import DesktopNavItems from './DesktopNavItems';
+import DropDownMenu from './DropDownMenu';
 import burger from './assets/burger.svg';
 import cross from './assets/cross.svg';
 
@@ -23,6 +24,7 @@ class NavBar extends Component {
         <Logo src={logo} className="logo" alt="logo" />
         <NavMenu>
           <DesktopNavItems />
+          <DropDownMenu />
         </NavMenu>
         <Language>
           <img src={language} alt="change language" />
