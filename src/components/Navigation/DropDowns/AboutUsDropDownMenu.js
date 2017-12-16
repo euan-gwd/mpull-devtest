@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const DropDownMenu = props => {
+const AboutUsDropDownMenu = props => {
   return (
-    <NavMenu className={props.open ? `open` : `close`}>
+    <NavMenu className={props.show ? `open` : `close`}>
       <DropMenu>
         <li>
           <a href="/">Employee Experience</a>
@@ -16,40 +16,47 @@ const DropDownMenu = props => {
   );
 };
 
-export default DropDownMenu;
+export default AboutUsDropDownMenu;
 
 const NavMenu = styled.nav`
-  position: fixed;
-  width: 280px;
-  min-width: 190px;
-  max-width: 70%;
-  height: 100%;
-  top: 54px;
-  left: 0;
-  z-index: 10;
+  width: 100px;
+  top: 0;
+  left: 62%;
+  z-index: 2;
   background-color: #fff;
-  border-right: 1px solid black;
-  padding: 2rem 1rem;
+  padding: 0;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
 
   &.open {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 
   &.close {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
 `;
 
 const DropMenu = styled.ul`
   margin: 0;
-  padding: 1rem 0;
+  padding: 1rem;
   box-sizing: border-box;
   list-style: none;
   display: grid;
   grid-gap: 1rem;
   border-top: 1px solid black;
   text-align: center;
+  font-size: 0.8rem;
   background-color: #fff;
+
+  a {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
 `;

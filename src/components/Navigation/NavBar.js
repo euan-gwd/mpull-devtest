@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import DesktopNavItems from './DesktopNavItems';
-import DropDownMenu from './DropDownMenu';
+import SolutionsDropDownMenu from './DropDowns/SolutionsDropDownMenu';
+import InsightsDropDownMenu from './DropDowns/InsightsDropDownMenu';
+import AboutUsDropDownMenu from './DropDowns/AboutUsDropDownMenu';
+
 import burger from './assets/burger.svg';
 import cross from './assets/cross.svg';
 
@@ -11,6 +14,30 @@ import language from './assets/language.svg';
 import search from './assets/search.svg';
 
 class NavBar extends Component {
+  state = {
+    showSolutionsDropMenu: false,
+    showInsightsDropMenu: false,
+    showAboutUsDropMenu: false
+  };
+
+  handleSolutionsDropMenuToggle = () => {
+    this.setState(prevState => {
+      return { showSolutionsDropMenu: !prevState.showSolutionsDropMenu };
+    });
+  };
+
+  handleInsightsDropMenuToggle = () => {
+    this.setState(prevState => {
+      return { showInsightsDropMenu: !prevState.showInsightsDropMenu };
+    });
+  };
+
+  handleAboutUsDropMenuToggle = () => {
+    this.setState(prevState => {
+      return { showAboutUsDropMenu: !prevState.showAboutUsDropMenu };
+    });
+  };
+
   render() {
     return (
       <ToolBar>
@@ -23,8 +50,14 @@ class NavBar extends Component {
         </MobileMenu>
         <Logo src={logo} className="logo" alt="logo" />
         <NavMenu>
-          <DesktopNavItems />
-          <DropDownMenu />
+          <DesktopNavItems
+            handleSolutionsDropMenuToggle={this.handleSolutionsDropMenuToggle}
+            handleInsightsDropMenuToggle={this.handleInsightsDropMenuToggle}
+            handleAboutUsDropMenuToggle={this.handleAboutUsDropMenuToggle}
+          />
+          <SolutionsDropDownMenu show={this.state.showSolutionsDropMenu} />
+          <InsightsDropDownMenu show={this.state.showInsightsDropMenu} />
+          <AboutUsDropDownMenu show={this.state.showAboutUsDropMenu} />
         </NavMenu>
         <Language>
           <img src={language} alt="change language" />

@@ -1,23 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const DesktopNavItems = () => {
+const DesktopNavItems = props => {
   return (
     <NavItemsList>
       <NavigationItem className="NavigationItem">
-        <a href="/">Solutions</a>
+        <a onClick={props.handleSolutionsDropMenuToggle}>Solutions</a>
       </NavigationItem>
       <NavigationItem className="NavigationItem">
-        <a href="/">Cases</a>
+        <a>Cases</a>
       </NavigationItem>
       <NavigationItem className="NavigationItem">
-        <a href="/">Insights</a>
+        <a onClick={props.handleInsightsDropMenuToggle}>Insights</a>
       </NavigationItem>
       <NavigationItem className="NavigationItem">
-        <a href="/">About Us</a>
+        <a onClick={props.handleAboutUsDropMenuToggle}>About Us</a>
       </NavigationItem>
       <NavigationItem className="NavigationItem">
-        <a href="/">Contact</a>
+        <a>Contact</a>
       </NavigationItem>
     </NavItemsList>
   );
@@ -59,6 +59,7 @@ const NavigationItem = styled.li`
       text-decoration: none;
       display: block;
       text-align: center;
+      cursor: pointer;
     }
   }
 `;
