@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import DropDownMenu from './DropDownMenu';
+import NavBarLang from './NavBarLang';
+import NavBarSeek from './NavBarSeek';
 
 import burger from './images/burger.svg';
 import cross from './images/cross.svg';
@@ -79,7 +81,8 @@ class NavBar extends Component {
               <DropDownMenu show={this.state.showSolutionsDropMenu} />
             </NavigationItem>
             <NavigationItem>
-              <a>Cases</a>
+              <a href="/">Cases</a>
+              <div />
             </NavigationItem>
             <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
               <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
@@ -91,6 +94,7 @@ class NavBar extends Component {
             </NavigationItem>
             <NavigationItem>
               <a href="/">Contact</a>
+              <div />
             </NavigationItem>
             <LanguageBtn onClick={this.handleLanguageBtnClick}>
               <img src={language} alt="change language" />
@@ -100,47 +104,8 @@ class NavBar extends Component {
             </SearchBtn>
           </MainNavigation>
         )}
-        {showNavOption === 2 && (
-          <NavigationLanguage>
-            <NavLangLogo src={logo} className="logo" alt="logo" />
-            <LanguageIcon>
-              <img src={language} alt="change language" />
-            </LanguageIcon>
-            <LanguageNavItemList>
-              <LanguageNavItem>
-                <a>UK</a>
-              </LanguageNavItem>
-              <LanguageNavItem>
-                <a>DK</a>
-              </LanguageNavItem>
-              <LanguageNavItem>
-                <a>NO</a>
-              </LanguageNavItem>
-              <LanguageNavItem>
-                <a>SE</a>
-              </LanguageNavItem>
-            </LanguageNavItemList>
-            <CloseNavBtn onClick={this.handleCloseBtnClick}>
-              <img src={cross} alt="Back to Main Navigation" />
-            </CloseNavBtn>
-          </NavigationLanguage>
-        )}
-        {showNavOption === 3 && (
-          <NavigationSearch>
-            <Logo href="/">
-              <img src={logo} className="logo" alt="logo" />
-            </Logo>
-            <SearchIcon>
-              <img src={search} alt="Search Bar" />
-            </SearchIcon>
-            <SearchNavItem>
-              <input type="search" placeholder="Type to search..." />
-            </SearchNavItem>
-            <CloseNavBtn onClick={this.handleCloseBtnClick}>
-              <img src={cross} alt="Back to Main Navigation" />
-            </CloseNavBtn>
-          </NavigationSearch>
-        )}
+        {showNavOption === 2 && <NavBarLang handleCloseBtnClick={this.handleCloseBtnClick} />}
+        {showNavOption === 3 && <NavBarSeek handleCloseBtnClick={this.handleCloseBtnClick} />}
       </ToolBar>
     );
   }
@@ -149,7 +114,12 @@ class NavBar extends Component {
 export default NavBar;
 
 const ToolBar = styled.header`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   box-shadow: 0px 1px 2px 0px rgba(160, 165, 170, 0.75);
+  height: 45px;
+  z-index: 5;
 `;
 
 //Main Navigation Styles
@@ -161,15 +131,17 @@ const MainNavigation = styled.div`
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   height: 45px;
-  z-index: 5;
 
   @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 1fr 1fr;
-    align-items: start;
-    padding: 1rem 0;
+    /* grid-template-rows: repeat(2, 1fr); */
+    align-items: center;
+    height: 45px;
     max-width: 1024px;
-    z-index: 10;
   }
 `;
 
@@ -183,12 +155,17 @@ const MobileMenu = styled.a`
 `;
 
 const Logo = styled.a`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   justify-self: center;
-  grid-column: span 2;
+  grid-column: 2 / span 2;
 
   @media screen and (min-width: 768px) {
     grid-column: 1;
-    justify-self: start;
+    justify-self: center;
+    align-self: start;
+    padding: 1rem 0;
   }
 `;
 
@@ -200,19 +177,19 @@ const NavigationItem = styled.div`
     padding: 0;
     box-sizing: border-box;
     display: grid;
+    grid-template-rows: repeat(2, 1fr);
     align-items: center;
-    grid-rows: span 2;
 
     a {
       margin: 0;
       padding: 0;
-      color: #000;
       box-sizing: border-box;
+      grid-row: 1;
+      color: #000;
       text-decoration: none;
-      display: block;
       text-align: center;
-      cursor: pointer;
     }
+
     a:hover,
     a:active,
     a:visited {
@@ -238,174 +215,6 @@ const LanguageBtn = styled.a`
 const SearchBtn = styled.a`
   @media screen and (max-width: 767px) {
     display: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    justify-self: center;
-    grid-column: 8 / 8;
-    cursor: pointer;
-  }
-`;
-
-//Navigation Language Styles
-
-const NavigationLanguage = styled.div`
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  height: 45px;
-  z-index: 5;
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(8, 1fr);
-    align-items: start;
-    padding: 1rem 0;
-    max-width: 1024px;
-    z-index: 10;
-  }
-`;
-
-const NavLangLogo = styled.img`
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    display: grid;
-    grid-column: 1;
-    justify-self: start;
-    cursor: pointer;
-  }
-`;
-
-const LanguageIcon = styled.a`
-  @media screen and (max-width: 767px) {
-    justify-self: start;
-  }
-
-  @media screen and (min-width: 768px) {
-    justify-self: center;
-    grid-column: 2;
-  }
-`;
-
-const LanguageNavItemList = styled.div`
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-`;
-
-const LanguageNavItem = styled.div`
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: grid;
-    align-items: center;
-
-    a {
-      margin: 0;
-      padding: 0;
-      color: #000;
-      box-sizing: border-box;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: grid;
-    align-items: center;
-    grid-rows: span 2;
-
-    a {
-      margin: 0;
-      padding: 0;
-      color: #000;
-      box-sizing: border-box;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-      cursor: pointer;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  }
-`;
-
-//Search Navigation Styles
-
-const NavigationSearch = styled.div`
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    margin: 0 auto;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 1fr;
-    align-items: center;
-    padding: 1rem 0;
-    height: 45px;
-    max-width: 1024px;
-    z-index: 5;
-  }
-`;
-
-const SearchNavItem = styled.div`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    align-items: center;
-    grid-column: 3 / 7;
-    display: inline-block;
-
-    input[type='search'] {
-      border: 0;
-      min-width: 100%;
-      display: block;
-      box-sizing: border-box;
-      font-size: 0.75rem;
-      line-height: 1.5rem;
-    }
-  }
-`;
-
-const SearchIcon = styled.a`
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: block;
-    justify-self: center;
-    grid-column: 2;
-  }
-`;
-
-const CloseNavBtn = styled.a`
-  @media screen and (max-width: 767px) {
-    grid-column: 4 / 4;
-    justify-self: end;
-    cursor: pointer;
   }
 
   @media screen and (min-width: 768px) {
