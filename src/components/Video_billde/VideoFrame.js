@@ -47,13 +47,12 @@ const Container = styled.div`
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
-    padding: 0;
+    padding: 1rem 0;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: repeat(3, 1fr) 50px;
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
-    /* min-height: 560px; */
     max-width: 1024px;
   }
 `;
