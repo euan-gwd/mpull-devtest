@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import NavBar from './Navigation/NavBar';
 import SideMenu from './Navigation/SideMenu';
 import VideoFrame from './VideoFrame/VideoFrame';
-import PositiveChange from './PlainTestFrame/PositiveChange';
+import PositiveChange from './PositiveChange/PositiveChange';
 import CustomerSurveySolutions from './CustomerSurveySolutions/CustomerSurveySolutions';
 import RightInsiderKnowledge from './RightInsiderKnowledge/RightInsiderKnowledge';
 import MeasureWorldWide from './MeasureWorldWide/MeasureWorldWide';
