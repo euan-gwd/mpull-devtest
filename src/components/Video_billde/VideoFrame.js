@@ -1,21 +1,155 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+import videoPlaceHolder from './images/man_tablet.png';
 import playIcon from '../../assets/Play-ikon.svg';
-import logoer from '../../assets/Logoer.svg';
-import './VideoFrame.css';
+import iso from './images/ISO.svg';
+import aaa from './images/AAA.svg';
+import esomar from './images/ESOMAR.png';
+// import './VideoFrame.css';
 
 class VideoFrame extends Component {
   state = {};
   render() {
     return (
-      <section className="hero">
-        <div className="container">
-          <p>Nordic Excellence Worldwide</p>
-          <img src={playIcon} alt="play video" />
-          <img src={logoer} alt="logoer link" />
-        </div>
-      </section>
+      <Wrapper backdrop={videoPlaceHolder}>
+        <Container>
+          <Title>Nordic Excellence Worldwide</Title>
+          <PlayIcon>
+            <img src={playIcon} alt="play video" />
+          </PlayIcon>
+          <Logoer className="logoer">
+            <img src={iso} alt="iso logo" />
+            <img src={aaa} alt="aaa logo" />
+            <img src={esomar} alt="esomar logo" />
+          </Logoer>
+        </Container>
+      </Wrapper>
     );
   }
 }
 
 export default VideoFrame;
+
+const Wrapper = styled.section`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url(${props => props.backdrop}) no-repeat center;
+  background-size: cover;
+`;
+
+const Container = styled.div`
+  margin: 0;
+  padding: 1rem 1rem 0.25rem 1rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr) 50px;
+  grid-template-columns: repeat(3, 33.3%);
+
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr) 50px;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    min-height: 560px;
+    max-width: 1024px;
+  }
+`;
+
+const Title = styled.h1`
+  grid-row: 1;
+  grid-column: span 3;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  font-size: 2rem;
+  color: white;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: span 2;
+    align-self: center;
+    margin: 0;
+    padding-top: 1rem;
+    font-size: 3.125rem;
+    color: white;
+  }
+`;
+
+const PlayIcon = styled.a`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  grid-row: 2 / 4;
+  grid-column: 2;
+  align-self: end;
+  justify-self: center;
+
+  img {
+    max-width: 100%;
+    height: 73px;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    grid-row: 2;
+    grid-column: 3 / 5;
+    align-self: center;
+    justify-self: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+`;
+
+const Logoer = styled.div`
+  grid-row: 4;
+  grid-column: 2 / 4;
+  justify-self: end;
+  align-self: end;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  width: 153px;
+  height: 30px;
+
+  > img {
+    align-self: center;
+    max-width: 100%;
+    height: 17px;
+    margin: 0 0.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-row: 4;
+    grid-column: 4 / 7;
+    justify-self: end;
+    align-self: start;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    width: 225px;
+    height: 30px;
+
+    > img {
+      align-self: center;
+      max-width: 100%;
+      height: 22px;
+      margin: 0 0.5rem;
+    }
+  }
+`;

@@ -1,1 +1,43 @@
+.hero {
+  background: url("./images/man_tablet.png") no-repeat center;
+  object-fit: cover;
+}
 
+.container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  max-height: 312px;
+}
+
+.container .title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 3.125rem;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    max-height: 560px;
+    max-width: 1024px;
+  }
+
+  .container .title {
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+    font-size: 3.125rem;
+    color: white;
+  }
+}
