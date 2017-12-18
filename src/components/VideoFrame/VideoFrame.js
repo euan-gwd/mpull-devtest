@@ -52,7 +52,6 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: repeat(3, 1fr) 50px;
     grid-template-columns: repeat(6, 1fr);
-    align-items: center;
     max-width: 1024px;
   }
 `;
