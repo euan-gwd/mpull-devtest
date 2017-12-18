@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import NavBar from './Navigation/NavBar';
 import SideMenu from './Navigation/SideMenu';
-import VideoFrame from './Video_billde/VideoFrame';
+import VideoFrame from './VideoFrame/VideoFrame';
 // import styled from 'styled-components';
 
 class Home extends Component {
