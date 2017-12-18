@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-class PlainTextFrame extends Component {
+class PositiveChange extends Component {
   state = {};
   render() {
     return (
@@ -21,7 +21,7 @@ class PlainTextFrame extends Component {
   }
 }
 
-export default PlainTextFrame;
+export default PositiveChange;
 
 const BackDrop = styled.section`
   margin: 0;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import bdImage from './images/woman_telephone.png';
 
-class ImageFrameRight extends Component {
+class MeasureWorldWide extends Component {
   state = {};
   render() {
     return (
@@ -23,7 +23,7 @@ class ImageFrameRight extends Component {
   }
 }
 
-export default ImageFrameRight;
+export default MeasureWorldWide;
 
 const BackDrop = styled.section`
   margin: 0;
