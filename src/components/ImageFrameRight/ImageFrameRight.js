@@ -6,7 +6,7 @@ import iso from './images/ISO.svg';
 import aaa from './images/AAA.svg';
 import esomar from './images/ESOMAR.png';
 
-class VideoFrame extends Component {
+class ImageFrameRight extends Component {
   state = {};
   render() {
     return (
@@ -27,7 +27,7 @@ class VideoFrame extends Component {
   }
 }
 
-export default VideoFrame;
+export default ImageFrameRight;
 
 const Wrapper = styled.section`
   margin: 0;

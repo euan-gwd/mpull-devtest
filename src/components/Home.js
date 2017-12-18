@@ -3,7 +3,7 @@ import NavBar from './Navigation/NavBar';
 import SideMenu from './Navigation/SideMenu';
 import VideoFrame from './VideoFrame/VideoFrame';
 import PlainTextFrame from './PlainTestFrame/PlainTextFrame';
-// import styled from 'styled-components';
+import ImageFrameRight from './ImageFrameRight/ImageFrameRight';
 
 class Home extends Component {
   state = {
@@ -23,6 +23,7 @@ class Home extends Component {
         <SideMenu open={this.state.showSideMenu} />
         <VideoFrame />
         <PlainTextFrame />
+        <ImageFrameRight />
       </Fragment>
     );
   }
