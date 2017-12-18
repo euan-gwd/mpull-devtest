@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import bdImage from './images/woman_telephone.png';
 
-class NewsLetter extends Component {
+class RightInsiderKnowledge extends Component {
   state = {};
   render() {
     return (
@@ -23,7 +23,7 @@ class NewsLetter extends Component {
   }
 }
 
-export default NewsLetter;
+export default RightInsiderKnowledge;
 
 const BackDrop = styled.section`
   margin: 0;

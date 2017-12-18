@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import bdImage from './images/woman_telephone.png';
 
-class SurveySolutions extends Component {
+class OurSurveySolutions extends Component {
   state = {};
   render() {
     return (
@@ -23,7 +23,7 @@ class SurveySolutions extends Component {
   }
 }
 
-export default SurveySolutions;
+export default OurSurveySolutions;
 
 const BackDrop = styled.section`
   margin: 0;

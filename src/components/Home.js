@@ -3,7 +3,14 @@ import NavBar from './Navigation/NavBar';
 import SideMenu from './Navigation/SideMenu';
 import VideoFrame from './VideoFrame/VideoFrame';
 import PositiveChange from './PlainTestFrame/PositiveChange';
-import SurveySolutions from './SurveySolutions/SurveySolutions';
+import CustomerSurveySolutions from './CustomerSurveySolutions/CustomerSurveySolutions';
+import RightInsiderKnowledge from './RightInsiderKnowledge/RightInsiderKnowledge';
+import MeasureWorldWide from './MeasureWorldWide/MeasureWorldWide';
+import ProvenByCustomers from './ProvenByCustomers/ProvenByCustomers';
+import WhoWeWorkWith from './WhoWeWorkWith/WhoWeWorkWith';
+import OurSurveySolutions from './OurSurveySolutions/OurSurveySolutions';
+import KeepYouUpdated from './KeepYouUpdated/KeepYouUpdated';
+import Bottom from './Bottom/Bottom';
 
 class Home extends Component {
   state = {
@@ -23,7 +30,14 @@ class Home extends Component {
         <SideMenu open={this.state.showSideMenu} />
         <VideoFrame />
         <PositiveChange />
-        <SurveySolutions />
+        <CustomerSurveySolutions />
+        <RightInsiderKnowledge />
+        <MeasureWorldWide />
+        <ProvenByCustomers />
+        <WhoWeWorkWith />
+        <OurSurveySolutions />
+        <KeepYouUpdated />
+        <Bottom />
       </Fragment>
     );
   }

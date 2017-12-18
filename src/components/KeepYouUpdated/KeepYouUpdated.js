@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import bdImage from './images/woman_telephone.png';
 
-class InsiderKnowledge extends Component {
+class KeepYouUpdated extends Component {
   state = {};
   render() {
     return (
@@ -23,7 +23,7 @@ class InsiderKnowledge extends Component {
   }
 }
 
-export default InsiderKnowledge;
+export default KeepYouUpdated;
 
 const BackDrop = styled.section`
   margin: 0;
