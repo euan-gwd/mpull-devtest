@@ -41,8 +41,8 @@ const Container = styled.div`
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    margin: 4rem auto;
-    padding: 0;
+    margin: 0 auto;
+    padding: 3rem 0;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: 1fr;

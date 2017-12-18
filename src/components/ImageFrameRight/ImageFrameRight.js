@@ -29,13 +29,25 @@ const BackDrop = styled.section`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(${props => props.image}) no-repeat center;
+  background: url(${props => props.image}) no-repeat;
+  background-origin: border-box;
   background-size: cover;
+  background-position: -3cm 0, center;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(${props => props.image}) no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    background-position: 0 0, center;
+  }
 `;
 
 const Container = styled.div`
-  margin: 3rem 1rem;
-  padding: 0;
+  margin: 0;
+  padding: 3rem 0;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 0.25fr 1fr 1fr;
@@ -47,14 +59,14 @@ const Container = styled.div`
     padding: 3rem 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: repeat(2, 1fr) 50px;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(6, 1fr);
     max-width: 1024px;
   }
 `;
 
 const Title = styled.h1`
-  margin: 1rem 0;
+  margin: 1rem;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -72,25 +84,26 @@ const Title = styled.h1`
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
-    font-size: 3.25rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: black;
   }
 `;
 
 const Content = styled.p`
-  margin: 0 1rem;
+  margin: 1rem;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
   font-size: 1rem;
+  line-height: 1.5rem;
   color: black;
 
   @media screen and (min-width: 768px) {
     grid-row: 2;
     grid-column: 4 / 7;
-    align-self: center;
+    align-self: end;
     justify-self: start;
     margin: 0;
     padding: 0 3.5rem 0 0;
@@ -116,6 +129,8 @@ const ButtonGroup = styled.div`
   grid-row-gap: 1rem;
 
   @media screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
     grid-row: 3;
     grid-column: 4 / 7;
     display: grid;
