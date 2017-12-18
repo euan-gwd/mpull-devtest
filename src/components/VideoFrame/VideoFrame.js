@@ -10,7 +10,7 @@ class VideoFrame extends Component {
   state = {};
   render() {
     return (
-      <Wrapper backdrop={videoPlaceHolder}>
+      <BackDrop image={videoPlaceHolder}>
         <Container>
           <Title>Nordic Excellence Worldwide</Title>
           <PlayIcon>
@@ -22,18 +22,18 @@ class VideoFrame extends Component {
             <img src={esomar} alt="esomarlogo" />
           </Logoer>
         </Container>
-      </Wrapper>
+      </BackDrop>
     );
   }
 }
 
 export default VideoFrame;
 
-const Wrapper = styled.section`
+const BackDrop = styled.section`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(${props => props.backdrop}) no-repeat center;
+  background: url(${props => props.image}) no-repeat center;
   background-size: cover;
 `;
 
@@ -47,7 +47,7 @@ const Container = styled.div`
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 3rem 0;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: repeat(3, 1fr) 50px;

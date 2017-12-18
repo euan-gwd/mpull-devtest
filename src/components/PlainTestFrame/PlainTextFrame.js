@@ -5,7 +5,7 @@ class PlainTextFrame extends Component {
   state = {};
   render() {
     return (
-      <Wrapper>
+      <BackDrop>
         <Container>
           <Title>We drive positive change</Title>
           <Content>
@@ -16,14 +16,14 @@ class PlainTextFrame extends Component {
             deliver the best solutions in the market.
           </Content>
         </Container>
-      </Wrapper>
+      </BackDrop>
     );
   }
 }
 
 export default PlainTextFrame;
 
-const Wrapper = styled.section`
+const BackDrop = styled.section`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -32,7 +32,7 @@ const Wrapper = styled.section`
 `;
 
 const Container = styled.div`
-  margin: 2rem 1rem;
+  margin: 3rem 1rem;
   padding: 0;
   box-sizing: border-box;
   display: grid;
@@ -46,8 +46,7 @@ const Container = styled.div`
     box-sizing: border-box;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
     max-width: 1024px;
   }
@@ -65,9 +64,9 @@ const Title = styled.h1`
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
-    grid-column: 1;
+    grid-column: 1 / 4;
     align-self: start;
-    margin: 0;
+    margin: 0 2rem 0 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
@@ -90,7 +89,7 @@ const Content = styled.div`
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
-    grid-column: 2;
+    grid-column: 4 / 7;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

@@ -1,154 +1,145 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import videoPlaceHolder from './images/man_tablet.png';
-import playIcon from '../../assets/Play-ikon.svg';
-import iso from './images/ISO.svg';
-import aaa from './images/AAA.svg';
-import esomar from './images/ESOMAR.png';
+import bdImage from './images/woman_telephone.png';
 
 class ImageFrameRight extends Component {
   state = {};
   render() {
     return (
-      <Wrapper backdrop={videoPlaceHolder}>
+      <BackDrop image={bdImage}>
         <Container>
-          <Title>Nordic Excellence Worldwide</Title>
-          <PlayIcon>
-            <img src={playIcon} alt="play video" />
-          </PlayIcon>
-          <Logoer className="logoer">
-            <img src={iso} alt="isologo" />
-            <img src={aaa} alt="aaalogo" />
-            <img src={esomar} alt="esomarlogo" />
-          </Logoer>
+          <Title>We do Proven Survey Solutions</Title>
+          <Content>
+            Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere parior
+            sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
+          </Content>
+          <ButtonGroup>
+            <Button>Read More</Button>
+            <Button>Customer Survey</Button>
+          </ButtonGroup>
         </Container>
-      </Wrapper>
+      </BackDrop>
     );
   }
 }
 
 export default ImageFrameRight;
 
-const Wrapper = styled.section`
+const BackDrop = styled.section`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(${props => props.backdrop}) no-repeat center;
+  background: url(${props => props.image}) no-repeat center;
   background-size: cover;
 `;
 
 const Container = styled.div`
-  margin: 0;
-  padding: 1rem 1rem 0.25rem 1rem;
+  margin: 3rem 1rem;
+  padding: 0;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: repeat(3, 1fr) 50px;
-  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: 0.25fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 3rem 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: repeat(3, 1fr) 50px;
+    grid-template-rows: repeat(2, 1fr) 50px;
     grid-template-columns: repeat(6, 1fr);
-    align-items: center;
     max-width: 1024px;
   }
 `;
 
 const Title = styled.h1`
-  grid-row: 1;
-  grid-column: span 3;
-  align-self: center;
-  margin: 0;
+  margin: 1rem 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: black;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: 4 / 7;
+    align-self: end;
+    margin: 0;
+    padding: 0 6rem 0 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 3.25rem;
+    text-transform: uppercase;
+    color: black;
+  }
+`;
+
+const Content = styled.p`
+  margin: 0 1rem;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
-  font-size: 2rem;
-  color: white;
+  font-size: 1rem;
+  color: black;
 
   @media screen and (min-width: 768px) {
-    grid-row: 1;
-    grid-column: span 2;
+    grid-row: 2;
+    grid-column: 4 / 7;
     align-self: center;
+    justify-self: start;
     margin: 0;
-    padding-top: 1rem;
-    font-size: 3.125rem;
-    color: white;
+    padding: 0 3.5rem 0 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: black;
   }
 `;
 
-const PlayIcon = styled.a`
-  margin: 0;
+const ButtonGroup = styled.div`
+  margin: 0 1rem;
   padding: 0;
   box-sizing: border-box;
-  grid-row: 2 / 4;
-  grid-column: 2;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: black;
+  display: grid;
+  grid-row-gap: 1rem;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 3;
+    grid-column: 4 / 7;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+`;
+
+const Button = styled.button`
   align-self: end;
-  justify-self: center;
+  margin: 0;
+  padding: 0.25rem;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 100;
+  color: black;
+  border: 1px solid black;
+  background-color: transparent;
+  height: 47px;
   cursor: pointer;
 
-  img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    grid-row: 2;
-    grid-column: 3 / 5;
-    align-self: center;
-    justify-self: center;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-  }
-`;
-
-const Logoer = styled.div`
-  grid-row: 4;
-  grid-column: 2 / 4;
-  justify-self: end;
-  align-self: end;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  width: 153px;
-  height: 30px;
-
-  > img {
-    align-self: center;
-    max-width: 100%;
-    height: 17px;
-    margin: 0 0.5rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    grid-row: 4;
-    grid-column: 4 / 7;
-    justify-self: end;
-    align-self: start;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    width: 225px;
-    height: 30px;
-
-    > img {
-      align-self: center;
-      max-width: 100%;
-      height: 22px;
-      margin: 0 0.5rem;
-    }
+  &:hover {
+    background-color: black;
+    color: white;
   }
 `;
