@@ -5,7 +5,6 @@ import playIcon from '../../assets/Play-ikon.svg';
 import iso from './images/ISO.svg';
 import aaa from './images/AAA.svg';
 import esomar from './images/ESOMAR.png';
-// import './VideoFrame.css';
 
 class VideoFrame extends Component {
   state = {};
@@ -18,9 +17,9 @@ class VideoFrame extends Component {
             <img src={playIcon} alt="play video" />
           </PlayIcon>
           <Logoer className="logoer">
-            <img src={iso} alt="iso logo" />
-            <img src={aaa} alt="aaa logo" />
-            <img src={esomar} alt="esomar logo" />
+            <img src={iso} alt="isologo" />
+            <img src={aaa} alt="aaalogo" />
+            <img src={esomar} alt="esomarlogo" />
           </Logoer>
         </Container>
       </Wrapper>
@@ -54,7 +53,7 @@ const Container = styled.div`
     grid-template-rows: repeat(3, 1fr) 50px;
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
-    min-height: 560px;
+    /* min-height: 560px; */
     max-width: 1024px;
   }
 `;
