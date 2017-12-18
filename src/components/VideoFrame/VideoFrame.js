@@ -88,10 +88,11 @@ const PlayIcon = styled.a`
   grid-column: 2;
   align-self: end;
   justify-self: center;
+  cursor: pointer;
 
   img {
     max-width: 100%;
-    height: 73px;
+    height: auto;
     object-fit: cover;
   }
 

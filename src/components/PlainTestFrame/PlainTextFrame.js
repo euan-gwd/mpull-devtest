@@ -1,26 +1,20 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import videoPlaceHolder from './images/man_tablet.png';
-import playIcon from '../../assets/Play-ikon.svg';
-import iso from './images/ISO.svg';
-import aaa from './images/AAA.svg';
-import esomar from './images/ESOMAR.png';
 
 class PlainTextFrame extends Component {
   state = {};
   render() {
     return (
-      <Wrapper backdrop={videoPlaceHolder}>
+      <Wrapper>
         <Container>
-          <Title>Nordic Excellence Worldwide</Title>
-          <PlayIcon>
-            <img src={playIcon} alt="play video" />
-          </PlayIcon>
-          <Logoer className="logoer">
-            <img src={iso} alt="isologo" />
-            <img src={aaa} alt="aaalogo" />
-            <img src={esomar} alt="esomarlogo" />
-          </Logoer>
+          <Title>We drive positive change</Title>
+          <Content>
+            We empower organizations and leaders to improve the employee and customer experience
+            through proven, concise and engaging advisory. Ennovas ISO certificate puts severe
+            demands to our Development and implementation of employee- and customer analysis. We are
+            very proud of the certification which is in line with Ennova‘s continued ambition to
+            deliver the best solutions in the market.
+          </Content>
         </Container>
       </Wrapper>
     );
@@ -33,121 +27,77 @@ const Wrapper = styled.section`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(${props => props.backdrop}) no-repeat center;
+  background-color: white;
   background-size: cover;
 `;
 
 const Container = styled.div`
-  margin: 0;
-  padding: 1rem 1rem 0.25rem 1rem;
+  margin: 2rem 1rem;
+  padding: 0;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: repeat(3, 1fr) 50px;
-  grid-template-columns: repeat(3, 33.3%);
+  grid-template-rows: 0.25fr 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
 
   @media screen and (min-width: 768px) {
-    margin: 0 auto;
-    padding: 1rem 0;
+    margin: 4rem auto;
+    padding: 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: repeat(3, 1fr) 50px;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
     align-items: center;
     max-width: 1024px;
   }
 `;
 
 const Title = styled.h1`
-  grid-row: 1;
-  grid-column: span 3;
-  align-self: center;
-  margin: 0;
+  margin: 1rem 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 100;
-  font-size: 2rem;
-  color: white;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: black;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
-    grid-column: span 2;
-    align-self: center;
-    margin: 0;
-    padding-top: 1rem;
-    font-size: 3.125rem;
-    color: white;
-  }
-`;
-
-const PlayIcon = styled.a`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  grid-row: 2 / 4;
-  grid-column: 2;
-  align-self: end;
-  justify-self: center;
-
-  img {
-    max-width: 100%;
-    height: 73px;
-    object-fit: cover;
-  }
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    grid-row: 2;
-    grid-column: 3 / 5;
-    align-self: center;
-    justify-self: center;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-  }
-`;
-
-const Logoer = styled.div`
-  grid-row: 4;
-  grid-column: 2 / 4;
-  justify-self: end;
-  align-self: end;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  width: 153px;
-  height: 30px;
-
-  > img {
-    align-self: center;
-    max-width: 100%;
-    height: 17px;
-    margin: 0 0.5rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    grid-row: 4;
-    grid-column: 4 / 7;
-    justify-self: end;
+    grid-column: 1;
     align-self: start;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
-    width: 225px;
-    height: 30px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 3.25rem;
+    text-transform: uppercase;
+    color: black;
+  }
+`;
 
-    > img {
-      align-self: center;
-      max-width: 100%;
-      height: 22px;
-      margin: 0 0.5rem;
-    }
+const Content = styled.div`
+  margin: 1rem 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: black;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: 2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: black;
   }
 `;

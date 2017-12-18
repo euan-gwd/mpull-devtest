@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import NavBar from './Navigation/NavBar';
 import SideMenu from './Navigation/SideMenu';
 import VideoFrame from './VideoFrame/VideoFrame';
+import PlainTextFrame from './PlainTestFrame/PlainTextFrame';
 // import styled from 'styled-components';
 
 class Home extends Component {
@@ -21,6 +22,7 @@ class Home extends Component {
         <NavBar open={this.state.showSideMenu} handleMenuToggle={this.handleMenuToggle} />
         <SideMenu open={this.state.showSideMenu} />
         <VideoFrame />
+        <PlainTextFrame />
       </Fragment>
     );
   }
