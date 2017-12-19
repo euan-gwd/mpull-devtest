@@ -19,8 +19,8 @@ class OurSurveySolutions extends Component {
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
-            <OfferButton>Try our survey trial version</OfferButton>
             <OfferImg src={phoneApp} alt="phone" />
+            <OfferButton>Try our survey trial version</OfferButton>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -73,6 +73,9 @@ const LeftColumn = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: grid;
+  grid-template-row: repeat (3, 1fr);
+  grid-template-column: 1fr;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
@@ -92,7 +95,8 @@ const RightColumn = styled.div`
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
@@ -107,11 +111,10 @@ const RightColumn = styled.div`
 `;
 
 const Title = styled.h1`
-  margin: 1rem;
+  align-self: center;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  position: relative;
-  top: -50px;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
   font-size: 1.5rem;
@@ -135,7 +138,8 @@ const Title = styled.h1`
 `;
 
 const Content = styled.p`
-  margin: 2rem 1rem 2rem;
+  align-self: center;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -160,7 +164,7 @@ const Content = styled.p`
 `;
 
 const ButtonGroup = styled.div`
-  margin: 0 1rem;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -202,7 +206,9 @@ const Button = styled.button`
 `;
 
 const OfferImg = styled.img`
-  margin: 0;
+  grid-row: 1;
+  grid-column: 1 / 3;
+  margin: 3rem auto 0;
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
@@ -223,6 +229,9 @@ const OfferImg = styled.img`
 `;
 
 const OfferButton = styled.button`
+  grid-row: 1;
+  grid-column: 2;
+  z-index: 2;
   width: 139px;
   height: 139px;
   margin: 0;
