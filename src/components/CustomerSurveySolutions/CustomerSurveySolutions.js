@@ -118,7 +118,7 @@ const Content = styled.p`
 
 const ButtonGroup = styled.div`
   margin: 0 1rem;
-  padding: 0;
+  padding: 0 2rem;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;

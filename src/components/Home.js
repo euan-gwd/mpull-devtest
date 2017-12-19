@@ -32,12 +32,12 @@ class Home extends Component {
         <PositiveChange />
         <CustomerSurveySolutions />
         <RightInsiderKnowledge />
-        <MeasureWorldWide />
+        {/* <MeasureWorldWide />
         <ProvenByCustomers />
         <WhoWeWorkWith />
         <OurSurveySolutions />
         <KeepYouUpdated />
-        <Bottom />
+        <Bottom /> */}
       </Fragment>
     );
   }
