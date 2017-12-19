@@ -11,10 +11,10 @@ const NavBarLang = props => {
       <Logo href="/">
         <img src={logo} className="logo" alt="logo" />
       </Logo>
-      <LanguageIcon>
-        <img src={language} alt="change language" />
-      </LanguageIcon>
       <LanguageNavItemList>
+        <LanguageNavItem>
+          <img src={language} alt="change language" />
+        </LanguageNavItem>
         <LanguageNavItem>
           <a>UK</a>
         </LanguageNavItem>
@@ -57,7 +57,6 @@ const NavigationLanguage = styled.div`
     align-items: center;
     height: 45px;
     max-width: 1024px;
-    border-left: 1px solid black;
   }
 `;
 
@@ -69,54 +68,57 @@ const Logo = styled.a`
   display: none;
 
   @media screen and (min-width: 768px) {
-    grid-column: 1;
-    justify-self: center;
-    align-self: start;
-    padding: 1rem 0;
+    grid-column: 1 / 3;
+    justify-self: start;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     display: block;
   }
 `;
 
-const LanguageIcon = styled.a`
-  @media screen and (max-width: 767px) {
-    justify-self: start;
-  }
+const LanguageNavItemList = styled.div`
+  grid-column: 1 / 4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  height: 44px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 
   @media screen and (min-width: 768px) {
-    justify-self: center;
-    grid-column: 3;
+    grid-column: 3 / 9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(5, 75px);
+    border-left: 1px solid black;
+    height: 45px;
   }
-`;
-
-const LanguageNavItemList = styled.div`
-  grid-column: span 2;
-  align-self: center;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
 `;
 
 const LanguageNavItem = styled.div`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  align-items: center;
+
+  a {
     margin: 0;
     padding: 0;
+    color: #000;
     box-sizing: border-box;
-    display: grid;
-    align-items: center;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
 
-    a {
-      margin: 0;
-      padding: 0;
-      color: #000;
-      box-sizing: border-box;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-      cursor: pointer;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+  a:hover {
+    text-decoration: underline;
   }
 
   @media screen and (min-width: 768px) {
@@ -125,7 +127,6 @@ const LanguageNavItem = styled.div`
     box-sizing: border-box;
     display: grid;
     align-items: center;
-    grid-rows: span 2;
 
     a {
       margin: 0;
@@ -141,6 +142,10 @@ const LanguageNavItem = styled.div`
     a:hover {
       text-decoration: underline;
     }
+
+    &:first-of-type {
+      justify-self: center;
+    }
   }
 `;
 
@@ -152,7 +157,7 @@ const CloseNavBtn = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    justify-self: center;
+    justify-self: end;
     grid-column: 10 / 10;
     cursor: pointer;
   }
