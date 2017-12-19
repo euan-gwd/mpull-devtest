@@ -81,7 +81,7 @@ const Content = styled.div`
   font-weight: 100;
   line-height: 1.5rem;
   font-size: 1rem;
-  color: black;
+  color: #818181;
 
   @media screen and (min-width: 768px) {
     grid-row: 2;
@@ -93,6 +93,6 @@ const Content = styled.div`
     font-weight: 100;
     line-height: 1.5rem;
     font-size: 1rem;
-    color: grey;
+    color: #818181;
   }
 `;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Arrow from './images/up-caret.svg';
 
 class BottomContactDetails extends Component {
   state = {};
@@ -72,6 +73,11 @@ class BottomContactDetails extends Component {
             <WebLink>Youtube</WebLink>
             <WebLink>Newsletter</WebLink>
           </ContactLink>
+          <ButtonGroup>
+            <UpArrow src={Arrow} alt="Return to Top Icon" />
+            <ButtonText href="/">Return To Top</ButtonText>
+            <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
+          </ButtonGroup>
         </Container>
       </BackDrop>
     );
@@ -93,14 +99,13 @@ const Container = styled.div`
   padding: 0;
   box-sizing: border-box;
   display: grid;
-  /* grid-row-gap: 4rem; */
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
     padding: 3rem 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.25fr;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 6rem 1rem;
     max-width: 1024px;
@@ -211,4 +216,63 @@ const WebLink = styled.a`
     color: #8b5559;
     font-weight: 300;
   }
+`;
+
+const ButtonGroup = styled.div`
+  grid-column: 1 / 5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+`;
+
+const UpArrow = styled.img`
+  grid-row: 1;
+  grid-column: span 2;
+  align-self: end;
+  justify-self: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #818181;
+  max-width: 100%;
+  height: 1rem;
+`;
+
+const ButtonText = styled.a`
+  grid-row: 2;
+  grid-column: 1 / 3;
+  justify-self: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #8b5559;
+    font-weight: 300;
+  }
+`;
+
+const CopyRightFooter = styled.span`
+  grid-row: 2;
+  grid-column: 2;
+  justify-self: end;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: #818181;
 `;
