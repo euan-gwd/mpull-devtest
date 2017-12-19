@@ -6,7 +6,7 @@ import PositiveChange from './PositiveChange/PositiveChange';
 import CustomerSurveySolutions from './CustomerSurveySolutions/CustomerSurveySolutions';
 import RightInsiderKnowledge from './RightInsiderKnowledge/RightInsiderKnowledge';
 import MeasureWorldWide from './MeasureWorldWide/MeasureWorldWide';
-// import ProvenByCustomers from './ProvenByCustomers/ProvenByCustomers';
+import ProvenByCustomers from './ProvenByCustomers/ProvenByCustomers';
 // import WhoWeWorkWith from './WhoWeWorkWith/WhoWeWorkWith';
 // import OurSurveySolutions from './OurSurveySolutions/OurSurveySolutions';
 // import KeepYouUpdated from './KeepYouUpdated/KeepYouUpdated';
@@ -33,8 +33,8 @@ class Home extends Component {
         <CustomerSurveySolutions />
         <RightInsiderKnowledge />
         <MeasureWorldWide />
-        {/* <ProvenByCustomers />
-        <WhoWeWorkWith />
+        <ProvenByCustomers />
+        {/* <WhoWeWorkWith />
         <OurSurveySolutions />
         <KeepYouUpdated />
         <Bottom /> */}
