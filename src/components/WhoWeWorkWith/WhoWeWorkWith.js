@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import clients from './images/clients.png';
+import ButtonDark from '../Buttons/ButtonDark';
 
 class WhoWeWorkWith extends Component {
   state = {};
@@ -18,7 +19,7 @@ class WhoWeWorkWith extends Component {
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <Button>Read more</Button>
+              <ButtonDark>Read more</ButtonDark>
             </ButtonGroup>
           </RightColumn>
         </Container>
@@ -170,26 +171,6 @@ const ButtonGroup = styled.div`
     grid-column: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-`;
-
-const Button = styled.button`
-  margin: 0;
-  padding: 0.25rem;
-  box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
-  font-size: 1rem;
-  font-weight: 100;
-  color: black;
-  border: 1px solid black;
-  background-color: transparent;
-  height: 47px;
-  width: 75%;
-  cursor: pointer;
-
-  &:hover {
-    background-color: black;
-    color: white;
   }
 `;
 

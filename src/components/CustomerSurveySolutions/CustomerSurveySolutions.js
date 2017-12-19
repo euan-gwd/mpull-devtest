@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import bdImage from './images/woman_telephone.png';
+import ButtonDark from '../Buttons/ButtonDark';
 
 class CustomerSurveySolutions extends Component {
   state = {};
@@ -14,8 +15,8 @@ class CustomerSurveySolutions extends Component {
             sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
           </Content>
           <ButtonGroup>
-            <Button>Read More</Button>
-            <Button>Customer Survey</Button>
+            <ButtonDark>Read More</ButtonDark>
+            <ButtonDark>Customer Survey</ButtonDark>
           </ButtonGroup>
         </Container>
       </BackDrop>
@@ -136,26 +137,5 @@ const ButtonGroup = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
-  }
-`;
-
-const Button = styled.button`
-  align-self: end;
-  margin: 0;
-  padding: 0.25rem;
-  box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
-  font-size: 1rem;
-  font-weight: 100;
-  color: black;
-  border: 1px solid black;
-  background-color: transparent;
-  height: 47px;
-  width: 75%;
-  cursor: pointer;
-
-  &:hover {
-    background-color: black;
-    color: white;
   }
 `;

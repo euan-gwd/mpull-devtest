@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import bdImage from './images/proven.png';
 import playIcon from './images/Play-ikon.svg';
+import ButtonLight from '../Buttons/ButtonLight';
 
 class ProvenByCustomers extends Component {
   state = {};
@@ -16,8 +17,8 @@ class ProvenByCustomers extends Component {
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <Button>Employee Survey</Button>
-              <Button>Customer Survey</Button>
+              <ButtonLight>Employee Survey</ButtonLight>
+              <ButtonLight>Customer Survey</ButtonLight>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
@@ -171,26 +172,6 @@ const ButtonGroup = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
-  }
-`;
-
-const Button = styled.button`
-  margin: 0;
-  padding: 0.25rem;
-  box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
-  font-size: 1rem;
-  font-weight: 100;
-  color: white;
-  border: 1px solid white;
-  background-color: transparent;
-  height: 47px;
-  width: 75%;
-  cursor: pointer;
-
-  &:hover {
-    background-color: white;
-    color: black;
   }
 `;
 

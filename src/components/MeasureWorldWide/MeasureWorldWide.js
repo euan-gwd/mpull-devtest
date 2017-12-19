@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import worldImage from './images/world.svg';
+import ButtonDark from '../Buttons/ButtonDark';
 
 class MeasureWorldWide extends Component {
   state = {};
@@ -19,7 +20,7 @@ class MeasureWorldWide extends Component {
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <Button>Read more</Button>
+              <ButtonDark>Read more</ButtonDark>
             </ButtonGroup>
           </RightColumn>
         </Container>
@@ -37,16 +38,6 @@ const BackDrop = styled.section`
   background-color: #fff;
   background-origin: border-box;
   background-size: cover;
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #fff;
-    background-origin: border-box;
-    background-size: cover;
-    background-position: 0 0, center;
-  }
 `;
 
 const Container = styled.div`
@@ -175,26 +166,6 @@ const ButtonGroup = styled.div`
     grid-column: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-`;
-
-const Button = styled.button`
-  margin: 0;
-  padding: 0.25rem;
-  box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
-  font-size: 1rem;
-  font-weight: 100;
-  color: black;
-  border: 1px solid black;
-  background-color: transparent;
-  height: 47px;
-  width: 75%;
-  cursor: pointer;
-
-  &:hover {
-    background-color: black;
-    color: white;
   }
 `;
 

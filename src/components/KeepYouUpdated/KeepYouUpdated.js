@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import ButtonLight from '../Buttons/ButtonLight';
 
 class KeepYouUpdated extends Component {
   state = {};
@@ -23,7 +24,9 @@ class KeepYouUpdated extends Component {
               <FormInputLabel>Email</FormInputLabel>
               <FormInput type="email" placeholder="Enter your email ..." />
             </FormInputGroup>
-            <Button>Submit</Button>
+            <ButtonGroup>
+              <ButtonLight>Submit</ButtonLight>
+            </ButtonGroup>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -172,28 +175,27 @@ const FormInput = styled.input`
   }
 `;
 
-const Button = styled.button`
+const ButtonGroup = styled.div`
+  grid-column: 1;
   align-self: end;
   margin: 0;
-  padding: 0.25rem;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-size: 1rem;
-  font-weight: 100;
+  font-weight: 400;
+  font-size: 1.5rem;
   text-transform: uppercase;
-  color: white;
-  border: 1px solid white;
-  background-color: transparent;
-  height: 47px;
-  width: 75%;
-  cursor: pointer;
-
-  &:hover {
-    background-color: white;
-    color: black;
-  }
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr;
 
   @media screen and (min-width: 768px) {
-    width: 50%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    grid-row: 4;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 `;

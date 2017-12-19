@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import phoneApp from './images/mobile.svg';
+import ButtonDark from '../Buttons/ButtonDark';
 
 class OurSurveySolutions extends Component {
   state = {};
@@ -15,7 +16,7 @@ class OurSurveySolutions extends Component {
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <Button>Read the new glex</Button>
+              <ButtonDark>Read the new glex</ButtonDark>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
@@ -183,26 +184,6 @@ const ButtonGroup = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
-  }
-`;
-
-const Button = styled.button`
-  margin: 0;
-  padding: 0.25rem;
-  box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
-  font-size: 1rem;
-  font-weight: 100;
-  color: black;
-  border: 1px solid black;
-  background-color: transparent;
-  height: 47px;
-  width: 75%;
-  cursor: pointer;
-
-  &:hover {
-    background-color: black;
-    color: white;
   }
 `;
 

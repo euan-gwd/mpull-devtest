@@ -217,6 +217,10 @@ const WebLink = styled.a`
     color: #8b5559;
     font-weight: 300;
   }
+
+  @media screen and (min-width: 768px) {
+    height: unset;
+  }
 `;
 
 const ButtonGroup = styled.div`
