@@ -37,7 +37,6 @@ const BackDrop = styled.section`
   background-color: #fff;
   background-origin: border-box;
   background-size: cover;
-  background-position: -3cm 0, center;
 
   @media screen and (min-width: 768px) {
     margin: 0;
@@ -55,7 +54,8 @@ const Container = styled.div`
   padding: 3rem 1rem 0;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr;
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
@@ -71,20 +71,18 @@ const Container = styled.div`
 const LeftColumn = styled.div`
   grid-row: 1;
   margin: 0;
-  padding: 0 2rem;
+  padding: 0;
   box-sizing: border-box;
   height: 100%;
-  display: inline-block;
+  display: grid;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
     grid-column: 1 / 4;
-    justify-self: end;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    width: 100%;
     display: grid;
   }
 `;
@@ -104,6 +102,7 @@ const RightColumn = styled.div`
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
   }
 `;
 
@@ -111,11 +110,9 @@ const Title = styled.h1`
   margin: 1rem;
   padding: 0;
   box-sizing: border-box;
-  position: relative;
-  top: -50px;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   color: black;
 
@@ -151,7 +148,6 @@ const Content = styled.p`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: unset;
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
     font-size: 1rem;
@@ -170,23 +166,19 @@ const ButtonGroup = styled.div`
   text-transform: uppercase;
   color: black;
   display: grid;
-  grid-row-gap: 1rem;
 
   @media screen and (min-width: 768px) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: unset;
     grid-row: 3;
     grid-column: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
   }
 `;
 
 const Button = styled.button`
-  align-self: center;
   margin: 0;
   padding: 0.25rem;
   box-sizing: border-box;
@@ -206,14 +198,14 @@ const Button = styled.button`
 `;
 
 const WorldImg = styled.img`
+  grid-row: 1;
+  grid-column: 1;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
-  height: 35vh;
+  height: auto;
   object-fit: cover;
-  position: relative;
-  top: -70px;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
@@ -221,17 +213,16 @@ const WorldImg = styled.img`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: unset;
     max-width: 100%;
-    height: 90%;
+    height: auto;
     object-fit: cover;
   }
 `;
 
 const WorldButton = styled.button`
-  position: relative;
+  grid-row: 1;
+  grid-column: 1;
   z-index: 2;
-  right: -140px;
   width: 139px;
   height: 139px;
   margin: 0;

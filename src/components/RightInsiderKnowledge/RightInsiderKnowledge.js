@@ -169,13 +169,11 @@ const ButtonGroup = styled.div`
   text-transform: uppercase;
   color: black;
   display: grid;
-  grid-row-gap: 1rem;
 
   @media screen and (min-width: 768px) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: unset;
     grid-row: 4;
     grid-column: 1;
     display: grid;
@@ -185,7 +183,6 @@ const ButtonGroup = styled.div`
 `;
 
 const Button = styled.button`
-  align-self: center;
   margin: 0;
   padding: 0.25rem;
   box-sizing: border-box;
