@@ -9,31 +9,39 @@ class BottomContactDetails extends Component {
         <Container>
           <ContactCard>
             <Title>Copenhagen</Title>
-            <Address>Store Kongensgade 81 DK-1264 Copenhagen K </Address>
+            <Address>
+              Store Kongensgade 81 <br /> DK-1264 Copenhagen K
+            </Address>
             <Telephone>+45 86 20 21 20</Telephone>
             <Email>email@ennova.com</Email>
-            <CVRId>CVR. nr. 19587347s</CVRId>
+            <CId>CVR. nr. 19587347s</CId>
           </ContactCard>
           <ContactCard>
-            <Title>Copenhagen</Title>
-            <Address>Store Kongensgade 81 DK-1264 Copenhagen K </Address>
-            <Telephone>+45 86 20 21 20</Telephone>
+            <Title>Oslo</Title>
+            <Address>
+              Kristian IVs gate 12 <br /> NO-0164 Oslo
+            </Address>
+            <Telephone>+47 95 83 78 45</Telephone>
             <Email>email@ennova.com</Email>
-            <CVRId>CVR. nr. 19587347s</CVRId>
+            <CId>Org. nr. 994 815 245</CId>
           </ContactCard>
           <ContactCard>
-            <Title>Copenhagen</Title>
-            <Address>Store Kongensgade 81 DK-1264 Copenhagen K </Address>
-            <Telephone>+45 86 20 21 20</Telephone>
+            <Title>Stockholm</Title>
+            <Address>
+              Östermalmsgaten 87 b, 1 <br />SE-114 59 Stockholm
+            </Address>
+            <Telephone>+46 (0) 8 545 670 80</Telephone>
             <Email>email@ennova.com</Email>
-            <CVRId>CVR. nr. 19587347s</CVRId>
+            <CId>Org. nr. 556 732 9312</CId>
           </ContactCard>
           <ContactCard>
-            <Title>Copenhagen</Title>
-            <Address>Store Kongensgade 81 DK-1264 Copenhagen K </Address>
+            <Title>Aarhus</Title>
+            <Address>
+              Daugbjergvej 26 <br /> DK-8000 Aarhus C
+            </Address>
             <Telephone>+45 86 20 21 20</Telephone>
             <Email>email@ennova.com</Email>
-            <CVRId>CVR. nr. 19587347s</CVRId>
+            <CId>CVR. nr. 19587347</CId>
           </ContactCard>
         </Container>
       </BackDrop>
@@ -79,18 +87,19 @@ const ContactCard = styled.article`
 `;
 
 const Title = styled.h1`
-  margin: 0;
+  margin: 0 0 1rem;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
   font-size: 1.5rem;
+  text-transform: uppercase;
   color: black;
 `;
 
 const Address = styled.p`
   margin: 0;
-  padding: 0;
+  padding: 0 2rem 0 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
@@ -110,8 +119,20 @@ const Telephone = styled.p`
   color: black;
 `;
 
-const Email = styled.p`
+const Email = styled.a`
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: #8b5559;
+  cursor: pointer;
+`;
+
+const CId = styled.p`
+  margin: 1rem 0 0 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -121,13 +142,18 @@ const Email = styled.p`
   color: black;
 `;
 
-const CVRId = styled.p`
+const Links = styled.a`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.5rem;
   font-size: 1rem;
   color: black;
+  cursor: pointer;
+
+  &:hover {
+    color: #8b5559;
+  }
 `;
