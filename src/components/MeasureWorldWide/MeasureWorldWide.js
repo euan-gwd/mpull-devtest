@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import offerImage from './images/offer.png';
+import worldImage from './images/world.svg';
 
 class MeasureWorldWide extends Component {
   state = {};
@@ -9,18 +9,18 @@ class MeasureWorldWide extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>We have the right insider Knowledge</Title>
+            <WorldButton>What Does it me to you?</WorldButton>
+            <WorldImg src={worldImage} alt="offerImage" />
+          </LeftColumn>
+          <RightColumn>
+            <Title>We measure worldwide</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <Button>Read the new glex</Button>
+              <Button>Read more</Button>
             </ButtonGroup>
-          </LeftColumn>
-          <RightColumn>
-            <OfferButton>Get new insights in our survey rapport</OfferButton>
-            <OfferImg src={offerImage} alt="offerImage" />
           </RightColumn>
         </Container>
       </BackDrop>
@@ -34,7 +34,7 @@ const BackDrop = styled.section`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f0f1f0;
+  background-color: #fff;
   background-origin: border-box;
   background-size: cover;
   background-position: -3cm 0, center;
@@ -43,7 +43,7 @@ const BackDrop = styled.section`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f0f1f0;
+    background-color: #fff;
     background-origin: border-box;
     background-size: cover;
     background-position: 0 0, center;
@@ -69,24 +69,6 @@ const Container = styled.div`
 `;
 
 const LeftColumn = styled.div`
-  grid-row: 2;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  @media screen and (min-width: 768px) {
-    grid-row: 1;
-    grid-column: 1 / 4;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr;
-  }
-`;
-
-const RightColumn = styled.div`
   grid-row: 1;
   margin: 0;
   padding: 0 2rem;
@@ -96,13 +78,32 @@ const RightColumn = styled.div`
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
-    grid-column: 4 / 7;
+    grid-column: 1 / 4;
     justify-self: end;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    display: inline-block;
+    width: 100%;
+    display: grid;
+  }
+`;
+
+const RightColumn = styled.div`
+  grid-row: 2;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: 4 / 7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -145,10 +146,10 @@ const Content = styled.p`
   color: black;
 
   @media screen and (min-width: 768px) {
-    grid-row: 3;
+    grid-row: 2;
     grid-column: 1;
     margin: 0;
-    padding: 0 3.5rem 0 0;
+    padding: 0;
     box-sizing: border-box;
     position: unset;
     font-family: 'Roboto Slab', serif;
@@ -176,7 +177,7 @@ const ButtonGroup = styled.div`
     padding: 0;
     box-sizing: border-box;
     position: unset;
-    grid-row: 4;
+    grid-row: 3;
     grid-column: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -204,7 +205,7 @@ const Button = styled.button`
   }
 `;
 
-const OfferImg = styled.img`
+const WorldImg = styled.img`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -215,17 +216,19 @@ const OfferImg = styled.img`
   top: -70px;
 
   @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: 1;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     position: unset;
     max-width: 100%;
-    height: auto;
+    height: 90%;
     object-fit: cover;
   }
 `;
 
-const OfferButton = styled.button`
+const WorldButton = styled.button`
   position: relative;
   z-index: 2;
   right: -140px;
@@ -250,14 +253,16 @@ const OfferButton = styled.button`
   }
 
   @media screen and (min-width: 768px) {
-    position: relative;
-    top: -200px;
-    right: -410px;
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: start;
+    z-index: 2;
     width: 139px;
     height: 139px;
     margin: 0;
     padding: 0.25rem;
     box-sizing: border-box;
+    position: unset;
     font-family: 'Roboto Slab', serif;
     font-size: 1rem;
     font-weight: 300;

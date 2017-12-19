@@ -6,11 +6,11 @@ import PositiveChange from './PositiveChange/PositiveChange';
 import CustomerSurveySolutions from './CustomerSurveySolutions/CustomerSurveySolutions';
 import RightInsiderKnowledge from './RightInsiderKnowledge/RightInsiderKnowledge';
 import MeasureWorldWide from './MeasureWorldWide/MeasureWorldWide';
-import ProvenByCustomers from './ProvenByCustomers/ProvenByCustomers';
-import WhoWeWorkWith from './WhoWeWorkWith/WhoWeWorkWith';
-import OurSurveySolutions from './OurSurveySolutions/OurSurveySolutions';
-import KeepYouUpdated from './KeepYouUpdated/KeepYouUpdated';
-import Bottom from './Bottom/Bottom';
+// import ProvenByCustomers from './ProvenByCustomers/ProvenByCustomers';
+// import WhoWeWorkWith from './WhoWeWorkWith/WhoWeWorkWith';
+// import OurSurveySolutions from './OurSurveySolutions/OurSurveySolutions';
+// import KeepYouUpdated from './KeepYouUpdated/KeepYouUpdated';
+// import Bottom from './Bottom/Bottom';
 
 class Home extends Component {
   state = {
