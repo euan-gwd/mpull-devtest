@@ -35,19 +35,7 @@ const BackDrop = styled.section`
   padding: 0;
   box-sizing: border-box;
   background-color: #f0f1f0;
-  background-origin: border-box;
   background-size: cover;
-  background-position: -3cm 0, center;
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f0f1f0;
-    background-origin: border-box;
-    background-size: cover;
-    background-position: 0 0, center;
-  }
 `;
 
 const Container = styled.div`
@@ -193,7 +181,7 @@ const Button = styled.button`
   border: 1px solid black;
   background-color: transparent;
   height: 47px;
-  width: 75%;
+  width: 85%;
   cursor: pointer;
 
   &:hover {
