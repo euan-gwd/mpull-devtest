@@ -1,48 +1,31 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import bdImage from './images/woman_telephone.png';
 
-class Bottom extends Component {
+class BottomContactDetails extends Component {
   state = {};
   render() {
     return (
-      <BackDrop image={bdImage}>
+      <BackDrop>
         <Container>
           <Title>We do Proven Survey Solutions</Title>
           <Content>
             Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere parior
             sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
           </Content>
-          <ButtonGroup>
-            <Button>Read More</Button>
-            <Button>Customer Survey</Button>
-          </ButtonGroup>
+          <Button>Read More</Button>
         </Container>
       </BackDrop>
     );
   }
 }
 
-export default Bottom;
+export default BottomContactDetails;
 
 const BackDrop = styled.section`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(${props => props.image}) no-repeat;
-  background-origin: border-box;
-  background-size: cover;
-  background-position: -3cm 0, center;
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: url(${props => props.image}) no-repeat;
-    background-origin: border-box;
-    background-size: cover;
-    background-position: 0 0, center;
-  }
+  background: grey;
 `;
 
 const Container = styled.div`
