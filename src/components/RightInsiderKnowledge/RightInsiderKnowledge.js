@@ -52,7 +52,7 @@ const BackDrop = styled.section`
 
 const Container = styled.div`
   margin: 0;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 0;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -110,6 +110,8 @@ const Title = styled.h1`
   margin: 1rem;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
+  top: -50px;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
   font-size: 1.5rem;
@@ -123,6 +125,7 @@ const Title = styled.h1`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    position: unset;
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
     font-size: 3rem;
@@ -132,7 +135,7 @@ const Title = styled.h1`
 `;
 
 const Content = styled.p`
-  margin: 1rem;
+  margin: 2rem 1rem 2rem;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -147,6 +150,7 @@ const Content = styled.p`
     margin: 0;
     padding: 0 3.5rem 0 0;
     box-sizing: border-box;
+    position: unset;
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
     font-size: 1rem;
@@ -170,6 +174,8 @@ const ButtonGroup = styled.div`
   @media screen and (min-width: 768px) {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    position: unset;
     grid-row: 4;
     grid-column: 1;
     display: grid;
@@ -209,9 +215,10 @@ const OfferImg = styled.img`
   top: -70px;
 
   @media screen and (min-width: 768px) {
-    margin: 3rem 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
+    position: unset;
     max-width: 100%;
     height: auto;
     object-fit: cover;
@@ -244,7 +251,7 @@ const OfferButton = styled.button`
 
   @media screen and (min-width: 768px) {
     position: relative;
-    bottom: 310px;
+    top: -200px;
     right: -410px;
     width: 139px;
     height: 139px;

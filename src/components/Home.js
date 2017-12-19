@@ -32,8 +32,8 @@ class Home extends Component {
         <PositiveChange />
         <CustomerSurveySolutions />
         <RightInsiderKnowledge />
-        {/* <MeasureWorldWide />
-        <ProvenByCustomers />
+        <MeasureWorldWide />
+        {/* <ProvenByCustomers />
         <WhoWeWorkWith />
         <OurSurveySolutions />
         <KeepYouUpdated />
