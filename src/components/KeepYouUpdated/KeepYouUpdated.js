@@ -15,17 +15,15 @@ class KeepYouUpdated extends Component {
               We empower organizations and leaders to improve the employee and customer experience
               through proven, concise and engaging advisory.
             </FormHeader>
-            <Form>
-              <InputGroup>
-                <label htmlFor="name" />
-                <input type="text" name="" id="name" />
-              </InputGroup>
-              <InputGroup>
-                <label htmlFor="email" />
-                <input type="email" name="" id="email" />
-              </InputGroup>
-              <Button>Submit</Button>
-            </Form>
+            <FormInputGroup>
+              <FormInputLabel>Name</FormInputLabel>
+              <FormInput type="text" placeholder="Enter your name ..." />
+            </FormInputGroup>
+            <FormInputGroup>
+              <FormInputLabel>Email</FormInputLabel>
+              <FormInput type="email" placeholder="Enter your email ..." />
+            </FormInputGroup>
+            <Button>Submit</Button>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -44,10 +42,10 @@ const BackDrop = styled.section`
 
 const Container = styled.div`
   margin: 0;
-  padding: 3rem 1rem 0;
+  padding: 3rem 1rem;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 2rem;
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
@@ -61,12 +59,9 @@ const Container = styled.div`
 `;
 
 const LeftColumn = styled.div`
-  grid-row: 1;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100%;
-  display: grid;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
@@ -79,12 +74,11 @@ const LeftColumn = styled.div`
 `;
 
 const RightColumn = styled.div`
-  grid-row: 2;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100%;
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
@@ -94,8 +88,8 @@ const RightColumn = styled.div`
     box-sizing: border-box;
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr
-    grid-row-gap: 2rem;
+    grid-template-rows: repeat (4, 1fr);
+    grid-row-gap: 1rem;
   }
 `;
 
@@ -125,7 +119,6 @@ const Title = styled.h1`
 `;
 
 const FormHeader = styled.p`
-  align-self: center;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -134,43 +127,53 @@ const FormHeader = styled.p`
   font-size: 1rem;
   line-height: 1.5rem;
   color: white;
+`;
 
-  @media screen and (min-width: 768px) {
-    grid-row: 1;
-    grid-column: 1;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto Slab', serif;
-    font-weight: 100;
-    font-size: 1rem;
-    line-height: 1.5rem;
+const FormInputGroup = styled.div`
+  align-self: end;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
+`;
+
+const FormInputLabel = styled.p`
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: grey;
+`;
+
+const FormInput = styled.input`
+  margin: 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 100;
+  color: white;
+  border: 1px solid grey;
+  background-color: grey;
+  height: 47px;
+  min-width: 100%;
+
+  &::placeholder {
     color: white;
   }
-`;
 
-const Form = styled.form`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-`;
-
-const InputGroup = styled.div`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  display: grid;
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-rows: 1fr 2fr;
+  &::-moz-placeholder {
+    opacity: 1;
   }
 `;
 
 const Button = styled.button`
+  align-self: end;
   margin: 0;
   padding: 0.25rem;
   box-sizing: border-box;
@@ -182,6 +185,7 @@ const Button = styled.button`
   border: 1px solid white;
   background-color: transparent;
   height: 47px;
+  width: 50%;
   cursor: pointer;
 
   &:hover {
