@@ -211,6 +211,7 @@ const WebLink = styled.a`
   display: block;
   color: black;
   cursor: pointer;
+  height: 40px;
 
   &:hover {
     color: #8b5559;
@@ -219,7 +220,7 @@ const WebLink = styled.a`
 `;
 
 const ButtonGroup = styled.div`
-  margin: 0;
+  margin: 2rem 0 0;
   padding: 0;
   box-sizing: border-box;
   display: grid;
@@ -301,7 +302,7 @@ const ButtonText = styled.a`
 `;
 
 const CopyRightFooter = styled.span`
-  margin: 3rem 0 0;
+  margin: 1rem 0 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
