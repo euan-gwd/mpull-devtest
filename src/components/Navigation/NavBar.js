@@ -122,6 +122,10 @@ const ToolBar = styled.header`
   box-shadow: 0px 1px 2px 0px rgba(160, 165, 170, 0.75);
   height: 45px;
   z-index: 5;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  background-color: white;
 `;
 
 //Main Navigation Styles
