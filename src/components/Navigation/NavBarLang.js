@@ -57,6 +57,7 @@ const NavigationLanguage = styled.div`
     align-items: center;
     height: 45px;
     max-width: 1024px;
+    border-left: 1px solid black;
   }
 `;
 
