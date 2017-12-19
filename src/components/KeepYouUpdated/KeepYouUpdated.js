@@ -1,22 +1,32 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import bdImage from './images/woman_telephone.png';
 
 class KeepYouUpdated extends Component {
   state = {};
   render() {
     return (
-      <BackDrop image={bdImage}>
+      <BackDrop>
         <Container>
-          <Title>We do Proven Survey Solutions</Title>
-          <Content>
-            Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere parior
-            sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
-          </Content>
-          <ButtonGroup>
-            <Button>Read More</Button>
-            <Button>Customer Survey</Button>
-          </ButtonGroup>
+          <LeftColumn>
+            <Title>We love to keep you updated</Title>
+          </LeftColumn>
+          <RightColumn>
+            <FormHeader>
+              We empower organizations and leaders to improve the employee and customer experience
+              through proven, concise and engaging advisory.
+            </FormHeader>
+            <Form>
+              <InputGroup>
+                <label htmlFor="name" />
+                <input type="text" name="" id="name" />
+              </InputGroup>
+              <InputGroup>
+                <label htmlFor="email" />
+                <input type="email" name="" id="email" />
+              </InputGroup>
+              <Button>Submit</Button>
+            </Form>
+          </RightColumn>
         </Container>
       </BackDrop>
     );
@@ -29,132 +39,153 @@ const BackDrop = styled.section`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(${props => props.image}) no-repeat;
-  background-origin: border-box;
-  background-size: cover;
-  background-position: -3cm 0, center;
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: url(${props => props.image}) no-repeat;
-    background-origin: border-box;
-    background-size: cover;
-    background-position: 0 0, center;
-  }
+  background-color: #000;
 `;
 
 const Container = styled.div`
   margin: 0;
-  padding: 3rem 0;
+  padding: 3rem 1rem 0;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 0.25fr 1fr 1fr;
-  grid-template-columns: 1fr;
-  align-items: center;
+  grid-template-rows: 1fr 1fr;
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
     padding: 3rem 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     grid-template-columns: repeat(6, 1fr);
     max-width: 1024px;
   }
 `;
 
+const LeftColumn = styled.div`
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  display: grid;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: 1 / 4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+  }
+`;
+
+const RightColumn = styled.div`
+  grid-row: 2;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  display: grid;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: 4 / 7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr
+    grid-row-gap: 2rem;
+  }
+`;
+
 const Title = styled.h1`
-  margin: 1rem;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
-  color: black;
+  color: white;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
-    grid-column: 4 / 7;
-    align-self: end;
+    grid-column: 1;
     margin: 0;
-    padding: 0 6rem 0 0;
+    padding: 0;
     box-sizing: border-box;
+    position: unset;
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
     font-size: 3rem;
     text-transform: uppercase;
-    color: black;
+    color: white;
   }
 `;
 
-const Content = styled.p`
-  margin: 1rem;
+const FormHeader = styled.p`
+  align-self: center;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: black;
+  color: white;
 
   @media screen and (min-width: 768px) {
-    grid-row: 2;
-    grid-column: 4 / 7;
-    align-self: end;
-    justify-self: start;
+    grid-row: 1;
+    grid-column: 1;
     margin: 0;
-    padding: 0 3.5rem 0 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
     font-size: 1rem;
     line-height: 1.5rem;
-    color: black;
+    color: white;
   }
 `;
 
-const ButtonGroup = styled.div`
-  margin: 0 1rem;
+const Form = styled.form`
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  color: black;
+`;
+
+const InputGroup = styled.div`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   display: grid;
-  grid-row-gap: 1rem;
 
   @media screen and (min-width: 768px) {
     margin: 0;
     padding: 0;
-    grid-row: 3;
-    grid-column: 4 / 7;
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
+    grid-template-rows: 1fr 2fr;
   }
 `;
 
 const Button = styled.button`
-  align-self: end;
   margin: 0;
   padding: 0.25rem;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: 100;
-  color: black;
-  border: 1px solid black;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid white;
   background-color: transparent;
   height: 47px;
   cursor: pointer;
 
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
   }
 `;
