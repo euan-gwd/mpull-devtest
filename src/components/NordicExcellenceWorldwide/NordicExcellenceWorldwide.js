@@ -93,6 +93,6 @@ const Content = styled.div`
     font-weight: 100;
     line-height: 1.5rem;
     font-size: 1rem;
-    color: black;
+    color: grey;
   }
 `;

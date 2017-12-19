@@ -7,11 +7,34 @@ class BottomContactDetails extends Component {
     return (
       <BackDrop>
         <Container>
-          <Title>Nordic Excellence Worldwide</Title>
-          <Content>
-            Ennova leverer viden, der forandrer. Vi rådgiver gennem hele processen, så ny viden
-            bliver forankret i virksomheden – og fører til den ønskede forandring.
-          </Content>
+          <ContactCard>
+            <Title>Copenhagen</Title>
+            <Address>Store Kongensgade 81 DK-1264 Copenhagen K </Address>
+            <Telephone>+45 86 20 21 20</Telephone>
+            <Email>email@ennova.com</Email>
+            <CVRId>CVR. nr. 19587347s</CVRId>
+          </ContactCard>
+          <ContactCard>
+            <Title>Copenhagen</Title>
+            <Address>Store Kongensgade 81 DK-1264 Copenhagen K </Address>
+            <Telephone>+45 86 20 21 20</Telephone>
+            <Email>email@ennova.com</Email>
+            <CVRId>CVR. nr. 19587347s</CVRId>
+          </ContactCard>
+          <ContactCard>
+            <Title>Copenhagen</Title>
+            <Address>Store Kongensgade 81 DK-1264 Copenhagen K </Address>
+            <Telephone>+45 86 20 21 20</Telephone>
+            <Email>email@ennova.com</Email>
+            <CVRId>CVR. nr. 19587347s</CVRId>
+          </ContactCard>
+          <ContactCard>
+            <Title>Copenhagen</Title>
+            <Address>Store Kongensgade 81 DK-1264 Copenhagen K </Address>
+            <Telephone>+45 86 20 21 20</Telephone>
+            <Email>email@ennova.com</Email>
+            <CVRId>CVR. nr. 19587347s</CVRId>
+          </ContactCard>
         </Container>
       </BackDrop>
     );
@@ -24,7 +47,7 @@ const BackDrop = styled.section`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: white;
+  background-color: lightgrey;
   background-size: cover;
 `;
 
@@ -43,38 +66,30 @@ const Container = styled.div`
     box-sizing: border-box;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
     max-width: 1024px;
   }
 `;
 
+const ContactCard = styled.article`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+`;
+
 const Title = styled.h1`
-  margin: 1rem 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
   font-size: 1.5rem;
-  text-transform: uppercase;
   color: black;
-
-  @media screen and (min-width: 768px) {
-    grid-row: 1;
-    grid-column: 1 / 4;
-    align-self: start;
-    margin: 0 2rem 0 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: black;
-  }
 `;
 
-const Content = styled.div`
-  margin: 1rem 0;
+const Address = styled.p`
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -82,17 +97,37 @@ const Content = styled.div`
   line-height: 1.5rem;
   font-size: 1rem;
   color: black;
+`;
 
-  @media screen and (min-width: 768px) {
-    grid-row: 2;
-    grid-column: 1 / 4;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto Slab', serif;
-    font-weight: 100;
-    line-height: 1.5rem;
-    font-size: 1rem;
-    color: black;
-  }
+const Telephone = styled.p`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: black;
+`;
+
+const Email = styled.p`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: black;
+`;
+
+const CVRId = styled.p`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  color: black;
 `;
