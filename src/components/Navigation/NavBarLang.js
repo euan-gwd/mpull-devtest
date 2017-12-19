@@ -70,8 +70,9 @@ const Logo = styled.a`
   @media screen and (min-width: 768px) {
     grid-column: 1 / 3;
     justify-self: start;
+    align-self: center;
     margin: 0;
-    padding: 0;
+    padding: 4px 0 0;
     box-sizing: border-box;
     display: block;
   }
@@ -83,7 +84,7 @@ const LanguageNavItemList = styled.div`
   padding: 0;
   box-sizing: border-box;
   border: 0;
-  height: 44px;
+  height: 45px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 
@@ -157,7 +158,7 @@ const CloseNavBtn = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    justify-self: end;
+    justify-self: start;
     grid-column: 10 / 10;
     cursor: pointer;
   }
