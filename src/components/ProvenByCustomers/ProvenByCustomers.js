@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import bdImage from './images/woman_telephone.png';
+import bdImage from './images/proven.png';
 
 class ProvenByCustomers extends Component {
   state = {};
@@ -8,13 +8,13 @@ class ProvenByCustomers extends Component {
     return (
       <BackDrop image={bdImage}>
         <Container>
-          <Title>We do Proven Survey Solutions</Title>
+          <Title>Our Proven Survey Solutions</Title>
           <Content>
             Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere parior
             sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
           </Content>
           <ButtonGroup>
-            <Button>Read More</Button>
+            <Button>Employee Survey</Button>
             <Button>Customer Survey</Button>
           </ButtonGroup>
         </Container>
@@ -32,7 +32,7 @@ const BackDrop = styled.section`
   background: url(${props => props.image}) no-repeat;
   background-origin: border-box;
   background-size: cover;
-  background-position: -3cm 0, center;
+  background-position: 0 0, center;
 
   @media screen and (min-width: 768px) {
     margin: 0;
@@ -73,11 +73,11 @@ const Title = styled.h1`
   font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
-  color: black;
+  color: white;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
-    grid-column: 4 / 7;
+    grid-column: 1 / 4;
     align-self: end;
     margin: 0;
     padding: 0 6rem 0 0;
@@ -86,7 +86,7 @@ const Title = styled.h1`
     font-weight: 400;
     font-size: 3rem;
     text-transform: uppercase;
-    color: black;
+    color: white;
   }
 `;
 
@@ -98,11 +98,11 @@ const Content = styled.p`
   font-weight: 100;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: black;
+  color: white;
 
   @media screen and (min-width: 768px) {
     grid-row: 2;
-    grid-column: 4 / 7;
+    grid-column: 1 / 4;
     align-self: end;
     justify-self: start;
     margin: 0;
@@ -112,7 +112,7 @@ const Content = styled.p`
     font-weight: 100;
     font-size: 1rem;
     line-height: 1.5rem;
-    color: black;
+    color: white;
   }
 `;
 
@@ -124,7 +124,7 @@ const ButtonGroup = styled.div`
   font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
-  color: black;
+  color: white;
   display: grid;
   grid-row-gap: 1rem;
 
@@ -132,7 +132,7 @@ const ButtonGroup = styled.div`
     margin: 0;
     padding: 0;
     grid-row: 3;
-    grid-column: 4 / 7;
+    grid-column: 1 / 4;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
@@ -147,14 +147,14 @@ const Button = styled.button`
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: 100;
-  color: black;
-  border: 1px solid black;
+  color: white;
+  border: 1px solid white;
   background-color: transparent;
   height: 47px;
   cursor: pointer;
 
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
   }
 `;
