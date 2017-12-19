@@ -37,10 +37,11 @@ const BackDrop = styled.section`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: url(${props => props.image}) no-repeat left;
+  background-color: grey;
+  background: url(${props => props.image}) no-repeat;
   background-origin: border-box;
   background-size: cover;
-  background-position: 0 0, center;
+  background-position-x: right;
 
   @media screen and (min-width: 768px) {
     margin: 0;
