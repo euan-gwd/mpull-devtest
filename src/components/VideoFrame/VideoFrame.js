@@ -38,7 +38,7 @@ const BackDrop = styled.section`
 `;
 
 const Container = styled.div`
-  margin: 0;
+  margin: 45px 0 0;
   padding: 1rem 1rem 0.25rem 1rem;
   box-sizing: border-box;
   display: grid;
@@ -46,7 +46,7 @@ const Container = styled.div`
   grid-template-columns: repeat(3, 33.3%);
 
   @media screen and (min-width: 768px) {
-    margin: 0 auto;
+    margin: 45px auto 0;
     padding: 3rem 0;
     box-sizing: border-box;
     display: grid;
