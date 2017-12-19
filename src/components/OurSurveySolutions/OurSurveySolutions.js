@@ -19,8 +19,8 @@ class OurSurveySolutions extends Component {
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
-            <OfferImg src={phoneApp} alt="phone" />
             <OfferButton>Try our survey trial version</OfferButton>
+            <OfferImg src={phoneApp} alt="phone" />
           </RightColumn>
         </Container>
       </BackDrop>
@@ -210,6 +210,8 @@ const OfferImg = styled.img`
   object-fit: cover;
 
   @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: 1;
     justify-self: end;
     margin: 0;
     padding: 0;
@@ -242,6 +244,9 @@ const OfferButton = styled.button`
   }
 
   @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: 2;
+    z-index: 2;
     width: 139px;
     height: 139px;
     margin: 0;
