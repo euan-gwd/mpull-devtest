@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import videoPlaceHolder from './images/man_tablet.png';
-import playIcon from '../../assets/Play-ikon.svg';
+import playIcon from './images/Play-ikon.svg';
 import iso from './images/ISO.svg';
 import aaa from './images/AAA.svg';
 import esomar from './images/ESOMAR.png';
