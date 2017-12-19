@@ -10,7 +10,7 @@ import ProvenByCustomers from './ProvenByCustomers/ProvenByCustomers';
 import WhoWeWorkWith from './WhoWeWorkWith/WhoWeWorkWith';
 import OurSurveySolutions from './OurSurveySolutions/OurSurveySolutions';
 import KeepYouUpdated from './KeepYouUpdated/KeepYouUpdated';
-import Bottom from './Bottom/Bottom';
+import BottomContactDetails from './BottomContactDetails/BottomContactDetails';
 
 class Home extends Component {
   state = {
@@ -37,7 +37,7 @@ class Home extends Component {
         <WhoWeWorkWith />
         <OurSurveySolutions />
         <KeepYouUpdated />
-        <Bottom />
+        <BottomContactDetails />
       </Fragment>
     );
   }
