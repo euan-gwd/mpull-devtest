@@ -43,6 +43,35 @@ class BottomContactDetails extends Component {
             <Email>email@ennova.com</Email>
             <CId>CVR. nr. 19587347</CId>
           </ContactCard>
+          <ContactLink>
+            <Title>Company</Title>
+            <WebLink>About</WebLink>
+            <WebLink>Career</WebLink>
+            <WebLink>Press &amp; Media</WebLink>
+            <WebLink>Bloggers</WebLink>
+            <WebLink>Contact Us</WebLink>
+          </ContactLink>
+          <ContactLink>
+            <Title>Terms</Title>
+            <WebLink>Data Security</WebLink>
+            <WebLink>Privacy Policy</WebLink>
+            <WebLink>Help &amp; Support</WebLink>
+            <WebLink>Site Map</WebLink>
+          </ContactLink>
+          <ContactLink>
+            <Title>Knowledge</Title>
+            <WebLink>News</WebLink>
+            <WebLink>Reports</WebLink>
+            <WebLink>Events</WebLink>
+          </ContactLink>
+          <ContactLink show>
+            <Title>Follow</Title>
+            <WebLink>LinkedIn</WebLink>
+            <WebLink>Twitter</WebLink>
+            <WebLink>Facebook</WebLink>
+            <WebLink>Youtube</WebLink>
+            <WebLink>Newsletter</WebLink>
+          </ContactLink>
         </Container>
       </BackDrop>
     );
@@ -64,9 +93,7 @@ const Container = styled.div`
   padding: 0;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 0.25fr 1fr;
-  grid-template-columns: 1fr;
-  align-items: center;
+  /* grid-row-gap: 4rem; */
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
@@ -75,15 +102,36 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 6rem 1rem;
     max-width: 1024px;
   }
 `;
 
 const ContactCard = styled.article`
+  margin: 3rem 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+`;
+
+const ContactLink = styled.article`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: ${props => (props.show ? 'block' : 'none')};
+
+  @media screen and (min-width: 768px) {
+    align-self: stretch;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+  }
 `;
 
 const Title = styled.h1`
@@ -124,11 +172,16 @@ const Email = styled.a`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.5rem;
   font-size: 1rem;
-  color: #8b5559;
+  color: black;
   cursor: pointer;
+
+  &:hover {
+    color: #8b5559;
+    font-weight: 300;
+  }
 `;
 
 const CId = styled.p`
@@ -142,18 +195,20 @@ const CId = styled.p`
   color: black;
 `;
 
-const Links = styled.a`
+const WebLink = styled.a`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.5rem;
   font-size: 1rem;
+  display: block;
   color: black;
   cursor: pointer;
 
   &:hover {
     color: #8b5559;
+    font-weight: 300;
   }
 `;
