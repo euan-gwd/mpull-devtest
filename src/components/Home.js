@@ -36,7 +36,7 @@ class Home extends Component {
         <ProvenByCustomers />
         <WhoWeWorkWith />
         <OurSurveySolutions />
-        {/* <KeepYouUpdated /> */}
+        <KeepYouUpdated />
         {/* <Bottom /> */}
       </Fragment>
     );
