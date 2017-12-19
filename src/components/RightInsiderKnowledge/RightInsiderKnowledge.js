@@ -244,7 +244,7 @@ const OfferButton = styled.button`
 
   @media screen and (min-width: 768px) {
     position: relative;
-    top: -250px;
+    bottom: 310px;
     right: -410px;
     width: 139px;
     height: 139px;
