@@ -95,7 +95,7 @@ const BackDrop = styled.section`
 `;
 
 const Container = styled.div`
-  margin: 3rem 1rem;
+  margin: 3rem 1rem 0;
   padding: 0;
   box-sizing: border-box;
   display: grid;
@@ -219,13 +219,22 @@ const WebLink = styled.a`
 `;
 
 const ButtonGroup = styled.div`
-  grid-column: 1 / 5;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1 / 5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const UpArrow = styled.img`
@@ -239,6 +248,19 @@ const UpArrow = styled.img`
   color: #818181;
   max-width: 100%;
   height: 1rem;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: span 2;
+    align-self: end;
+    justify-self: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #818181;
+    max-width: 100%;
+    height: 1rem;
+  }
 `;
 
 const ButtonText = styled.a`
@@ -252,22 +274,34 @@ const ButtonText = styled.a`
   font-weight: 300;
   line-height: 1.5rem;
   font-size: 1rem;
-  color: black;
+  color: #818181;
   text-decoration: none;
   cursor: pointer;
 
-  &:hover {
-    color: #8b5559;
+  @media screen and (min-width: 768px) {
+    grid-row: 2;
+    grid-column: 1 / 3;
+    justify-self: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
     font-weight: 300;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #8b5559;
+      font-weight: 300;
+    }
   }
 `;
 
 const CopyRightFooter = styled.span`
-  grid-row: 2;
-  grid-column: 2;
-  justify-self: end;
-  z-index: 2;
-  margin: 0;
+  margin: 3rem 0 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -275,4 +309,19 @@ const CopyRightFooter = styled.span`
   line-height: 1.5rem;
   font-size: 1rem;
   color: #818181;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 2;
+    grid-column: 2;
+    justify-self: end;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: #818181;
+  }
 `;
