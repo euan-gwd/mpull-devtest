@@ -56,7 +56,7 @@ const BackDrop = styled.section`
 
 const Container = styled.div`
   margin: 0;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   box-sizing: border-box;
   display: grid;
 
@@ -71,7 +71,7 @@ const Container = styled.div`
 `;
 
 const LeftColumn = styled.div`
-  margin: 1rem;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   display: grid;
@@ -89,7 +89,7 @@ const LeftColumn = styled.div`
 `;
 
 const RightColumn = styled.div`
-  margin: 1rem;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   display: grid;

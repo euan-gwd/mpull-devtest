@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import kunder from './images/kunder.svg';
+import clients from './images/clients.png';
 
 class WhoWeWorkWith extends Component {
   state = {};
@@ -9,11 +9,10 @@ class WhoWeWorkWith extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <WorldButton>What Does it me to you?</WorldButton>
-            <WorldImg src={kunder} alt="offerImage" />
+            <ImgTable src={clients} alt="offerImage" />
           </LeftColumn>
           <RightColumn>
-            <Title>We measure worldwide</Title>
+            <Title>Who We Work With</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
@@ -51,10 +50,10 @@ const BackDrop = styled.section`
 
 const Container = styled.div`
   margin: 0;
-  padding: 3rem 1rem 0;
+  padding: 3rem 1rem;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
 
   @media screen and (min-width: 768px) {
@@ -74,7 +73,6 @@ const LeftColumn = styled.div`
   padding: 0;
   box-sizing: border-box;
   height: 100%;
-  display: grid;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
@@ -102,28 +100,25 @@ const RightColumn = styled.div`
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
-    grid-row-gap: 2rem;
   }
 `;
 
 const Title = styled.h1`
-  margin: 1rem;
-  padding: 0;
+  margin: 0;
+  padding: 0 1rem;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
     grid-column: 1;
-    align-self: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: unset;
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
     font-size: 3rem;
@@ -197,7 +192,7 @@ const Button = styled.button`
   }
 `;
 
-const WorldImg = styled.img`
+const ImgTable = styled.img`
   grid-row: 1;
   grid-column: 1;
   margin: 0;
@@ -216,58 +211,5 @@ const WorldImg = styled.img`
     max-width: 100%;
     height: auto;
     object-fit: cover;
-  }
-`;
-
-const WorldButton = styled.button`
-  grid-row: 1;
-  grid-column: 1;
-  z-index: 2;
-  width: 139px;
-  height: 139px;
-  margin: 0;
-  padding: 0.5rem;
-  box-sizing: border-box;
-  font-family: 'Roboto Slab', serif;
-  font-size: 1rem;
-  font-weight: 300;
-  color: black;
-  text-transform: uppercase;
-  border: 1px solid black;
-  border-radius: 50% 50%;
-  background-color: transparent;
-  cursor: pointer;
-
-  &:hover {
-    background-color: black;
-    color: white;
-  }
-
-  @media screen and (min-width: 768px) {
-    grid-row: 1;
-    grid-column: 1;
-    justify-self: start;
-    z-index: 2;
-    width: 139px;
-    height: 139px;
-    margin: 0;
-    padding: 0.25rem;
-    box-sizing: border-box;
-    position: unset;
-    font-family: 'Roboto Slab', serif;
-    font-size: 1rem;
-    font-weight: 300;
-    color: black;
-    text-transform: uppercase;
-    border: 1px solid black;
-    border-radius: 50% 50%;
-    border-spacing: 1rem;
-    background-color: transparent;
-    cursor: pointer;
-
-    &:hover {
-      background-color: black;
-      color: white;
-    }
   }
 `;

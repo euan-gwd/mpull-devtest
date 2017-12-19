@@ -8,7 +8,7 @@ import RightInsiderKnowledge from './RightInsiderKnowledge/RightInsiderKnowledge
 import MeasureWorldWide from './MeasureWorldWide/MeasureWorldWide';
 import ProvenByCustomers from './ProvenByCustomers/ProvenByCustomers';
 import WhoWeWorkWith from './WhoWeWorkWith/WhoWeWorkWith';
-// import OurSurveySolutions from './OurSurveySolutions/OurSurveySolutions';
+import OurSurveySolutions from './OurSurveySolutions/OurSurveySolutions';
 // import KeepYouUpdated from './KeepYouUpdated/KeepYouUpdated';
 // import Bottom from './Bottom/Bottom';
 
@@ -35,7 +35,7 @@ class Home extends Component {
         <MeasureWorldWide />
         <ProvenByCustomers />
         <WhoWeWorkWith />
-        {/* <OurSurveySolutions /> */}
+        <OurSurveySolutions />
         {/* <KeepYouUpdated /> */}
         {/* <Bottom /> */}
       </Fragment>
