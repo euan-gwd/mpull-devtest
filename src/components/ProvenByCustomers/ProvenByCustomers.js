@@ -9,7 +9,7 @@ class ProvenByCustomers extends Component {
       <BackDrop image={bdImage}>
         <Container>
           <LeftColumn>
-            <Title>Our Proven Survey Solutions</Title>
+            <Title>We are Proven by our customers</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
@@ -61,7 +61,6 @@ const Container = styled.div`
     padding: 3rem 0;
     box-sizing: border-box;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(6, 1fr);
     max-width: 1024px;
   }
@@ -79,7 +78,9 @@ const LeftColumn = styled.div`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100%;
     display: grid;
+    grid-template-rows: repeat(3, 1fr);
   }
 `;
 
@@ -95,6 +96,7 @@ const RightColumn = styled.div`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100%;
     display: grid;
   }
 `;
@@ -110,6 +112,7 @@ const Title = styled.h1`
   color: white;
 
   @media screen and (min-width: 768px) {
+    grid-row: 1;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -132,6 +135,7 @@ const Content = styled.p`
   color: white;
 
   @media screen and (min-width: 768px) {
+    grid-row: 3;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -156,6 +160,7 @@ const ButtonGroup = styled.div`
   grid-row-gap: 1rem;
 
   @media screen and (min-width: 768px) {
+    grid-row: 4;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
