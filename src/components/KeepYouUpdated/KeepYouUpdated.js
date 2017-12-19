@@ -185,11 +185,15 @@ const Button = styled.button`
   border: 1px solid white;
   background-color: transparent;
   height: 47px;
-  width: 50%;
+  width: 75%;
   cursor: pointer;
 
   &:hover {
     background-color: white;
     color: black;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
   }
 `;

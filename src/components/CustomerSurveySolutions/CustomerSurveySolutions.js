@@ -118,7 +118,7 @@ const Content = styled.p`
 
 const ButtonGroup = styled.div`
   margin: 0 1rem;
-  padding: 0 2rem;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
@@ -151,6 +151,7 @@ const Button = styled.button`
   border: 1px solid black;
   background-color: transparent;
   height: 47px;
+  width: 75%;
   cursor: pointer;
 
   &:hover {
