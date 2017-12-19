@@ -11,12 +11,14 @@ const NavBarSeek = props => {
       <Logo href="/">
         <img src={logo} className="logo" alt="logo" />
       </Logo>
-      <SearchIcon>
-        <img src={search} alt="Search Bar" />
-      </SearchIcon>
-      <SearchNavItem>
-        <input type="search" placeholder="Type to search..." />
-      </SearchNavItem>
+      <SearchNavItemList>
+        <SearchIcon>
+          <img src={search} alt="Search Bar" />
+        </SearchIcon>
+        <SearchNavItem>
+          <input type="search" placeholder="Type to search..." />
+        </SearchNavItem>
+      </SearchNavItemList>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>
         <img src={cross} alt="Back to Main Navigation" />
       </CloseNavBtn>
@@ -58,31 +60,53 @@ const Logo = styled.a`
   display: none;
 
   @media screen and (min-width: 768px) {
-    grid-column: 1;
-    justify-self: center;
-    align-self: start;
-    padding: 1rem 0;
+    grid-column: 1 / 3;
+    justify-self: start;
+    align-self: center;
+    margin: 0;
+    padding: 4px 0 0;
+    box-sizing: border-box;
     display: block;
   }
 `;
 
-const SearchIcon = styled.a`
-  @media screen and (max-width: 767px) {
-    justify-self: start;
-  }
+const SearchNavItemList = styled.div`
+  grid-column: 1 / 4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  height: 45px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 
   @media screen and (min-width: 768px) {
+    grid-column: 3 / 9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 50px auto;
+    border-left: 1px solid black;
+    height: 45px;
+  }
+`;
+
+const SearchIcon = styled.div`
+  @media screen and (min-width: 768px) {
+    display: grid;
+    align-items: center;
     justify-self: center;
-    align-self: center;
-    grid-column: 3;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 45px;
   }
 `;
 
 const SearchNavItem = styled.div`
-  grid-column: 2 / 4;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  display: grid;
+  align-items: center;
 
   input[type='search'] {
     border: 0;
@@ -95,13 +119,6 @@ const SearchNavItem = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-    grid-column: 4 / 9;
-    align-self: center;
-    justify-self: start;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
     input[type='search'] {
       border: 0;
       width: 100%;
