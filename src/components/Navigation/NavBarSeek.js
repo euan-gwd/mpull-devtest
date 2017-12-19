@@ -78,7 +78,7 @@ const SearchNavItemList = styled.div`
   border: 0;
   height: 45px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 50px auto;
 
   @media screen and (min-width: 768px) {
     grid-column: 3 / 9;
@@ -93,6 +93,14 @@ const SearchNavItemList = styled.div`
 `;
 
 const SearchIcon = styled.div`
+  display: grid;
+  align-items: center;
+  justify-self: start;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 45px;
+
   @media screen and (min-width: 768px) {
     display: grid;
     align-items: center;
