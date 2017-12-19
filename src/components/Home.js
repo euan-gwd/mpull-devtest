@@ -11,6 +11,7 @@ import WhoWeWorkWith from './WhoWeWorkWith/WhoWeWorkWith';
 import OurSurveySolutions from './OurSurveySolutions/OurSurveySolutions';
 import KeepYouUpdated from './KeepYouUpdated/KeepYouUpdated';
 import NordicExcellenceWorldwide from './NordicExcellenceWorldwide/NordicExcellenceWorldwide';
+import BottomContactDetails from './BottomContactDetails/BottomContactDetails';
 
 class Home extends Component {
   state = {
@@ -38,6 +39,7 @@ class Home extends Component {
         <OurSurveySolutions />
         <KeepYouUpdated />
         <NordicExcellenceWorldwide />
+        <BottomContactDetails />
       </Fragment>
     );
   }
