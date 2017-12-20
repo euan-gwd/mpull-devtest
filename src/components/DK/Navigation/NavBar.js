@@ -74,28 +74,28 @@ class NavBar extends Component {
                 onClick={this.props.handleMenuToggle}
               />
             </MobileMenu>
-            <Logo href="/en/home">
+            <Logo href="/dk/home">
               <img src={logo} className="logo" alt="logo" />
             </Logo>
             <NavigationItems>
               <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
-                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>Solutions</a>
+                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>løsninger</a>
                 <DropDownMenu show={this.state.showSolutionsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/en/home">Cases</NavLink>
+                <NavLink to="/dk/home">sager</NavLink>
                 <div />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
-                <a onMouseEnter={this.handleInsightsDropMenuToggle}>Insights</a>
+                <a onMouseEnter={this.handleInsightsDropMenuToggle}>indsigter</a>
                 <DropDownMenu show={this.state.showInsightsDropMenu} />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleAboutUsDropMenuClose}>
-                <a onMouseEnter={this.handleAboutUsDropMenuToggle}>About Us</a>
+                <a onMouseEnter={this.handleAboutUsDropMenuToggle}>om os</a>
                 <DropDownMenu show={this.state.showAboutUsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/en/home">Contact</NavLink>
+                <NavLink to="/dk/home">kontakt</NavLink>
                 <div />
               </NavigationItem>
             </NavigationItems>

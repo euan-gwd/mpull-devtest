@@ -7,7 +7,7 @@ class PositiveChange extends Component {
     return (
       <BackDrop>
         <Container>
-          <Title>We drive positive change</Title>
+          <Title>vi kører positive forandringer</Title>
           <Content>
             We empower organizations and leaders to improve the employee and customer experience
             through proven, concise and engaging advisory. Ennovas ISO certificate puts severe
