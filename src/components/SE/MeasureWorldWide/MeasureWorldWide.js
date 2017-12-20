@@ -10,17 +10,17 @@ class MeasureWorldWide extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <WorldButton>What Does it me to you?</WorldButton>
+            <WorldButton>Hva gjør det meg til deg?</WorldButton>
             <WorldImg src={worldImage} alt="offerImage" />
           </LeftColumn>
           <RightColumn>
-            <Title>We measure worldwide</Title>
+            <Title>Vi måler hele verden</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Read more</ButtonDark>
+              <ButtonDark>Les mer</ButtonDark>
             </ButtonGroup>
           </RightColumn>
         </Container>
@@ -42,7 +42,7 @@ const BackDrop = styled.section`
 
 const Container = styled.div`
   margin: 0;
-  padding: 3rem 1rem 0;
+  padding: 3rem 1rem;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 1fr 2fr;
@@ -105,6 +105,7 @@ const Title = styled.h1`
   font-weight: 400;
   font-size: 2rem;
   text-transform: uppercase;
+  overflow-wrap: break-word;
   color: black;
 
   @media screen and (min-width: 768px) {
@@ -119,6 +120,7 @@ const Title = styled.h1`
     font-weight: 400;
     font-size: 3rem;
     text-transform: uppercase;
+    overflow-wrap: break-word;
     color: black;
   }
 `;
@@ -131,6 +133,7 @@ const Content = styled.p`
   font-weight: 100;
   font-size: 1rem;
   line-height: 1.5rem;
+  overflow-wrap: break-word;
   color: black;
 
   @media screen and (min-width: 768px) {
@@ -143,6 +146,7 @@ const Content = styled.p`
     font-weight: 100;
     font-size: 1rem;
     line-height: 1.5rem;
+    overflow-wrap: break-word;
     color: black;
   }
 `;
