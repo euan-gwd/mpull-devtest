@@ -9,23 +9,23 @@ class KeepYouUpdated extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>We love to keep you updated</Title>
+            <Title>Vi älskar att hålla dig uppdaterad</Title>
           </LeftColumn>
           <RightColumn>
             <FormHeader>
-              We empower organizations and leaders to improve the employee and customer experience
-              through proven, concise and engaging advisory.
+              Vi ger organisationer och ledare för att förbättra den anställde och kundupplevelsen
+              genom beprövade, koncis och engagerande rådgivande.
             </FormHeader>
             <FormInputGroup>
-              <FormInputLabel>Name</FormInputLabel>
-              <FormInput type="text" placeholder="Enter your name ..." />
+              <FormInputLabel>Namn</FormInputLabel>
+              <FormInput type="text" placeholder="Ange ditt namn ..." />
             </FormInputGroup>
             <FormInputGroup>
-              <FormInputLabel>Email</FormInputLabel>
-              <FormInput type="email" placeholder="Enter your email ..." />
+              <FormInputLabel>E-postadressl</FormInputLabel>
+              <FormInput type="email" placeholder="Ange din e-postadress ..." />
             </FormInputGroup>
             <ButtonGroup>
-              <ButtonLight>Submit</ButtonLight>
+              <ButtonLight>Lämna</ButtonLight>
             </ButtonGroup>
           </RightColumn>
         </Container>
