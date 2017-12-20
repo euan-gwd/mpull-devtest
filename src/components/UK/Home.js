@@ -13,7 +13,7 @@ import KeepYouUpdated from './KeepYouUpdated/KeepYouUpdated';
 import NordicExcellenceWorldwide from './NordicExcellenceWorldwide/NordicExcellenceWorldwide';
 import BottomContactDetails from './BottomContactDetails/BottomContactDetails';
 
-class Home extends Component {
+class HomeUK extends Component {
   state = {
     showSideMenu: false
   };
@@ -45,4 +45,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default HomeUK;
