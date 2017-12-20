@@ -13,8 +13,8 @@ class KeepYouUpdated extends Component {
           </LeftColumn>
           <RightColumn>
             <FormHeader>
-              We empower organizations and leaders to improve the employee and customer experience
-              through proven, concise and engaging advisory.
+              Vi bemyndige organisationer og ledere til at forbedre den ansatte og kundeoplevelse
+              gennem bevist, koncis og engagerende rådgivende.
             </FormHeader>
             <FormInputGroup>
               <FormInputLabel>Navn</FormInputLabel>

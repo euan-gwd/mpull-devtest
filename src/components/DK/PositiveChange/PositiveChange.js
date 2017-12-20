@@ -9,11 +9,11 @@ class PositiveChange extends Component {
         <Container>
           <Title>vi kører positive forandringer</Title>
           <Content>
-            We empower organizations and leaders to improve the employee and customer experience
-            through proven, concise and engaging advisory. Ennovas ISO certificate puts severe
-            demands to our Development and implementation of employee- and customer analysis. We are
-            very proud of the certification which is in line with Ennova‘s continued ambition to
-            deliver the best solutions in the market.
+            Vi bemyndige organisationer og ledere til at forbedre den ansatte og kundeoplevelse
+            gennem bevist, koncis og engagerende rådgivende. Ennovas ISO-certifikat stiller store
+            krav til vores Udvikling og implementering af medarbejder- og kundeanalyser. Vi er meget
+            stolte af den certificering, som er i tråd med Ennova fortsatte ambition om at levere de
+            bedste løsninger på markedet.
           </Content>
         </Container>
       </BackDrop>
