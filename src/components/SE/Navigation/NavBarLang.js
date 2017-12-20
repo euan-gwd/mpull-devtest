@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 import cross from './images/cross.svg';
 import logo from './images/logo.svg';
@@ -16,16 +17,16 @@ const NavBarLang = props => {
           <img src={language} alt="change language" />
         </LanguageNavItem>
         <LanguageNavItem>
-          <a>UK</a>
+          <NavLink to="/UK/home">UK</NavLink>
         </LanguageNavItem>
         <LanguageNavItem>
-          <a>DK</a>
+          <NavLink to="/DK/home">DK</NavLink>
         </LanguageNavItem>
         <LanguageNavItem>
-          <a>NO</a>
+          <NavLink to="/NO/home">NO</NavLink>
         </LanguageNavItem>
         <LanguageNavItem>
-          <a>SE</a>
+          <NavLink to="/SE/home">SE</NavLink>
         </LanguageNavItem>
       </LanguageNavItemList>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>
