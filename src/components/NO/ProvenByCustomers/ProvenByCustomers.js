@@ -11,14 +11,14 @@ class ProvenByCustomers extends Component {
       <BackDrop image={bdImage}>
         <Container>
           <LeftColumn>
-            <Title>We are Proven by our customers</Title>
+            <Title>Vi er bevist af vores kunder</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonLight>Employee Survey</ButtonLight>
-              <ButtonLight>Customer Survey</ButtonLight>
+              <ButtonLight>Medarbejderundersøgelse</ButtonLight>
+              <ButtonLight>Kundeundersøgelse</ButtonLight>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
@@ -171,7 +171,7 @@ const ButtonGroup = styled.div`
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
+    overflow-wrap: break-word;
   }
 `;
 
