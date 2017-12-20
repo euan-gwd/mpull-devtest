@@ -74,7 +74,7 @@ class NavBar extends Component {
                 onClick={this.props.handleMenuToggle}
               />
             </MobileMenu>
-            <Logo href="/">
+            <Logo href="/en/home">
               <img src={logo} className="logo" alt="logo" />
             </Logo>
             <NavigationItems>

@@ -74,7 +74,7 @@ class BottomContactDetails extends Component {
           </ContactLink>
           <ButtonGroup>
             <UpArrow>&#8963;</UpArrow>
-            <ButtonText href="/">Return To Top</ButtonText>
+            <ButtonText href="/en/home">Return To Top</ButtonText>
             <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
           </ButtonGroup>
         </Container>
