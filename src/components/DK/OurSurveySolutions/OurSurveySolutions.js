@@ -10,7 +10,7 @@ class OurSurveySolutions extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>Vores dokumenterede undersøgelsesløsninger</Title>
+            <Title>vores bevist undersøgelse løsninger</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
@@ -116,6 +116,7 @@ const Title = styled.h1`
   font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
+  overflow-wrap: break-word;
   color: black;
 
   @media screen and (min-width: 768px) {
@@ -130,6 +131,7 @@ const Title = styled.h1`
     font-weight: 400;
     font-size: 3rem;
     text-transform: uppercase;
+    overflow-wrap: break-word;
     color: black;
   }
 `;
@@ -143,6 +145,7 @@ const Content = styled.p`
   font-weight: 100;
   font-size: 1rem;
   line-height: 1.5rem;
+  overflow-wrap: break-word;
   color: black;
 
   @media screen and (min-width: 768px) {
@@ -156,6 +159,7 @@ const Content = styled.p`
     font-weight: 100;
     font-size: 1rem;
     line-height: 1.5rem;
+    overflow-wrap: break-word;
     color: black;
   }
 `;

@@ -42,7 +42,7 @@ const BackDrop = styled.section`
 
 const Container = styled.div`
   margin: 0;
-  padding: 3rem 1rem 0;
+  padding: 3rem 1rem;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 1fr 2fr;
