@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import videoPlaceHolder from './images/man_tablet.png';
-import playIcon from './images/Play-ikon.svg';
+import ButtonRound from '../Buttons/ButtonRound';
 import iso from './images/ISO.svg';
 import aaa from './images/AAA.svg';
 import esomar from './images/ESOMAR.png';
@@ -13,9 +13,9 @@ class VideoFrame extends Component {
       <BackDrop image={videoPlaceHolder}>
         <Container>
           <Title>Nordic Excellence Worldwide</Title>
-          <PlayIcon>
-            <img src={playIcon} alt="play video" />
-          </PlayIcon>
+          <PlayButtonGroup>
+            <ButtonRound />
+          </PlayButtonGroup>
           <Logoer className="logoer">
             <img src={iso} alt="isologo" />
             <img src={aaa} alt="aaalogo" />
@@ -79,36 +79,25 @@ const Title = styled.h1`
   }
 `;
 
-const PlayIcon = styled.a`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+const PlayButtonGroup = styled.div`
   grid-row: 2 / 4;
   grid-column: 2;
-  align-self: end;
   justify-self: center;
-  cursor: pointer;
-
-  img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  height: 100%
+  box-sizing: border-box;
 
   @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     grid-row: 2;
     grid-column: 3 / 5;
-    align-self: center;
     justify-self: center;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
+    align-self: start;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
   }
 `;
 

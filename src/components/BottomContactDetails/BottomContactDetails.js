@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Arrow from './images/up-caret.svg';
 
 class BottomContactDetails extends Component {
   state = {};
@@ -74,7 +73,7 @@ class BottomContactDetails extends Component {
             <WebLink>Newsletter</WebLink>
           </ContactLink>
           <ButtonGroup>
-            <UpArrow src={Arrow} alt="Return to Top Icon" />
+            <UpArrow>&#8963;</UpArrow>
             <ButtonText href="/">Return To Top</ButtonText>
             <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
           </ButtonGroup>
@@ -242,7 +241,7 @@ const ButtonGroup = styled.div`
   }
 `;
 
-const UpArrow = styled.img`
+const UpArrow = styled.p`
   grid-row: 1;
   grid-column: span 2;
   align-self: end;
@@ -250,9 +249,13 @@ const UpArrow = styled.img`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  line-height: 1.5rem;
+  font-size: 3rem;
   color: #818181;
-  max-width: 100%;
-  height: 1rem;
+  text-decoration: none;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
@@ -262,9 +265,13 @@ const UpArrow = styled.img`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    line-height: 1.5rem;
+    font-size: 3rem;
     color: #818181;
-    max-width: 100%;
-    height: 1rem;
+    text-decoration: none;
+    cursor: pointer;
   }
 `;
 
@@ -294,7 +301,7 @@ const ButtonText = styled.a`
     font-weight: 300;
     line-height: 1.5rem;
     font-size: 1rem;
-    color: black;
+    color: #818181;
     text-decoration: none;
     cursor: pointer;
 
