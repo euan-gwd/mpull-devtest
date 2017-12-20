@@ -165,8 +165,7 @@ const ButtonGroup = styled.div`
     grid-row: 4;
     grid-column: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
   }
 `;
 
