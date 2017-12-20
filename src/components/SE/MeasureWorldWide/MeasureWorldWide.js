@@ -10,17 +10,17 @@ class MeasureWorldWide extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <WorldButton>What Does it me to you?</WorldButton>
+            <WorldButton>Vad gör det mig till dig?</WorldButton>
             <WorldImg src={worldImage} alt="offerImage" />
           </LeftColumn>
           <RightColumn>
-            <Title>We measure worldwide</Title>
+            <Title>Vi mäter hela världen</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Read more</ButtonDark>
+              <ButtonDark>Läs mer</ButtonDark>
             </ButtonGroup>
           </RightColumn>
         </Container>
