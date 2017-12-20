@@ -168,10 +168,16 @@ const FormInput = styled.input`
 
   &::placeholder {
     color: white;
+    font-size: 0.85rem;
   }
 
   &::-moz-placeholder {
     opacity: 1;
+    font-size: 0.85rem;
+  }
+
+  &:focus {
+    outline: 1px solid white;
   }
 `;
 
