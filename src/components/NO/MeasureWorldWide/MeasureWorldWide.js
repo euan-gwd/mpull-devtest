@@ -10,7 +10,7 @@ class MeasureWorldWide extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <WorldButton>Hvad betyder det for dig?</WorldButton>
+            <WorldButton>Hva gjør det meg til deg?</WorldButton>
             <WorldImg src={worldImage} alt="offerImage" />
           </LeftColumn>
           <RightColumn>
@@ -20,7 +20,7 @@ class MeasureWorldWide extends Component {
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Læs mere</ButtonDark>
+              <ButtonDark>Les mer</ButtonDark>
             </ButtonGroup>
           </RightColumn>
         </Container>
