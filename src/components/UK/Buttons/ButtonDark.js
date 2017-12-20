@@ -14,6 +14,7 @@ const Button = styled.button`
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: 100;
+  text-transform: capitalize;
   color: black;
   border: 1px solid black;
   background-color: transparent;
