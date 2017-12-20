@@ -9,7 +9,7 @@ class KeepYouUpdated extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>We love to keep you updated</Title>
+            <Title>Vi elsker at holde dig opdateret</Title>
           </LeftColumn>
           <RightColumn>
             <FormHeader>
@@ -17,15 +17,15 @@ class KeepYouUpdated extends Component {
               through proven, concise and engaging advisory.
             </FormHeader>
             <FormInputGroup>
-              <FormInputLabel>Name</FormInputLabel>
-              <FormInput type="text" placeholder="Enter your name ..." />
+              <FormInputLabel>Navn</FormInputLabel>
+              <FormInput type="text" placeholder="Indtast dit navn..." />
             </FormInputGroup>
             <FormInputGroup>
               <FormInputLabel>Email</FormInputLabel>
-              <FormInput type="email" placeholder="Enter your email ..." />
+              <FormInput type="email" placeholder="Indtast din email..." />
             </FormInputGroup>
             <ButtonGroup>
-              <ButtonLight>Submit</ButtonLight>
+              <ButtonLight>Indsend</ButtonLight>
             </ButtonGroup>
           </RightColumn>
         </Container>

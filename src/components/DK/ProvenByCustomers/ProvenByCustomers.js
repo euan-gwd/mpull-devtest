@@ -171,7 +171,7 @@ const ButtonGroup = styled.div`
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
+    overflow-wrap: break-word;
   }
 `;
 
