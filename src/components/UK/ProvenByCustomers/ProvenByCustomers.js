@@ -17,7 +17,7 @@ class ProvenByCustomers extends Component {
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonLight>Employee Survey</ButtonLight>
+              <ButtonLight>Medarbeiderundersøkelsen</ButtonLight>
               <ButtonLight>Customer Survey</ButtonLight>
             </ButtonGroup>
           </LeftColumn>
