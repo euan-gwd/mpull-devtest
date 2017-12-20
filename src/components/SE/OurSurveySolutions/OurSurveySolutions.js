@@ -10,18 +10,18 @@ class OurSurveySolutions extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>Våre velprøvde undersøkelsen løsninger</Title>
+            <Title>Our proven survey solutions</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Les den nye glex</ButtonDark>
+              <ButtonDark>Read the new glex</ButtonDark>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
             <OfferImg src={phoneApp} alt="phone" />
-            <OfferButton>Prøv vår undersøkelse prøveversjon</OfferButton>
+            <OfferButton>Try our survey trial version</OfferButton>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -116,7 +116,6 @@ const Title = styled.h1`
   font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
-  overflow-wrap: break-word;
   color: black;
 
   @media screen and (min-width: 768px) {
@@ -131,7 +130,6 @@ const Title = styled.h1`
     font-weight: 400;
     font-size: 3rem;
     text-transform: uppercase;
-    overflow-wrap: break-word;
     color: black;
   }
 `;
@@ -145,7 +143,6 @@ const Content = styled.p`
   font-weight: 100;
   font-size: 1rem;
   line-height: 1.5rem;
-  overflow-wrap: break-word;
   color: black;
 
   @media screen and (min-width: 768px) {
@@ -159,7 +156,6 @@ const Content = styled.p`
     font-weight: 100;
     font-size: 1rem;
     line-height: 1.5rem;
-    overflow-wrap: break-word;
     color: black;
   }
 `;
@@ -224,7 +220,6 @@ const OfferButton = styled.button`
   font-weight: 300;
   color: black;
   text-transform: uppercase;
-  overflow-wrap: break-word;
   border: 1px solid black;
   border-radius: 50% 50%;
   background-color: transparent;
@@ -250,7 +245,6 @@ const OfferButton = styled.button`
     font-weight: 300;
     color: black;
     text-transform: uppercase;
-    overflow-wrap: break-word;
     border: 1px solid black;
     border-radius: 50% 50%;
     border-spacing: 1rem;

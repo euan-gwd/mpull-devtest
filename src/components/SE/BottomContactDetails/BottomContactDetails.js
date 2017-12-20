@@ -50,37 +50,37 @@ class BottomContactDetails extends Component {
             <CId>CVR. nr. 19587347</CId>
           </ContactCard>
           <ContactLink>
-            <Title>Selskap</Title>
-            <WebLink>Handle om</WebLink>
-            <WebLink>karriere</WebLink>
-            <WebLink>Trykk &amp; mediene</WebLink>
-            <WebLink>Bloggere</WebLink>
-            <WebLink>Kontakt oss</WebLink>
+            <Title>Company</Title>
+            <WebLink>About</WebLink>
+            <WebLink>Career</WebLink>
+            <WebLink>Press &amp; Media</WebLink>
+            <WebLink>Bloggers</WebLink>
+            <WebLink>Contact Us</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>vilkår</Title>
-            <WebLink>datasikkerhet</WebLink>
-            <WebLink>Personvernregler</WebLink>
-            <WebLink>Hjelp &amp; Brukerstøtte</WebLink>
-            <WebLink>nettstedskart</WebLink>
+            <Title>Terms</Title>
+            <WebLink>Data Security</WebLink>
+            <WebLink>Privacy Policy</WebLink>
+            <WebLink>Help &amp; Support</WebLink>
+            <WebLink>Site Map</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>kunnskap</Title>
-            <WebLink>Nyheder</WebLink>
-            <WebLink>Rapporter</WebLink>
-            <WebLink>arrangementer</WebLink>
+            <Title>Knowledge</Title>
+            <WebLink>News</WebLink>
+            <WebLink>Reports</WebLink>
+            <WebLink>Events</WebLink>
           </ContactLink>
           <ContactLink show>
-            <Title>Følg</Title>
+            <Title>Follow</Title>
             <WebLink>LinkedIn</WebLink>
             <WebLink>Twitter</WebLink>
             <WebLink>Facebook</WebLink>
             <WebLink>Youtube</WebLink>
-            <WebLink>nyhedsbrev</WebLink>
+            <WebLink>Newsletter</WebLink>
           </ContactLink>
           <ButtonGroup>
             <UpArrow>&#8963;</UpArrow>
-            <ButtonText onClick={this.handleScrollToTop}>Gå tilbake til toppen</ButtonText>
+            <ButtonText onClick={this.handleScrollToTop}>Return To Top</ButtonText>
             <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
           </ButtonGroup>
         </Container>

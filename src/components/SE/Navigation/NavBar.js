@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 import DropDownMenu from './DropDownMenu';
 import NavBarLang from './NavBarLang';
 import NavBarSeek from './NavBarSeek';
@@ -63,27 +63,27 @@ class NavBar extends Component {
                 onClick={this.props.handleMenuToggle}
               />
             </MobileMenu>
-            <Logo href="/no/home">
+            <Logo href="/en/home">
               <img src={logo} className="logo" alt="logo" />
             </Logo>
             <NavigationItems>
               <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
-                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>løsninger</a>
+                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>Solutions</a>
                 <DropDownMenu show={this.state.showSolutionsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/no/home">saker</NavLink>
+                <NavLink to="/en/home">Cases</NavLink>
                 <div />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
-                <a onMouseEnter={this.handleInsightsDropMenuToggle}>innsikt</a>
+                <a onMouseEnter={this.handleInsightsDropMenuToggle}>Insights</a>
                 <DropDownMenu show={this.state.showInsightsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/no/home">om oss</NavLink>
+                <NavLink to="/en/home">About Us</NavLink>
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/no/home">kontakt</NavLink>
+                <NavLink to="/en/home">Contact</NavLink>
                 <div />
               </NavigationItem>
             </NavigationItems>

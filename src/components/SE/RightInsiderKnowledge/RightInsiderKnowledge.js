@@ -10,18 +10,18 @@ class RightInsiderKnowledge extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>Vi har rett til innsidehandel kunnskap</Title>
+            <Title>We have the right insider Knowledge</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>lese den nye glex</ButtonDark>
+              <ButtonDark>Read the new glex</ButtonDark>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
             <OfferImg src={offerImage} alt="offerImage" />
-            <OfferButton>Få ny innsikt i vår undersøkelse rapport</OfferButton>
+            <OfferButton>Get new insights in our survey rapport</OfferButton>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -155,7 +155,6 @@ const ButtonGroup = styled.div`
   font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
-  word-wrap: break-word;
   color: black;
   display: grid;
 
@@ -163,7 +162,6 @@ const ButtonGroup = styled.div`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    word-wrap: break-word;
     grid-row: 4;
     grid-column: 1;
     display: grid;
@@ -207,7 +205,6 @@ const OfferButton = styled.button`
   font-weight: 300;
   color: black;
   text-transform: uppercase;
-  overflow-wrap: break-word;
   border: 1px solid black;
   border-radius: 50% 50%;
   background-color: transparent;

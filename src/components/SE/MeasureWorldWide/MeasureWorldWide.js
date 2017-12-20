@@ -10,17 +10,17 @@ class MeasureWorldWide extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <WorldButton>Hva gjør det meg til deg?</WorldButton>
+            <WorldButton>What Does it me to you?</WorldButton>
             <WorldImg src={worldImage} alt="offerImage" />
           </LeftColumn>
           <RightColumn>
-            <Title>Vi måler hele verden</Title>
+            <Title>We measure worldwide</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Les mer</ButtonDark>
+              <ButtonDark>Read more</ButtonDark>
             </ButtonGroup>
           </RightColumn>
         </Container>
@@ -105,7 +105,6 @@ const Title = styled.h1`
   font-weight: 400;
   font-size: 2rem;
   text-transform: uppercase;
-  overflow-wrap: break-word;
   color: black;
 
   @media screen and (min-width: 768px) {
@@ -120,7 +119,6 @@ const Title = styled.h1`
     font-weight: 400;
     font-size: 3rem;
     text-transform: uppercase;
-    overflow-wrap: break-word;
     color: black;
   }
 `;
@@ -133,7 +131,6 @@ const Content = styled.p`
   font-weight: 100;
   font-size: 1rem;
   line-height: 1.5rem;
-  overflow-wrap: break-word;
   color: black;
 
   @media screen and (min-width: 768px) {
@@ -146,7 +143,6 @@ const Content = styled.p`
     font-weight: 100;
     font-size: 1rem;
     line-height: 1.5rem;
-    overflow-wrap: break-word;
     color: black;
   }
 `;

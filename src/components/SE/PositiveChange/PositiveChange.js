@@ -7,13 +7,13 @@ class PositiveChange extends Component {
     return (
       <BackDrop>
         <Container>
-          <Title>Vi kjører positiv endring</Title>
+          <Title>We drive positive change</Title>
           <Content>
-            Vi styrke organisasjoner og ledere til å forbedre den ansatte og kundeopplevelsen
-            gjennom utprøvd, konsis og engasjerende rådgivende. Ennovas ISO sertifikat setter store
-            krav til vår utvikling og implementering av ansatte og kundeanalyse. Vi er veldig stolte
-            av sertifiseringen som er i tråd med Ennova fortsatte ambisjon om å levere de beste
-            løsningene i markedet.
+            We empower organizations and leaders to improve the employee and customer experience
+            through proven, concise and engaging advisory. Ennovas ISO certificate puts severe
+            demands to our Development and implementation of employee- and customer analysis. We are
+            very proud of the certification which is in line with Ennova‘s continued ambition to
+            deliver the best solutions in the market.
           </Content>
         </Container>
       </BackDrop>

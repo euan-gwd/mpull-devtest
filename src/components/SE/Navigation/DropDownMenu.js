@@ -6,10 +6,10 @@ const DropDownMenu = props => {
     <NavMenu className={props.show ? `open` : `close`}>
       <DropMenu>
         <li>
-          <a href="/dk/home">ansatt erfaring</a>
+          <a href="/">Employee Experience</a>
         </li>
         <li>
-          <a href="/dk/home">kunde erfaring</a>
+          <a href="/">Customer Experience</a>
         </li>
       </DropMenu>
     </NavMenu>

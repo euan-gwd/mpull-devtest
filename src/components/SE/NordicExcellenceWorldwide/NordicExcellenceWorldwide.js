@@ -7,7 +7,7 @@ class NordicExcellenceWorldwide extends Component {
     return (
       <BackDrop>
         <Container>
-          <Title>nordisk fortreffelighet over hele verden</Title>
+          <Title>Nordic Excellence Worldwide</Title>
           <Content>
             Ennova leverer viden, der forandrer. Vi rådgiver gennem hele processen, så ny viden
             bliver forankret i virksomheden – og fører til den ønskede forandring.

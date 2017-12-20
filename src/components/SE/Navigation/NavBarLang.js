@@ -9,7 +9,7 @@ import language from './images/language.svg';
 const NavBarLang = props => {
   return (
     <NavigationLanguage>
-      <Logo href="/dk/home">
+      <Logo href="/">
         <img src={logo} className="logo" alt="logo" />
       </Logo>
       <LanguageNavItemList>
