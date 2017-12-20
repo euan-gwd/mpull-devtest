@@ -294,6 +294,7 @@ const ButtonText = styled.a`
   font-size: 1rem;
   color: #818181;
   text-decoration: none;
+  text-transform: capitalize;
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
@@ -307,6 +308,7 @@ const ButtonText = styled.a`
     font-weight: 300;
     line-height: 1.5rem;
     font-size: 1rem;
+    text-transform: capitalize;
     color: #818181;
     text-decoration: none;
     cursor: pointer;
