@@ -12,16 +12,16 @@ const MobileNavItems = () => {
         </a>
       </NavigationItem>
       <NavigationItem>
-        <a>sager</a>
+        <a>saker</a>
       </NavigationItem>
       <NavigationItem>
-        <a>indsigter</a>
+        <a>innsikt</a>
         <a>
           <img src={downarrow} alt="dropdown menu" />
         </a>
       </NavigationItem>
       <NavigationItem>
-        <a>om os</a>
+        <a>om oss</a>
         <a>
           <img src={downarrow} alt="dropdown menu" />
         </a>

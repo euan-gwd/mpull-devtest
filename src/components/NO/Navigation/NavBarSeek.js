@@ -8,7 +8,7 @@ import search from './images/search.svg';
 const NavBarSeek = props => {
   return (
     <NavigationSearch>
-      <Logo href="/dk/home">
+      <Logo href="/no/home">
         <img src={logo} className="logo" alt="logo" />
       </Logo>
       <SearchNavItemList>
@@ -16,7 +16,7 @@ const NavBarSeek = props => {
           <img src={search} alt="Search Bar" />
         </SearchIcon>
         <SearchNavItem>
-          <input type="search" placeholder="Skriv for at søge..." />
+          <input type="search" placeholder="Skriv for å søke..." />
         </SearchNavItem>
       </SearchNavItemList>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>

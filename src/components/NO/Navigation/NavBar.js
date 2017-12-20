@@ -63,7 +63,7 @@ class NavBar extends Component {
                 onClick={this.props.handleMenuToggle}
               />
             </MobileMenu>
-            <Logo href="/dk/home">
+            <Logo href="/no/home">
               <img src={logo} className="logo" alt="logo" />
             </Logo>
             <NavigationItems>
@@ -72,18 +72,18 @@ class NavBar extends Component {
                 <DropDownMenu show={this.state.showSolutionsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/dk/home">sager</NavLink>
+                <NavLink to="/no/home">saker</NavLink>
                 <div />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
-                <a onMouseEnter={this.handleInsightsDropMenuToggle}>indsigter</a>
+                <a onMouseEnter={this.handleInsightsDropMenuToggle}>innsikt</a>
                 <DropDownMenu show={this.state.showInsightsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/dk/home">om os</NavLink>
+                <NavLink to="/no/home">om oss</NavLink>
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/dk/home">kontakt</NavLink>
+                <NavLink to="/no/home">kontakt</NavLink>
                 <div />
               </NavigationItem>
             </NavigationItems>
