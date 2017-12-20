@@ -91,7 +91,8 @@ const RightColumn = styled.div`
     padding: 0;
     box-sizing: border-box;
     height: 100%;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
@@ -166,7 +167,7 @@ const ButtonGroup = styled.div`
     grid-row: 4;
     grid-column: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2rem;
   }
 `;
@@ -182,6 +183,8 @@ const OfferImg = styled.img`
   top: -70px;
 
   @media screen and (min-width: 768px) {
+    grid-row: 1;
+    grid-column: 1 / 4;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -217,9 +220,11 @@ const OfferButton = styled.button`
   }
 
   @media screen and (min-width: 768px) {
-    position: relative;
-    top: -200px;
-    right: -410px;
+    position: unset;
+    grid-row: 1;
+    grid-column: 3;
+    justify-self: end;
+    zindex: 2;
     width: 139px;
     height: 139px;
     margin: 0;
