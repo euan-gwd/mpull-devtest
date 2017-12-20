@@ -109,7 +109,7 @@ const ToolBar = styled.header`
   padding: 0;
   box-sizing: border-box;
   box-shadow: 0px 1px 2px 0px rgba(160, 165, 170, 0.75);
-  height: 45px;
+  height: 56px;
   z-index: 5;
   position: fixed;
   width: 100vw;
@@ -125,7 +125,7 @@ const MainNavigation = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  height: 45px;
+  height: 56px;
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
@@ -134,7 +134,7 @@ const MainNavigation = styled.div`
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     align-items: center;
-    height: 45px;
+    height: 56px;
     max-width: 1024px;
   }
 `;

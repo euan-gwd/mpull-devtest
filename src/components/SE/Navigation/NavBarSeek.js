@@ -37,7 +37,7 @@ const NavigationSearch = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  height: 45px;
+  height: 56px;
 
   @media screen and (min-width: 768px) {
     margin: 0 auto;
@@ -47,7 +47,7 @@ const NavigationSearch = styled.div`
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 1fr;
     align-items: center;
-    height: 45px;
+    height: 56px;
     max-width: 1024px;
   }
 `;
@@ -76,7 +76,7 @@ const SearchNavItemList = styled.div`
   padding: 0;
   box-sizing: border-box;
   border: 0;
-  height: 45px;
+  height: 56px;
   display: grid;
   grid-template-columns: 50px auto;
 
@@ -88,7 +88,7 @@ const SearchNavItemList = styled.div`
     display: grid;
     grid-template-columns: 50px auto;
     border-left: 1px solid black;
-    height: 45px;
+    height: 56px;
   }
 `;
 
@@ -99,7 +99,7 @@ const SearchIcon = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 45px;
+  height: 56px;
 
   @media screen and (min-width: 768px) {
     display: grid;
@@ -108,7 +108,7 @@ const SearchIcon = styled.div`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 45px;
+    height: 56px;
   }
 `;
 
