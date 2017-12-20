@@ -15,40 +15,17 @@ const Button = styled.button`
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
-  font-weight: 300;
-  color: black;
+  font-weight: 100;
+  color: white;
   text-transform: uppercase;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 50% 50%;
+  border-spacing: 1rem;
   background-color: transparent;
   cursor: pointer;
 
   &:hover {
     background-color: black;
     color: white;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 139px;
-    height: 139px;
-    margin: 0;
-    padding: 0.25rem;
-    box-sizing: border-box;
-    position: unset;
-    font-family: 'Roboto Slab', serif;
-    font-size: 1rem;
-    font-weight: 300;
-    color: black;
-    text-transform: uppercase;
-    border: 1px solid black;
-    border-radius: 50% 50%;
-    border-spacing: 1rem;
-    background-color: transparent;
-    cursor: pointer;
-
-    &:hover {
-      background-color: black;
-      color: white;
-    }
   }
 `;
