@@ -137,6 +137,7 @@ const SearchNavItem = styled.div`
 
     &:focus {
       outline-color: #818181;
+      opacity: 0.5;
     }
 
     &::placeholder {
