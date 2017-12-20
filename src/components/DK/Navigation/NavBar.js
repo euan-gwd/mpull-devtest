@@ -79,7 +79,7 @@ class NavBar extends Component {
             </Logo>
             <NavigationItems>
               <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
-                <a onClick={this.handleSolutionsDropMenuToggle}>Solutions</a>
+                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>Solutions</a>
                 <DropDownMenu show={this.state.showSolutionsDropMenu} />
               </NavigationItem>
               <NavigationItem>
@@ -87,11 +87,11 @@ class NavBar extends Component {
                 <div />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
-                <a onClick={this.handleInsightsDropMenuToggle}>Insights</a>
+                <a onMouseEnter={this.handleInsightsDropMenuToggle}>Insights</a>
                 <DropDownMenu show={this.state.showInsightsDropMenu} />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleAboutUsDropMenuClose}>
-                <a onClick={this.handleAboutUsDropMenuToggle}>About Us</a>
+                <a onMouseEnter={this.handleAboutUsDropMenuToggle}>About Us</a>
                 <DropDownMenu show={this.state.showAboutUsDropMenu} />
               </NavigationItem>
               <NavigationItem>
