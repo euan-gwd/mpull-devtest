@@ -9,14 +9,14 @@ class CustomerSurveySolutions extends Component {
     return (
       <BackDrop image={bdImage}>
         <Container>
-          <Title>We do Proven Survey Solutions</Title>
+          <Title>Vi beprövade enkätlösningar</Title>
           <Content>
             Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere parior
             sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
           </Content>
           <ButtonGroup>
-            <ButtonDark>Read More</ButtonDark>
-            <ButtonDark>Customer Survey</ButtonDark>
+            <ButtonDark>Läs mer</ButtonDark>
+            <ButtonDark>kundundersökning</ButtonDark>
           </ButtonGroup>
         </Container>
       </BackDrop>
