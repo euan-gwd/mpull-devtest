@@ -217,10 +217,10 @@ const OfferButton = styled.button`
   width: 139px;
   height: 139px;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.75rem;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 300;
   color: black;
   text-transform: uppercase;
@@ -243,10 +243,10 @@ const OfferButton = styled.button`
     width: 139px;
     height: 139px;
     margin: 0;
-    padding: 0.25rem;
+    padding: 0.75rem;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 300;
     color: black;
     text-transform: uppercase;

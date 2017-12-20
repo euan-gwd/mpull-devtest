@@ -213,6 +213,7 @@ const WebLink = styled.a`
   font-weight: 100;
   line-height: 1.5rem;
   font-size: 1rem;
+  text-transform: capitalize;
   display: block;
   color: black;
   cursor: pointer;
@@ -293,6 +294,7 @@ const ButtonText = styled.a`
   line-height: 1.5rem;
   font-size: 1rem;
   color: #818181;
+  text-transform: capitalize;
   text-decoration: none;
   cursor: pointer;
 
@@ -308,6 +310,7 @@ const ButtonText = styled.a`
     line-height: 1.5rem;
     font-size: 1rem;
     color: #818181;
+    text-transform: capitalize;
     text-decoration: none;
     cursor: pointer;
 

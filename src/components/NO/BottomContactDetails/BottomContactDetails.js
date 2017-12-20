@@ -212,6 +212,7 @@ const WebLink = styled.a`
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
   line-height: 1.5rem;
+  text-transform: capitalize;
   font-size: 1rem;
   display: block;
   color: black;
@@ -293,6 +294,7 @@ const ButtonText = styled.a`
   line-height: 1.5rem;
   font-size: 1rem;
   color: #818181;
+  text-transform: capitalize;
   text-decoration: none;
   cursor: pointer;
 
@@ -326,6 +328,7 @@ const CopyRightFooter = styled.span`
   font-weight: 100;
   line-height: 1.5rem;
   font-size: 1rem;
+  text-transform: capitalize;
   color: #818181;
 
   @media screen and (min-width: 768px) {
@@ -340,6 +343,7 @@ const CopyRightFooter = styled.span`
     font-weight: 100;
     line-height: 1.5rem;
     font-size: 1rem;
+    text-transform: capitalize;
     color: #818181;
   }
 `;
