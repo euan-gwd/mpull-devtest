@@ -19,7 +19,7 @@ const Button = styled.button`
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-size: 6rem;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 3rem;
   border: 1px solid white;
   border-radius: 45px;

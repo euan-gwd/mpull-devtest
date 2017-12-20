@@ -96,8 +96,8 @@ const PlayButtonGroup = styled.div`
     align-self: start;
     margin: 0;
     padding: 0;
-    height: 100%;
     box-sizing: border-box;
+    height: 100%;
   }
 `;
 

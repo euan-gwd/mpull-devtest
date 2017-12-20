@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import bdImage from './images/proven.png';
-import playIcon from './images/Play-ikon.svg';
+import ButtonRound from '../Buttons/ButtonRound';
 import ButtonLight from '../Buttons/ButtonLight';
 
 class ProvenByCustomers extends Component {
@@ -23,7 +23,7 @@ class ProvenByCustomers extends Component {
           </LeftColumn>
           <RightColumn>
             <PlayIcon>
-              <img src={playIcon} alt="play video" />
+              <ButtonRound />
             </PlayIcon>
           </RightColumn>
         </Container>
@@ -51,7 +51,7 @@ const BackDrop = styled.section`
     background: url(${props => props.image}) no-repeat;
     background-origin: border-box;
     background-size: cover;
-    background-position: 0 0, center;
+    background-position-x: center;
   }
 `;
 
@@ -175,7 +175,7 @@ const ButtonGroup = styled.div`
   }
 `;
 
-const PlayIcon = styled.a`
+const PlayIcon = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -183,19 +183,13 @@ const PlayIcon = styled.a`
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     grid-row: 1;
     grid-column: 1;
     justify-self: end;
-    display: grid;
-
-    img {
-      max-width: 100%;
-      height: 139px;
-      width: 139px;
-      object-fit: cover;
-    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    display: block;
   }
 `;
