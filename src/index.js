@@ -13,11 +13,11 @@ const Root = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Redirect exact from="/" to="/UK/home" />
-        <Route path="/UK/home" component={HomeUK} />
-        <Route path="/DK/home" component={HomeDK} />
-        <Route path="/NO/home" component={HomeNO} />
-        <Route path="/SE/home" component={HomeSE} />
+        <Redirect exact from="/" to="/en/home" />
+        <Route path="/en/home" component={HomeUK} />
+        <Route path="/dk/home" component={HomeDK} />
+        <Route path="/no/home" component={HomeNO} />
+        <Route path="/se/home" component={HomeSE} />
       </Switch>
     </BrowserRouter>
   );

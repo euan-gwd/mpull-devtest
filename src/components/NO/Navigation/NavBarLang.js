@@ -17,16 +17,16 @@ const NavBarLang = props => {
           <img src={language} alt="change language" />
         </LanguageNavItem>
         <LanguageNavItem>
-          <NavLink to="/UK/home">UK</NavLink>
+          <NavLink to="/en/home">UK</NavLink>
         </LanguageNavItem>
         <LanguageNavItem>
-          <NavLink to="/DK/home">DK</NavLink>
+          <NavLink to="/dk/home">DK</NavLink>
         </LanguageNavItem>
         <LanguageNavItem>
-          <NavLink to="/NO/home">NO</NavLink>
+          <NavLink to="/no/home">NO</NavLink>
         </LanguageNavItem>
         <LanguageNavItem>
-          <NavLink to="/SE/home">SE</NavLink>
+          <NavLink to="/se/home">SE</NavLink>
         </LanguageNavItem>
       </LanguageNavItemList>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>
