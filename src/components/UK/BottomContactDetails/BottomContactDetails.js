@@ -3,6 +3,12 @@ import styled from 'styled-components';
 
 class BottomContactDetails extends Component {
   state = {};
+
+  handleScrollToTop = event => {
+    event.preventDefault();
+    window.scrollTo(0, 0);
+  };
+
   render() {
     return (
       <BackDrop>
@@ -74,7 +80,7 @@ class BottomContactDetails extends Component {
           </ContactLink>
           <ButtonGroup>
             <UpArrow>&#8963;</UpArrow>
-            <ButtonText href="/en/home">Return To Top</ButtonText>
+            <ButtonText onClick={this.handleScrollToTop}>Return To Top</ButtonText>
             <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
           </ButtonGroup>
         </Container>
