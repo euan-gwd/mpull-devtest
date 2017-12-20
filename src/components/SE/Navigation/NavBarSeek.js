@@ -8,7 +8,7 @@ import search from './images/search.svg';
 const NavBarSeek = props => {
   return (
     <NavigationSearch>
-      <Logo href="/">
+      <Logo href="/se/home">
         <img src={logo} className="logo" alt="logo" />
       </Logo>
       <SearchNavItemList>
