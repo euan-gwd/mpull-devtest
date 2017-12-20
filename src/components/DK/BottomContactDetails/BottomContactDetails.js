@@ -44,37 +44,37 @@ class BottomContactDetails extends Component {
             <CId>CVR. nr. 19587347</CId>
           </ContactCard>
           <ContactLink>
-            <Title>Company</Title>
-            <WebLink>About</WebLink>
-            <WebLink>Career</WebLink>
-            <WebLink>Press &amp; Media</WebLink>
-            <WebLink>Bloggers</WebLink>
-            <WebLink>Contact Us</WebLink>
+            <Title>Selskab</Title>
+            <WebLink>Om</WebLink>
+            <WebLink>karriere</WebLink>
+            <WebLink>Trykke &amp; Medier</WebLink>
+            <WebLink>Bloggere</WebLink>
+            <WebLink>Kontakt os</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>Terms</Title>
-            <WebLink>Data Security</WebLink>
-            <WebLink>Privacy Policy</WebLink>
-            <WebLink>Help &amp; Support</WebLink>
-            <WebLink>Site Map</WebLink>
+            <Title>Betingelser</Title>
+            <WebLink>Datasikkerhed</WebLink>
+            <WebLink>Fortrolighedspolitik</WebLink>
+            <WebLink>Hjælp &amp; Afstivning</WebLink>
+            <WebLink>Sted Kort</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>Knowledge</Title>
-            <WebLink>News</WebLink>
-            <WebLink>Reports</WebLink>
-            <WebLink>Events</WebLink>
+            <Title>viden</Title>
+            <WebLink>Nyheder</WebLink>
+            <WebLink>Rapporter</WebLink>
+            <WebLink>begivenheder</WebLink>
           </ContactLink>
           <ContactLink show>
-            <Title>Follow</Title>
+            <Title>følge efter</Title>
             <WebLink>LinkedIn</WebLink>
             <WebLink>Twitter</WebLink>
             <WebLink>Facebook</WebLink>
             <WebLink>Youtube</WebLink>
-            <WebLink>Newsletter</WebLink>
+            <WebLink>nyhedsbrev</WebLink>
           </ContactLink>
           <ButtonGroup>
             <UpArrow>&#8963;</UpArrow>
-            <ButtonText href="/en/home">Return To Top</ButtonText>
+            <ButtonText href="/dk/home">Tilbage til toppen</ButtonText>
             <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
           </ButtonGroup>
         </Container>
