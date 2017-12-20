@@ -50,28 +50,28 @@ class BottomContactDetails extends Component {
             <CId>CVR. nr. 19587347</CId>
           </ContactCard>
           <ContactLink>
-            <Title>Selskab</Title>
-            <WebLink>Om</WebLink>
+            <Title>Selskap</Title>
+            <WebLink>Handle om</WebLink>
             <WebLink>karriere</WebLink>
-            <WebLink>Trykke &amp; Medier</WebLink>
+            <WebLink>Trykk &amp; mediene</WebLink>
             <WebLink>Bloggere</WebLink>
-            <WebLink>Kontakt os</WebLink>
+            <WebLink>Kontakt oss</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>Betingelser</Title>
-            <WebLink>Datasikkerhed</WebLink>
-            <WebLink>Fortrolighedspolitik</WebLink>
-            <WebLink>Hjælp &amp; Afstivning</WebLink>
-            <WebLink>Sted Kort</WebLink>
+            <Title>vilkår</Title>
+            <WebLink>datasikkerhet</WebLink>
+            <WebLink>Personvernregler</WebLink>
+            <WebLink>Hjelp &amp; Brukerstøtte</WebLink>
+            <WebLink>nettstedskart</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>viden</Title>
+            <Title>kunnskap</Title>
             <WebLink>Nyheder</WebLink>
             <WebLink>Rapporter</WebLink>
-            <WebLink>begivenheder</WebLink>
+            <WebLink>arrangementer</WebLink>
           </ContactLink>
           <ContactLink show>
-            <Title>følge efter</Title>
+            <Title>Følg</Title>
             <WebLink>LinkedIn</WebLink>
             <WebLink>Twitter</WebLink>
             <WebLink>Facebook</WebLink>
@@ -80,7 +80,7 @@ class BottomContactDetails extends Component {
           </ContactLink>
           <ButtonGroup>
             <UpArrow>&#8963;</UpArrow>
-            <ButtonText onClick={this.handleScrollToTop}>Tilbage til toppen</ButtonText>
+            <ButtonText onClick={this.handleScrollToTop}>Gå tilbake til toppen</ButtonText>
             <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
           </ButtonGroup>
         </Container>
