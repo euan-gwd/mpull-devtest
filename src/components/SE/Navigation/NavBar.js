@@ -68,22 +68,22 @@ class NavBar extends Component {
             </Logo>
             <NavigationItems>
               <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
-                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>Solutions</a>
+                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>lösningar</a>
                 <DropDownMenu show={this.state.showSolutionsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/se/home">Cases</NavLink>
+                <NavLink to="/se/home">fall</NavLink>
                 <div />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
-                <a onMouseEnter={this.handleInsightsDropMenuToggle}>Insights</a>
+                <a onMouseEnter={this.handleInsightsDropMenuToggle}>insikter</a>
                 <DropDownMenu show={this.state.showInsightsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/se/home">About Us</NavLink>
+                <NavLink to="/se/home">om oss</NavLink>
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/se/home">Contact</NavLink>
+                <NavLink to="/se/home">Kontakta</NavLink>
                 <div />
               </NavigationItem>
             </NavigationItems>

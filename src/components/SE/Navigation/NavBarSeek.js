@@ -16,7 +16,7 @@ const NavBarSeek = props => {
           <img src={search} alt="Search Bar" />
         </SearchIcon>
         <SearchNavItem>
-          <input type="search" placeholder="Type to search..." />
+          <input type="search" placeholder="Skriv för att söka..." />
         </SearchNavItem>
       </SearchNavItemList>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>
