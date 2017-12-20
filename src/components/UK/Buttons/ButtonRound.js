@@ -33,7 +33,7 @@ const Button = styled.button`
   > p {
     position: relative;
     top: -10px;
-    left: 0;
+    left: 30px;
   }
 
   &:hover {
