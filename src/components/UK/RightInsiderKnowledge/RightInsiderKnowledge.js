@@ -20,8 +20,8 @@ class RightInsiderKnowledge extends Component {
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
-            <OfferButton>Get new insights in our survey rapport</OfferButton>
             <OfferImg src={offerImage} alt="offerImage" />
+            <OfferButton>Get new insights in our survey rapport</OfferButton>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -41,7 +41,7 @@ const BackDrop = styled.section`
 
 const Container = styled.div`
   margin: 0;
-  padding: 3rem 1rem 0;
+  padding: 3rem 1rem;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -78,10 +78,11 @@ const LeftColumn = styled.div`
 const RightColumn = styled.div`
   grid-row: 1;
   margin: 0;
-  padding: 0 2rem;
+  padding: 0;
   box-sizing: border-box;
   height: 100%;
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
@@ -97,11 +98,9 @@ const RightColumn = styled.div`
 `;
 
 const Title = styled.h1`
-  margin: 1rem;
+  margin: 2rem 0;
   padding: 0;
   box-sizing: border-box;
-  position: relative;
-  top: -50px;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
   font-size: 1.5rem;
@@ -115,7 +114,6 @@ const Title = styled.h1`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: unset;
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
     font-size: 3rem;
@@ -125,7 +123,7 @@ const Title = styled.h1`
 `;
 
 const Content = styled.p`
-  margin: 2rem 1rem 2rem;
+  margin: 2rem 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -150,7 +148,7 @@ const Content = styled.p`
 `;
 
 const ButtonGroup = styled.div`
-  margin: 0 1rem;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -173,14 +171,14 @@ const ButtonGroup = styled.div`
 `;
 
 const OfferImg = styled.img`
+  grid-row: 1;
+  grid-column: 1 / 3;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   max-width: 100%;
-  height: 35vh;
+  height: auto;
   object-fit: cover;
-  position: relative;
-  top: -70px;
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
@@ -188,7 +186,6 @@ const OfferImg = styled.img`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: unset;
     max-width: 100%;
     height: auto;
     object-fit: cover;
@@ -196,9 +193,9 @@ const OfferImg = styled.img`
 `;
 
 const OfferButton = styled.button`
-  position: relative;
-  z-index: 2;
-  right: -140px;
+  grid-row: 1;
+  grid-column: 2;
+  zindex: 2;
   width: 139px;
   height: 139px;
   margin: 0;
@@ -220,7 +217,6 @@ const OfferButton = styled.button`
   }
 
   @media screen and (min-width: 768px) {
-    position: unset;
     grid-row: 1;
     grid-column: 3;
     justify-self: end;

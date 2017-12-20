@@ -105,8 +105,8 @@ const RightColumn = styled.div`
 `;
 
 const Title = styled.h1`
-  margin: 0;
-  padding: 0 1rem;
+  margin: 2rem 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
@@ -129,7 +129,7 @@ const Title = styled.h1`
 `;
 
 const Content = styled.p`
-  margin: 2rem 1rem 2rem;
+  margin: 2rem 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -153,7 +153,7 @@ const Content = styled.p`
 `;
 
 const ButtonGroup = styled.div`
-  margin: 0 1rem;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;

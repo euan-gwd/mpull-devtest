@@ -36,24 +36,20 @@ const BackDrop = styled.section`
   padding: 0;
   box-sizing: border-box;
   background-color: #f0f1f0;
-  background-origin: border-box;
   background-size: cover;
-  background-position: -3cm 0, center;
 
   @media screen and (min-width: 768px) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #f0f1f0;
-    background-origin: border-box;
     background-size: cover;
-    background-position: 0 0, center;
   }
 `;
 
 const Container = styled.div`
   margin: 0;
-  padding: 3rem 1rem 0;
+  padding: 3rem 1rem;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -113,7 +109,7 @@ const RightColumn = styled.div`
 
 const Title = styled.h1`
   align-self: center;
-  margin: 0;
+  margin: 2rem 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -140,7 +136,7 @@ const Title = styled.h1`
 
 const Content = styled.p`
   align-self: center;
-  margin: 0;
+  margin: 2rem 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -199,8 +195,8 @@ const OfferImg = styled.img`
 
   @media screen and (min-width: 768px) {
     grid-row: 1;
-    grid-column: 1;
-    justify-self: end;
+    grid-column: 1 / 3;
+    justify-self: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -237,6 +233,7 @@ const OfferButton = styled.button`
   @media screen and (min-width: 768px) {
     grid-row: 1;
     grid-column: 2;
+    justify-self: end;
     z-index: 2;
     width: 139px;
     height: 139px;
