@@ -15,7 +15,6 @@ class NavBar extends Component {
   state = {
     showSolutionsDropMenu: false,
     showInsightsDropMenu: false,
-    showAboutUsDropMenu: false,
     showNav: 1
   };
 
@@ -37,16 +36,6 @@ class NavBar extends Component {
 
   handleInsightsDropMenuClose = () => {
     this.setState({ showInsightsDropMenu: false });
-  };
-
-  handleAboutUsDropMenuToggle = () => {
-    this.setState(prevState => {
-      return { showAboutUsDropMenu: !prevState.showAboutUsDropMenu };
-    });
-  };
-
-  handleAboutUsDropMenuClose = () => {
-    this.setState({ showAboutUsDropMenu: false });
   };
 
   handleLanguageBtnClick = () => {
@@ -90,9 +79,8 @@ class NavBar extends Component {
                 <a onMouseEnter={this.handleInsightsDropMenuToggle}>Insights</a>
                 <DropDownMenu show={this.state.showInsightsDropMenu} />
               </NavigationItem>
-              <NavigationItem onMouseLeave={this.handleAboutUsDropMenuClose}>
-                <a onMouseEnter={this.handleAboutUsDropMenuToggle}>About Us</a>
-                <DropDownMenu show={this.state.showAboutUsDropMenu} />
+              <NavigationItem>
+                <NavLink to="/en/home">About Us</NavLink>
               </NavigationItem>
               <NavigationItem>
                 <NavLink to="/en/home">Contact</NavLink>

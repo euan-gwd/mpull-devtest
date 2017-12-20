@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 import DropDownMenu from './DropDownMenu';
 import NavBarLang from './NavBarLang';
 import NavBarSeek from './NavBarSeek';
@@ -71,7 +72,7 @@ class NavBar extends Component {
                 <DropDownMenu show={this.state.showSolutionsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <a href="/dk/home">sager</a>
+                <NavLink to="/dk/home">sager</NavLink>
                 <div />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
@@ -79,10 +80,10 @@ class NavBar extends Component {
                 <DropDownMenu show={this.state.showInsightsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <a href="/dk/home">om os</a>
+                <NavLink to="/dk/home">om os</NavLink>
               </NavigationItem>
               <NavigationItem>
-                <a href="/dk/home">kontakt</a>
+                <NavLink to="/dk/home">kontakt</NavLink>
                 <div />
               </NavigationItem>
             </NavigationItems>
