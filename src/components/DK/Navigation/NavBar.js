@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import DropDownMenu from './DropDownMenu';
 import NavBarLang from './NavBarLang';
@@ -15,7 +14,6 @@ class NavBar extends Component {
   state = {
     showSolutionsDropMenu: false,
     showInsightsDropMenu: false,
-    showAboutUsDropMenu: false,
     showNav: 1
   };
 
@@ -37,16 +35,6 @@ class NavBar extends Component {
 
   handleInsightsDropMenuClose = () => {
     this.setState({ showInsightsDropMenu: false });
-  };
-
-  handleAboutUsDropMenuToggle = () => {
-    this.setState(prevState => {
-      return { showAboutUsDropMenu: !prevState.showAboutUsDropMenu };
-    });
-  };
-
-  handleAboutUsDropMenuClose = () => {
-    this.setState({ showAboutUsDropMenu: false });
   };
 
   handleLanguageBtnClick = () => {
@@ -83,19 +71,18 @@ class NavBar extends Component {
                 <DropDownMenu show={this.state.showSolutionsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/dk/home">sager</NavLink>
+                <a href="/dk/home">sager</a>
                 <div />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
                 <a onMouseEnter={this.handleInsightsDropMenuToggle}>indsigter</a>
                 <DropDownMenu show={this.state.showInsightsDropMenu} />
               </NavigationItem>
-              <NavigationItem onMouseLeave={this.handleAboutUsDropMenuClose}>
-                <a onMouseEnter={this.handleAboutUsDropMenuToggle}>om os</a>
-                <DropDownMenu show={this.state.showAboutUsDropMenu} />
+              <NavigationItem>
+                <a href="/dk/home">om os</a>
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/dk/home">kontakt</NavLink>
+                <a href="/dk/home">kontakt</a>
                 <div />
               </NavigationItem>
             </NavigationItems>
