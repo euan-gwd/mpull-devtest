@@ -113,28 +113,38 @@ const SearchIcon = styled.div`
 `;
 
 const SearchNavItem = styled.div`
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   display: grid;
   align-items: center;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5rem;
 
   input[type='search'] {
     border: 0;
+    height: 80%;
     width: 100%;
     min-width: 100%;
     display: inline;
-    box-sizing: border-box;
-    font-size: 0.75rem;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+    font-weight: 100;
     line-height: 1.5rem;
-  }
+    box-sizing: border-box;
 
-  @media screen and (min-width: 768px) {
-    input[type='search'] {
-      border: 0;
-      width: 100%;
-      min-width: 100%;
-      display: inline;
-      box-sizing: border-box;
+    &:focus {
+      outline-color: #818181;
+    }
+
+    &::placeholder {
       font-size: 0.75rem;
-      line-height: 1.5rem;
+    }
+
+    &::-moz-placeholder {
+      font-size: 0.75rem;
     }
   }
 `;

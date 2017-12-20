@@ -206,6 +206,10 @@ const NavigationItem = styled.div`
       padding: 0;
       box-sizing: border-box;
       color: #000;
+      font-family: 'Roboto Slab', serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      text-transform: uppercase;
       text-decoration: none;
     }
 

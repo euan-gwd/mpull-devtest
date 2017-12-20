@@ -113,6 +113,10 @@ const LanguageNavItem = styled.div`
     padding: 0;
     color: #000;
     box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
     text-decoration: none;
     display: block;
     text-align: center;

@@ -20,21 +20,21 @@ export default DropDownMenu;
 
 const NavMenu = styled.nav`
   position: relative;
-  width: 100px;
-  top: 0;
+  width: 100%;
+  top: 1px;
   left: 0;
   background-color: #fff;
   padding: 0;
   box-sizing: border-box;
-  transition: transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   border-top: 1px solid black;
 
   &.open {
-    transform: translateY(0);
+    opacity: 1;
   }
 
   &.close {
-    transform: translateY(-200px);
+    opacity: 0;
   }
 `;
 
