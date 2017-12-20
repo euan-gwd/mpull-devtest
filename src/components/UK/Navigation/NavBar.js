@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import DropDownMenu from './DropDownMenu';
 import NavBarLang from './NavBarLang';
@@ -82,7 +83,7 @@ class NavBar extends Component {
                 <DropDownMenu show={this.state.showSolutionsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <a href="/">Cases</a>
+                <NavLink to="/en/home">Cases</NavLink>
                 <div />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
@@ -94,7 +95,7 @@ class NavBar extends Component {
                 <DropDownMenu show={this.state.showAboutUsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <a href="/">Contact</a>
+                <NavLink to="/en/home">Contact</NavLink>
                 <div />
               </NavigationItem>
             </NavigationItems>
@@ -195,7 +196,7 @@ const NavigationItem = styled.div`
     margin: 0;
     padding: 1rem 0;
     box-sizing: border-box;
-    align-self: start;
+    align-self: stretch;
     justify-self: center;
     text-align: center;
     display: block;
