@@ -12,7 +12,7 @@ class VideoFrame extends Component {
     return (
       <BackDrop image={videoPlaceHolder}>
         <Container>
-          <Title>nordisk oplevelse over hele verden</Title>
+          <Title>Nordisk Fortreffelighet over hele verden</Title>
           <PlayButtonGroup>
             <ButtonRound />
           </PlayButtonGroup>
@@ -66,6 +66,7 @@ const Title = styled.h1`
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
   font-size: 2rem;
+  text-transform: capitalize;
   color: white;
 
   @media screen and (min-width: 768px) {
@@ -75,6 +76,7 @@ const Title = styled.h1`
     margin: 0;
     padding-top: 1rem;
     font-size: 3.125rem;
+    text-transform: capitalize;
     color: white;
   }
 `;
