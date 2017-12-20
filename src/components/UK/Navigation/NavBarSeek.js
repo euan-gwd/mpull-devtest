@@ -136,8 +136,7 @@ const SearchNavItem = styled.div`
     box-sizing: border-box;
 
     &:focus {
-      outline-color: #818181;
-      opacity: 0.5;
+      outline: 0;
     }
 
     &::placeholder {
@@ -158,7 +157,7 @@ const CloseNavBtn = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    justify-self: center;
+    justify-self: end;
     grid-column: 10 / 10;
     cursor: pointer;
   }

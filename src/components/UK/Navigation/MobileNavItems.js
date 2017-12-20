@@ -41,16 +41,6 @@ const NavItemsList = styled.ul`
   list-style: none;
   display: grid;
   grid-row-gap: 1rem;
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-  }
 `;
 
 const NavigationItem = styled.li`
@@ -65,6 +55,10 @@ const NavigationItem = styled.li`
     margin: 0;
     padding: 0;
     color: #000;
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
     text-decoration: none;
     align-self: center;
     justify-self: start;
@@ -83,36 +77,5 @@ const NavigationItem = styled.li`
     align-self: center;
     justify-self: end;
     cursor: pointer;
-  }
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    box-sizing: border-box;
-    display: flex;
-    height: 100%;
-    align-items: center;
-
-    a {
-      color: #000;
-      text-decoration: none;
-      padding: 16px 1rem;
-      box-sizing: border-box;
-      display: block;
-    }
-
-    a:hover,
-    a:active {
-      text-decoration-line: underline;
-      text-decoration-style: solid;
-      text-decoration-color: black;
-      text-underline-position: auto;
-    }
-
-    a > img {
-      display: none;
-      align-self: center;
-      justify-self: end;
-      cursor: pointer;
-    }
   }
 `;
