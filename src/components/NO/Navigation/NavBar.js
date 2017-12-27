@@ -159,7 +159,7 @@ const Logo = styled.a`
     grid-column: 1;
     justify-self: center;
     align-self: start;
-    padding: 1rem 0;
+    padding: 1.4rem 0;
   }
 `;
 
@@ -182,7 +182,7 @@ const NavigationItem = styled.div`
 
   @media screen and (min-width: 768px) {
     margin: 0;
-    padding: 1rem 0;
+    padding: 1.4rem 0;
     box-sizing: border-box;
     align-self: stretch;
     justify-self: center;
@@ -220,7 +220,7 @@ const LanguageBtn = styled.a`
     grid-column: 9 / 10;
     justify-self: end;
     align-self: start;
-    padding: 1rem 0;
+    padding: 1.4rem 0;
   }
 `;
 
@@ -233,6 +233,6 @@ const SearchBtn = styled.a`
     grid-column: 10 / 10;
     justify-self: center;
     align-self: start;
-    padding: 1rem 0;
+    padding: 1.4rem 0;
   }
 `;

@@ -210,7 +210,7 @@ const WorldButton = styled.button`
   color: black;
   text-transform: uppercase;
   border: 1px solid black;
-  border-radius: 50% 50%;
+  border-radius: 100%;
   background-color: transparent;
   cursor: pointer;
 
@@ -236,7 +236,7 @@ const WorldButton = styled.button`
     color: black;
     text-transform: uppercase;
     border: 1px solid black;
-    border-radius: 50% 50%;
+    border-radius: 100%;
     border-spacing: 1rem;
     background-color: transparent;
     cursor: pointer;

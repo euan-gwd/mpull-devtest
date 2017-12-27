@@ -10,7 +10,7 @@ class MeasureWorldWide extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <WorldButton>What Does it me to you?</WorldButton>
+            <WorldButton>What Does it mean to you?</WorldButton>
             <WorldImg src={worldImage} alt="offerImage" />
           </LeftColumn>
           <RightColumn>
@@ -206,7 +206,7 @@ const WorldButton = styled.button`
   color: black;
   text-transform: uppercase;
   border: 1px solid black;
-  border-radius: 50% 50%;
+  border-radius: 100%;
   background-color: transparent;
   cursor: pointer;
 
@@ -232,7 +232,7 @@ const WorldButton = styled.button`
     color: black;
     text-transform: uppercase;
     border: 1px solid black;
-    border-radius: 50% 50%;
+    border-radius: 100%;
     border-spacing: 1rem;
     background-color: transparent;
     cursor: pointer;

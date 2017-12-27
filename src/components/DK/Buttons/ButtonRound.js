@@ -22,7 +22,7 @@ const Button = styled.button`
   font-weight: 100;
   line-height: 3rem;
   border: 1px solid white;
-  border-radius: 45px;
+  border-radius: 100%;
   background-color: transparent;
   color: white;
   cursor: pointer;
@@ -52,7 +52,7 @@ const Button = styled.button`
     font-weight: 300;
     line-height: 3rem;
     border: 1px solid white;
-    border-radius: 70px;
+    border-radius: 100%;
     background-color: transparent;
     color: white;
     cursor: pointer;
