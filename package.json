@@ -1,6 +1,6 @@
 {
   "name": "mpull-devtest",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "private": true,
   "dependencies": {
     "normalize.css": "^7.0.0",
@@ -8,26 +8,27 @@
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
-    "styled-components": "^2.3.0"
+    "styled-components": "^2.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "deploy": "firebase deploy",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.3",
-    "eslint": "^4.13.1",
+    "babel-eslint": "^8.1.2",
+    "eslint": "^4.14.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-react-app": "^2.0.1",
     "eslint-plugin-flowtype": "^2.40.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-prettier": "^2.4.0",
     "eslint-plugin-react": "^7.5.1",
     "prettier": "^1.9.2",
-    "prettier-eslint": "^8.3.1",
+    "prettier-eslint": "^8.6.2",
     "typescript": "^2.6.2",
     "typescript-styled-plugin": "^0.2.2"
   }
