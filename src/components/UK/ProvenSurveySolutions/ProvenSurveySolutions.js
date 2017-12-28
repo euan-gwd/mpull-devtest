@@ -87,7 +87,7 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
@@ -104,7 +104,7 @@ const Title = styled.h1`
     padding: 0 6rem 0 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 3rem;
     text-transform: uppercase;
     color: black;

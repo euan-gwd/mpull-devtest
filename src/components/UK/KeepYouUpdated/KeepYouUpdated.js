@@ -108,13 +108,20 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: white;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 2rem 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
     font-size: 2.75rem;
+    text-transform: uppercase;
+    color: white;
   }
 
   @media screen and (min-width: 1025px) {
@@ -125,7 +132,7 @@ const Title = styled.h1`
     box-sizing: border-box;
     position: unset;
     font-family: 'Roboto Slab', serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 3rem;
     text-transform: uppercase;
     color: white;
