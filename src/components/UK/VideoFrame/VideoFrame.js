@@ -46,6 +46,7 @@ const Container = styled.div`
   grid-template-columns: repeat(3, 33.3%);
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 56px 0 0;
     padding: 2rem;
     box-sizing: border-box;
   }
@@ -71,31 +72,32 @@ const Title = styled.h1`
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
   font-size: 1.5rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: white;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     grid-row: 1;
     grid-column: span 2;
-    align-self: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
     font-size: 2.75rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: white;
   }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: span 2;
-    align-self: center;
+    /* align-self: center; */
     margin: 0;
-    padding-top: 1rem;
+    padding: 0;
+    box-sizing: border-box;
+    /* padding-top: 1rem; */
     font-size: 3rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: white;
   }
 `;

@@ -96,6 +96,7 @@ const SearchNavBar = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     grid-row: 1;
     grid-column: 3 / 7;
+    align-items: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

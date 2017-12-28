@@ -38,7 +38,8 @@ const Container = styled.div`
   align-items: center;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    padding: 1rem;
+    margin: 0;
+    padding: 2rem;
     box-sizing: border-box;
   }
 
@@ -79,7 +80,7 @@ const Title = styled.h1`
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: black;
   }

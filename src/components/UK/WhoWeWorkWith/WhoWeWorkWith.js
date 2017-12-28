@@ -109,7 +109,7 @@ const RightColumn = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     grid-row: 2;
     margin: 0;
-    padding: 0 0;
+    padding: 0;
     box-sizing: border-box;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
