@@ -112,6 +112,10 @@ const Title = styled.h1`
   text-transform: uppercase;
   color: black;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 2.75rem;
+  }
+
   @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 1;

@@ -107,9 +107,7 @@ const RightColumn = styled.div`
     box-sizing: border-box;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 
   @media screen and (min-width: 1025px) {
@@ -131,7 +129,7 @@ const Title = styled.h1`
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
 
@@ -144,7 +142,7 @@ const Title = styled.h1`
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.75rem;
     text-transform: uppercase;
     color: black;
   }
@@ -220,7 +218,7 @@ const ButtonGroup = styled.div`
     grid-row: 3;
     grid-column: 1;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.5fr;
   }
 
   @media screen and (min-width: 1025px) {

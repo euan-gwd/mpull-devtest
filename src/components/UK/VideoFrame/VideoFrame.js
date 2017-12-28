@@ -94,7 +94,7 @@ const Title = styled.h1`
     align-self: center;
     margin: 0;
     padding-top: 1rem;
-    font-size: 3.125rem;
+    font-size: 3rem;
     text-transform: capitalize;
     color: white;
   }

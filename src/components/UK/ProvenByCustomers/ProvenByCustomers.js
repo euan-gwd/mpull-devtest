@@ -61,6 +61,11 @@ const Container = styled.div`
   box-sizing: border-box;
   display: grid;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
@@ -116,6 +121,10 @@ const Title = styled.h1`
   text-transform: uppercase;
   color: white;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 2.75rem;
+  }
+
   @media screen and (min-width: 1025px) {
     grid-row: 1;
     margin: 0;
@@ -163,6 +172,12 @@ const ButtonGroup = styled.div`
   color: white;
   display: grid;
   grid-row-gap: 1rem;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1rem;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 4;
