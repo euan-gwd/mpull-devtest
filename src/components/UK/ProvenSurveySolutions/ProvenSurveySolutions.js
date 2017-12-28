@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import bdImage from './images/woman_telephone.png';
 import ButtonDark from '../Buttons/ButtonDark';
 
-class CustomerSurveySolutions extends Component {
+class ProvenSurveySolutions extends Component {
   state = {};
   render() {
     return (
@@ -24,7 +24,7 @@ class CustomerSurveySolutions extends Component {
   }
 }
 
-export default CustomerSurveySolutions;
+export default ProvenSurveySolutions;
 
 const BackDrop = styled.section`
   margin: 0;
@@ -34,6 +34,16 @@ const BackDrop = styled.section`
   background-origin: border-box;
   background-size: cover;
   background-position: -3cm 0, center;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(${props => props.image}) no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    background-position: 0 0, center;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0;
@@ -54,6 +64,10 @@ const Container = styled.div`
   grid-template-rows: 0.25fr 1fr 1fr;
   grid-template-columns: 1fr;
   align-items: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 2rem;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
@@ -128,6 +142,12 @@ const ButtonGroup = styled.div`
   color: black;
   display: grid;
   grid-row-gap: 1rem;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1rem;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0;
