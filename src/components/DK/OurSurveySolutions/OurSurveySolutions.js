@@ -38,7 +38,7 @@ const BackDrop = styled.section`
   background-color: #f0f1f0;
   background-size: cover;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -54,7 +54,7 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0 0;
     box-sizing: border-box;
@@ -74,7 +74,7 @@ const LeftColumn = styled.div`
   grid-template-row: repeat (3, 1fr);
   grid-template-column: 1fr;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 1 / 4;
     margin: 0;
@@ -95,7 +95,7 @@ const RightColumn = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 4 / 7;
     margin: 0;
@@ -119,7 +119,7 @@ const Title = styled.h1`
   overflow-wrap: break-word;
   color: black;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 1;
     align-self: center;
@@ -148,7 +148,7 @@ const Content = styled.p`
   overflow-wrap: break-word;
   color: black;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 3;
     grid-column: 1;
     margin: 0;
@@ -175,7 +175,7 @@ const ButtonGroup = styled.div`
   color: black;
   display: grid;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -197,7 +197,7 @@ const OfferImg = styled.img`
   height: auto;
   object-fit: cover;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 1 / 3;
     justify-self: center;
@@ -235,7 +235,7 @@ const OfferButton = styled.button`
     color: white;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 2;
     justify-self: end;

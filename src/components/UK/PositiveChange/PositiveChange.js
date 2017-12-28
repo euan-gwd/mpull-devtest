@@ -40,7 +40,7 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
     box-sizing: border-box;
@@ -61,7 +61,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   color: black;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 1 / 4;
     align-self: start;
@@ -86,7 +86,7 @@ const Content = styled.div`
   font-size: 1rem;
   color: black;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 4 / 7;
     margin: 0;

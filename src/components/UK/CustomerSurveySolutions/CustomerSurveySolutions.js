@@ -35,7 +35,7 @@ const BackDrop = styled.section`
   background-size: cover;
   background-position: -3cm 0, center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -55,7 +55,7 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
     box-sizing: border-box;
@@ -76,7 +76,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   color: black;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 4 / 7;
     align-self: end;
@@ -101,7 +101,7 @@ const Content = styled.p`
   line-height: 1.5rem;
   color: black;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 2;
     grid-column: 4 / 7;
     align-self: end;
@@ -129,7 +129,7 @@ const ButtonGroup = styled.div`
   display: grid;
   grid-row-gap: 1rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0;
     padding: 0;
     grid-row: 3;

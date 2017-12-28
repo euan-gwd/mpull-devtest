@@ -105,7 +105,7 @@ const Container = styled.div`
   box-sizing: border-box;
   display: grid;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
     box-sizing: border-box;
@@ -122,7 +122,7 @@ const ContactCard = styled.article`
   padding: 0;
   box-sizing: border-box;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -135,7 +135,7 @@ const ContactLink = styled.article`
   box-sizing: border-box;
   display: ${props => (props.show ? 'block' : 'none')};
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     align-self: stretch;
     margin: 0;
     padding: 0;
@@ -223,7 +223,7 @@ const WebLink = styled.a`
     font-weight: 300;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     height: unset;
   }
 `;
@@ -236,7 +236,7 @@ const ButtonGroup = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-column: 1 / 5;
     margin: 0;
     padding: 0;
@@ -263,7 +263,7 @@ const UpArrow = styled.p`
   text-decoration: none;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: span 2;
     align-self: end;
@@ -297,7 +297,7 @@ const ButtonText = styled.a`
   text-transform: capitalize;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 2;
     grid-column: 1 / 3;
     justify-self: center;
@@ -330,7 +330,7 @@ const CopyRightFooter = styled.span`
   font-size: 1rem;
   color: #818181;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 2;
     grid-column: 2;
     justify-self: end;

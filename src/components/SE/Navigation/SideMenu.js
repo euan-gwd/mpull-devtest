@@ -43,7 +43,7 @@ const NavMenu = styled.nav`
     transform: translateX(-100%);
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
 `;

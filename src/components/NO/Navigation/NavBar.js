@@ -127,7 +127,7 @@ const MainNavigation = styled.div`
   align-items: center;
   height: 56px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
@@ -143,7 +143,7 @@ const MobileMenu = styled.a`
   display: block;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
 `;
@@ -155,7 +155,7 @@ const Logo = styled.a`
   justify-self: center;
   grid-column: 2 / span 2;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-column: 1;
     justify-self: center;
     align-self: start;
@@ -166,7 +166,7 @@ const Logo = styled.a`
 const NavigationItems = styled.div`
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-column-start: 3;
     grid-column-end: 9;
     align-self: center;
@@ -180,7 +180,7 @@ const NavigationItems = styled.div`
 const NavigationItem = styled.div`
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0;
     padding: 1.4rem 0;
     box-sizing: border-box;
@@ -216,7 +216,7 @@ const LanguageBtn = styled.a`
     cursor: pointer;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-column: 9 / 10;
     justify-self: end;
     align-self: start;
@@ -229,7 +229,7 @@ const SearchBtn = styled.a`
     display: none;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-column: 10 / 10;
     justify-self: center;
     align-self: start;

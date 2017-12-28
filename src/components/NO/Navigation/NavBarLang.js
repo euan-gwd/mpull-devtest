@@ -49,7 +49,7 @@ const NavigationLanguage = styled.div`
   align-items: center;
   height: 56px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
@@ -68,7 +68,7 @@ const Logo = styled.a`
   justify-self: center;
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-column: 1 / 3;
     justify-self: start;
     align-self: center;
@@ -89,7 +89,7 @@ const LanguageNavItemList = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-column: 3 / 9;
     margin: 0;
     padding: 0;
@@ -127,7 +127,7 @@ const LanguageNavItem = styled.div`
     text-decoration: underline;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -162,7 +162,7 @@ const CloseNavBtn = styled.a`
     cursor: pointer;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     justify-self: end;
     grid-column: 10 / 10;
     cursor: pointer;

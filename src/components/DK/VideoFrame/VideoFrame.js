@@ -45,7 +45,7 @@ const Container = styled.div`
   grid-template-rows: repeat(3, 1fr) 50px;
   grid-template-columns: repeat(3, 33.3%);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 45px auto 0;
     padding: 3rem 0;
     box-sizing: border-box;
@@ -69,7 +69,7 @@ const Title = styled.h1`
   text-transform: capitalize;
   color: white;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: span 2;
     align-self: center;
@@ -91,7 +91,7 @@ const PlayButtonGroup = styled.div`
   height: 100%
   box-sizing: border-box;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 2;
     grid-column: 3 / 5;
     justify-self: center;
@@ -122,7 +122,7 @@ const Logoer = styled.div`
     margin: 0 0.5rem;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 4;
     grid-column: 4 / 7;
     justify-self: end;

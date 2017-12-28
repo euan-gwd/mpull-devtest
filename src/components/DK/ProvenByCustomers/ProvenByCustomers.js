@@ -44,7 +44,7 @@ const BackDrop = styled.section`
   background-size: cover;
   background-position-x: right;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -61,7 +61,7 @@ const Container = styled.div`
   box-sizing: border-box;
   display: grid;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
     box-sizing: border-box;
@@ -77,7 +77,7 @@ const LeftColumn = styled.div`
   box-sizing: border-box;
   display: grid;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 1 / 4;
     margin: 0;
@@ -95,7 +95,7 @@ const RightColumn = styled.div`
   box-sizing: border-box;
   display: grid;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 4 / 7;
     margin: 0;
@@ -116,7 +116,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   color: white;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     margin: 0;
     padding: 0;
@@ -139,7 +139,7 @@ const Content = styled.p`
   line-height: 1.5rem;
   color: white;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 3;
     margin: 0;
     padding: 0;
@@ -164,7 +164,7 @@ const ButtonGroup = styled.div`
   display: grid;
   grid-row-gap: 1rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 4;
     margin: 0;
     padding: 0;
@@ -182,7 +182,7 @@ const PlayIcon = styled.div`
   display: none;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 1;
     justify-self: end;

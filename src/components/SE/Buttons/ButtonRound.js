@@ -41,7 +41,7 @@ const Button = styled.button`
     color: white;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     width: 139px;
     height: 139px;
     margin: 0;
