@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import bdImage from './images/proven.png';
-import ButtonRound from '../Buttons/ButtonRound';
+import playIcon from './images/Play-ikon-white.svg';
 import ButtonLight from '../Buttons/ButtonLight';
 
 class ProvenByCustomers extends Component {
@@ -22,9 +22,9 @@ class ProvenByCustomers extends Component {
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
-            <PlayIcon>
-              <ButtonRound />
-            </PlayIcon>
+            <PlayButtonGroup>
+              <PlayButton src={playIcon} alt="play video" />
+            </PlayButtonGroup>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -175,7 +175,7 @@ const ButtonGroup = styled.div`
   }
 `;
 
-const PlayIcon = styled.div`
+const PlayButtonGroup = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -191,5 +191,25 @@ const PlayIcon = styled.div`
     box-sizing: border-box;
     height: 100%;
     display: block;
+  }
+`;
+
+const PlayButton = styled.img`
+  grid-row: 1;
+  grid-column: 2;
+  z-index: 2;
+  width: 139px;
+  height: 139px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 100%;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+    color: white;
   }
 `;
