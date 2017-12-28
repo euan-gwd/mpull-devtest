@@ -68,7 +68,7 @@ const Container = styled.div`
 
 const LeftColumn = styled.div`
   grid-row: 1;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   height: 100%;
@@ -131,6 +131,7 @@ const Title = styled.h1`
   font-weight: 100;
   font-size: 1.5rem;
   text-transform: uppercase;
+  text-align: center;
   color: black;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {

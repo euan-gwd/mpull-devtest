@@ -75,10 +75,11 @@ const Container = styled.div`
 
 const LeftColumn = styled.div`
   grid-row: 1;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   height: 100%;
+  display: grid;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     grid-row: 1;
@@ -125,6 +126,7 @@ const RightColumn = styled.div`
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
   }
 `;
 
@@ -139,7 +141,17 @@ const Title = styled.h1`
   color: black;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
     font-size: 2.75rem;
+    text-transform: uppercase;
+    color: black;
   }
 
   @media screen and (min-width: 1025px) {
@@ -220,7 +232,7 @@ const ImgTable = styled.img`
   box-sizing: border-box;
   max-width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
