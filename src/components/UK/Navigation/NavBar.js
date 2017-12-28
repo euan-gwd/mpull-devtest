@@ -127,18 +127,17 @@ const MainNavigation = styled.div`
   align-items: center;
   height: 56px;
 
-  /* @media screen and (min-width: 769px) and (max-width: 1023px) {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     align-items: center;
     height: 56px;
-    max-width: 1024px;
-  } */
+  }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
@@ -146,7 +145,7 @@ const MainNavigation = styled.div`
     grid-template-columns: repeat(10, 1fr);
     align-items: center;
     height: 56px;
-    max-width: 1024px;
+    max-width: 1120px;
   }
 `;
 
@@ -165,6 +164,13 @@ const Logo = styled.a`
   box-sizing: border-box;
   justify-self: center;
   grid-column: 2 / span 2;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    grid-column: 4 / 6;
+    justify-self: center;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-column: 1;
@@ -227,10 +233,18 @@ const LanguageBtn = styled.a`
     cursor: pointer;
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    grid-column: 7;
+    justify-self: end;
+  }
+
   @media screen and (min-width: 1025px) {
-    grid-column: 9 / 10;
+    grid-column: 9;
     justify-self: end;
     align-self: start;
+    margin: 0;
     padding: 1.4rem 0;
   }
 `;
@@ -240,10 +254,18 @@ const SearchBtn = styled.a`
     display: none;
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    grid-column: 8;
+    justify-self: end;
+  }
+
   @media screen and (min-width: 1025px) {
-    grid-column: 10 / 10;
+    margin: 0;
+    padding: 1.4rem 0;
+    grid-column: 10;
     justify-self: center;
     align-self: start;
-    padding: 1.4rem 0;
   }
 `;
