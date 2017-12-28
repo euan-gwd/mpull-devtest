@@ -67,7 +67,7 @@ const Container = styled.div`
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 

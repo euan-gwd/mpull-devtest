@@ -62,7 +62,7 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(6, 1fr);
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 

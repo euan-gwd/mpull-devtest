@@ -113,7 +113,7 @@ const Container = styled.div`
     grid-template-rows: 1fr 1fr 0.25fr;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 6rem 1rem;
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 
