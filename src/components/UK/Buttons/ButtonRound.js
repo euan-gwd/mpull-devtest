@@ -33,7 +33,7 @@ const Button = styled.button`
   > p {
     position: relative;
     top: -10px;
-    left: 0px;
+    left: 0;
   }
 
   &:hover {
@@ -41,7 +41,36 @@ const Button = styled.button`
     color: white;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    width: 139px;
+    height: 139px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-size: 6rem;
+    font-weight: 300;
+    line-height: 3rem;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > p {
+      align-self: center;
+    }
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
     width: 139px;
     height: 139px;
     margin: 0;

@@ -127,7 +127,18 @@ const MainNavigation = styled.div`
   align-items: center;
   height: 56px;
 
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 769px) and (max-width: 1023px) {
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    height: 56px;
+    max-width: 1024px;
+  } */
+
+  @media screen and (min-width: 1024px) {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
@@ -143,7 +154,7 @@ const MobileMenu = styled.a`
   display: block;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
 `;
