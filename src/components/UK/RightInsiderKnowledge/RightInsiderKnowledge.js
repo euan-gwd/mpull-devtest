@@ -46,6 +46,10 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 2rem;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
@@ -158,6 +162,12 @@ const ButtonGroup = styled.div`
   color: black;
   display: grid;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1rem;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0;
     padding: 0;
@@ -177,7 +187,7 @@ const OfferImg = styled.img`
   box-sizing: border-box;
   max-width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
