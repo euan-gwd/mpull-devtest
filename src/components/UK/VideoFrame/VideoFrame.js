@@ -70,7 +70,7 @@ const Title = styled.h1`
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
   color: white;
 

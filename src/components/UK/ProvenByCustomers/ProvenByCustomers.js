@@ -116,7 +116,7 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: white;
@@ -131,7 +131,7 @@ const Title = styled.h1`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 3rem;
     text-transform: uppercase;
     color: white;
@@ -166,7 +166,7 @@ const ButtonGroup = styled.div`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: white;

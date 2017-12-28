@@ -79,7 +79,7 @@ class BottomContactDetails extends Component {
             <WebLink>Newsletter</WebLink>
           </ContactLink>
           <ButtonGroup>
-            <UpArrow>&#8963;</UpArrow>
+            <UpArrow onClick={this.handleScrollToTop}>&#8963;</UpArrow>
             <ButtonText onClick={this.handleScrollToTop}>Return To Top</ButtonText>
             <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
           </ButtonGroup>
@@ -104,6 +104,14 @@ const Container = styled.div`
   padding: 0;
   box-sizing: border-box;
   display: grid;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 1rem;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 1fr 0.25fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem 2rem;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
@@ -235,6 +243,17 @@ const ButtonGroup = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    grid-row: 3;
+    grid-column: 1 / 5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-column: 1 / 5;
