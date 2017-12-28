@@ -32,8 +32,8 @@ const BackDrop = styled.section`
 `;
 
 const Container = styled.div`
-  margin: 3rem 1rem;
-  padding: 0;
+  margin: 0;
+  padding: 3rem 1rem;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 0.25fr 1fr;
