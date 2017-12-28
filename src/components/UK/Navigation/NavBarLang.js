@@ -231,7 +231,7 @@ const CloseNavBtn = styled.a`
   }
 
   @media screen and (min-width: 1025px) {
-    justify-self: end;
+    justify-self: center;
     grid-column: 10 / 10;
     cursor: pointer;
   }

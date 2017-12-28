@@ -11,14 +11,9 @@ const NavBarSeek = props => {
       <Logo href="/">
         <img src={logo} className="logo" alt="logo" />
       </Logo>
-      <SearchNavItemList>
-        <SearchIcon>
-          <img src={search} alt="Search Bar" />
-        </SearchIcon>
-        <SearchNavItem>
-          <input type="search" placeholder="Type to search..." />
-        </SearchNavItem>
-      </SearchNavItemList>
+      <SearchNavBar>
+        <SearchInput type="search" placeholder="Type to search..." icon={search} />
+      </SearchNavBar>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>
         <img src={cross} alt="Back to Main Navigation" />
       </CloseNavBtn>
@@ -88,7 +83,7 @@ const Logo = styled.a`
   }
 `;
 
-const SearchNavItemList = styled.div`
+const SearchNavBar = styled.div`
   grid-row: 1;
   grid-column: 1 / 4;
   margin: 0;
@@ -97,7 +92,6 @@ const SearchNavItemList = styled.div`
   border: 0;
   height: 56px;
   display: grid;
-  grid-template-columns: 50px auto;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     grid-row: 1;
@@ -113,77 +107,43 @@ const SearchNavItemList = styled.div`
     grid-column: 3 / 9;
     margin: 0;
     padding: 0;
+    padding-left: 1.5rem;
     box-sizing: border-box;
-    grid-template-columns: 50px auto;
     border: 0;
     border-left: 1px solid black;
     height: 56px;
   }
 `;
 
-const SearchIcon = styled.div`
-  display: grid;
-  align-items: center;
-  justify-self: start;
+const SearchInput = styled.input`
   margin: 0;
   padding: 0;
+  padding-left: 2.25rem;
   box-sizing: border-box;
-  height: 56px;
-
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    align-items: center;
-    justify-self: center;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 56px;
-    display: grid;
-  }
-
-  @media screen and (min-width: 1025px) {
-    display: grid;
-    align-items: center;
-    justify-self: center;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 56px;
-  }
-`;
-
-const SearchNavItem = styled.div`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  display: grid;
-  align-items: center;
+  height: 80%;
+  width: auto;
+  transition: width 0.4s ease-in-out;
+  background-image: url(${props => props.icon});
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 0.5rem;
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: 100;
   line-height: 1.5rem;
+  border: 0;
 
-  input[type='search'] {
-    border: 0;
-    height: 80%;
-    min-width: 100%;
-    display: block;
-    font-family: 'Roboto Slab', serif;
-    font-size: 1rem;
-    font-weight: 100;
-    line-height: 1.5rem;
-    box-sizing: border-box;
+  &:focus {
+    outline: 0;
+    width: 100%;
+  }
 
-    &:focus {
-      outline: 0;
-    }
+  &::placeholder {
+    font-size: 0.75rem;
+  }
 
-    &::placeholder {
-      font-size: 0.75rem;
-    }
-
-    &::-moz-placeholder {
-      font-size: 0.75rem;
-    }
+  &::-moz-placeholder {
+    font-size: 0.75rem;
   }
 `;
 
@@ -203,7 +163,7 @@ const CloseNavBtn = styled.a`
   }
 
   @media screen and (min-width: 1025px) {
-    justify-self: end;
+    justify-self: center;
     grid-column: 10 / 10;
     cursor: pointer;
   }

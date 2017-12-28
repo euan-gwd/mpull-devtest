@@ -87,12 +87,12 @@ class NavBar extends Component {
                 <div />
               </NavigationItem>
             </NavigationItems>
-            <LanguageBtn onClick={this.handleLanguageBtnClick}>
-              <img src={language} alt="change language" />
-            </LanguageBtn>
-            <SearchBtn onClick={this.handleSearchBtnClick}>
-              <img src={search} alt="search" />
-            </SearchBtn>
+            <LanguageBtn
+              onClick={this.handleLanguageBtnClick}
+              src={language}
+              alt="change language"
+            />
+            <SearchBtn onClick={this.handleSearchBtnClick} src={search} alt="search" />
           </MainNavigation>
         )}
         {showNav === 2 && <NavBarLang handleCloseBtnClick={this.handleCloseBtnClick} />}
@@ -226,7 +226,7 @@ const NavigationItem = styled.div`
   }
 `;
 
-const LanguageBtn = styled.a`
+const LanguageBtn = styled.img`
   @media screen and (max-width: 767px) {
     display: block;
     justify-self: end;
@@ -249,7 +249,7 @@ const LanguageBtn = styled.a`
   }
 `;
 
-const SearchBtn = styled.a`
+const SearchBtn = styled.img`
   @media screen and (max-width: 767px) {
     display: none;
   }
