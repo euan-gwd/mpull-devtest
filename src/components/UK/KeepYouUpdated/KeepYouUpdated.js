@@ -50,6 +50,11 @@ const Container = styled.div`
   display: grid;
   grid-row-gap: 2rem;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
@@ -81,7 +86,8 @@ const RightColumn = styled.div`
   padding: 0;
   box-sizing: border-box;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat (4, 1fr);
+  grid-row-gap: 1rem;
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -105,6 +111,10 @@ const Title = styled.h1`
   font-size: 1.5rem;
   text-transform: uppercase;
   color: white;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 2.75rem;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -194,6 +204,16 @@ const ButtonGroup = styled.div`
   color: black;
   display: grid;
   grid-template-columns: 1fr;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    grid-row: 4;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 0.5fr;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0;

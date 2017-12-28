@@ -37,6 +37,11 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   align-items: center;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
@@ -57,6 +62,13 @@ const Title = styled.h1`
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 2.75rem;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
