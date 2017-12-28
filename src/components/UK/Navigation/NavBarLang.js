@@ -67,7 +67,7 @@ const NavigationLanguage = styled.div`
     grid-template-columns: repeat(10, 1fr);
     align-items: center;
     height: 56px;
-    max-width: 1120px;
+    max-width: 1025px;
   }
 `;
 

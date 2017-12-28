@@ -53,7 +53,7 @@ const NavigationSearch = styled.div`
     grid-template-rows: 1fr;
     align-items: center;
     height: 56px;
-    max-width: 1120px;
+    max-width: 1025px;
   }
 `;
 
