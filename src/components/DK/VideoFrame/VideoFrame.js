@@ -12,7 +12,7 @@ class VideoFrame extends Component {
     return (
       <BackDrop image={videoPlaceHolder}>
         <Container>
-          <Title>Nordic Excellence Worldwide</Title>
+          <Title>Nordic Fortræffelighed I hele verden</Title>
           <PlayButtonGroup>
             <PlayButton src={playIcon} alt="play video" />
           </PlayButtonGroup>

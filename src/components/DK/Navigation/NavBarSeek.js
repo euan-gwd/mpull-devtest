@@ -13,10 +13,10 @@ const NavBarSeek = props => {
         <img src={logo} className="logo" alt="logo" />
       </Logo>
       <SearchNavBar>
-        <SearchInput type="search" placeholder="Type to search..." icon={search} />
+        <SearchInput type="search" placeholder="Skriv for at søge..." icon={search} />
       </SearchNavBar>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>
-        <img src={cross} alt="Back to Main Navigation" />
+        <img src={cross} alt="Tilbage til hovednavigering" />
       </CloseNavBtn>
     </NavigationSearch>
   );

@@ -15,7 +15,7 @@ const NavBarLang = props => {
       </Logo>
       <LanguageNavItemList>
         <LangIcon>
-          <img src={language} alt="change language" />
+          <img src={language} alt="skift sprog" />
         </LangIcon>
         <LanguageNavItem>
           <NavLink to="/en/home">UK</NavLink>
@@ -31,7 +31,7 @@ const NavBarLang = props => {
         </LanguageNavItem>
       </LanguageNavItemList>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>
-        <img src={cross} alt="Back to Main Navigation" />
+        <img src={cross} alt="Tilbage til hovednavigering" />
       </CloseNavBtn>
     </NavigationLanguage>
   );
@@ -110,6 +110,7 @@ const LanguageNavItemList = styled.div`
   height: 56px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  animation: 0.3s ${slideInAnimation};
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     grid-column: 3 / 6;

@@ -110,6 +110,7 @@ const LanguageNavItemList = styled.div`
   height: 56px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  animation: 0.3s ${slideInAnimation};
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     grid-column: 3 / 6;

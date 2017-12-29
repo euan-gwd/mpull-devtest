@@ -6,28 +6,28 @@ const MobileNavItems = () => {
   return (
     <NavItemsList>
       <NavigationItem>
-        <a>Solutions</a>
+        <a>Løsninger</a>
         <a>
           <img src={downarrow} alt="dropdown menu" />
         </a>
       </NavigationItem>
       <NavigationItem>
-        <a>Cases</a>
+        <a>Sager</a>
       </NavigationItem>
       <NavigationItem>
-        <a>Insights</a>
+        <a>Indsigter</a>
         <a>
           <img src={downarrow} alt="dropdown menu" />
         </a>
       </NavigationItem>
       <NavigationItem>
-        <a>About Us</a>
+        <a>Om Os</a>
         <a>
           <img src={downarrow} alt="dropdown menu" />
         </a>
       </NavigationItem>
       <NavigationItem>
-        <a>Contact</a>
+        <a>Kontakt</a>
       </NavigationItem>
     </NavItemsList>
   );

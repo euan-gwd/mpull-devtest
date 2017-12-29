@@ -13,13 +13,13 @@ class WhoWeWorkWith extends Component {
             <ImgTable src={clients} alt="offerImage" />
           </LeftColumn>
           <RightColumn>
-            <Title>Who We Work With</Title>
+            <Title>hvem vi arbejder med</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Read more</ButtonDark>
+              <ButtonDark>Læs mere</ButtonDark>
             </ButtonGroup>
           </RightColumn>
         </Container>

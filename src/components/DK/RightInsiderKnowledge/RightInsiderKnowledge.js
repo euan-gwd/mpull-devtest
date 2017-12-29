@@ -10,18 +10,18 @@ class RightInsiderKnowledge extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>We have the right insider Knowledge</Title>
+            <Title>Vi har ret til insider-viden</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Read the new glex</ButtonDark>
+              <ButtonDark>Læs den nye glex</ButtonDark>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
             <OfferImg src={offerImage} alt="offerImage" />
-            <OfferButton>Get new insights in our survey rapport</OfferButton>
+            <OfferButton>Få nye indsigter i vores undersøgelse rapport</OfferButton>
           </RightColumn>
         </Container>
       </BackDrop>

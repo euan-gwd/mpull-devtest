@@ -80,7 +80,7 @@ class BottomContactDetails extends Component {
           </ContactLink>
           <ButtonGroup>
             <UpArrow onClick={this.handleScrollToTop}>&#8963;</UpArrow>
-            <ButtonText onClick={this.handleScrollToTop}>Return To Top</ButtonText>
+            <ButtonText onClick={this.handleScrollToTop}>tilbage til toppen</ButtonText>
             <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
           </ButtonGroup>
         </Container>
