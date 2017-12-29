@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import bdImage from './images/proven.png';
-import ButtonRound from '../Buttons/ButtonRound';
+import playIcon from './images/Play-ikon-white.svg';
 import ButtonLight from '../Buttons/ButtonLight';
 
 class ProvenByCustomers extends Component {
@@ -11,20 +11,20 @@ class ProvenByCustomers extends Component {
       <BackDrop image={bdImage}>
         <Container>
           <LeftColumn>
-            <Title>Vi er bevist af vores kunder</Title>
+            <Title>We are Proven by our customers</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonLight>Medarbejder undersøgelse</ButtonLight>
-              <ButtonLight>Kunde undersøgelse</ButtonLight>
+              <ButtonLight>Employee Survey</ButtonLight>
+              <ButtonLight>Customer Survey</ButtonLight>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
-            <PlayIcon>
-              <ButtonRound />
-            </PlayIcon>
+            <PlayButtonGroup>
+              <PlayButton src={playIcon} alt="play video" />
+            </PlayButtonGroup>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -61,13 +61,19 @@ const Container = styled.div`
   box-sizing: border-box;
   display: grid;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 
@@ -111,10 +117,21 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: white;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 2rem 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 2.75rem;
+    text-transform: uppercase;
+    color: white;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -122,7 +139,7 @@ const Title = styled.h1`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3rem;
     text-transform: uppercase;
     color: white;
@@ -157,12 +174,18 @@ const ButtonGroup = styled.div`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: white;
   display: grid;
   grid-row-gap: 1rem;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1rem;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 4;
@@ -171,11 +194,11 @@ const ButtonGroup = styled.div`
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    overflow-wrap: break-word;
+    grid-column-gap: 2rem;
   }
 `;
 
-const PlayIcon = styled.div`
+const PlayButtonGroup = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -191,5 +214,25 @@ const PlayIcon = styled.div`
     box-sizing: border-box;
     height: 100%;
     display: block;
+  }
+`;
+
+const PlayButton = styled.img`
+  grid-row: 1;
+  grid-column: 2;
+  z-index: 2;
+  width: 139px;
+  height: 139px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 100%;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+    color: white;
   }
 `;

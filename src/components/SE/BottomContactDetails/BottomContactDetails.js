@@ -50,37 +50,37 @@ class BottomContactDetails extends Component {
             <CId>CVR. nr. 19587347</CId>
           </ContactCard>
           <ContactLink>
-            <Title>företag</Title>
-            <WebLink>handla om</WebLink>
-            <WebLink>karriär</WebLink>
-            <WebLink>Tryck &amp; Media</WebLink>
-            <WebLink>bloggare</WebLink>
-            <WebLink>kontakta oss</WebLink>
+            <Title>Company</Title>
+            <WebLink>About</WebLink>
+            <WebLink>Career</WebLink>
+            <WebLink>Press &amp; Media</WebLink>
+            <WebLink>Bloggers</WebLink>
+            <WebLink>Contact Us</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>villkor</Title>
-            <WebLink>datasäkerhet</WebLink>
-            <WebLink>Integritetspolicy</WebLink>
-            <WebLink>hjälp &amp; Stöd</WebLink>
-            <WebLink>sidokarta</WebLink>
+            <Title>Terms</Title>
+            <WebLink>Data Security</WebLink>
+            <WebLink>Privacy Policy</WebLink>
+            <WebLink>Help &amp; Support</WebLink>
+            <WebLink>Site Map</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>kunskap</Title>
-            <WebLink>Nyheter</WebLink>
-            <WebLink>rapporter</WebLink>
-            <WebLink>evenemang</WebLink>
+            <Title>Knowledge</Title>
+            <WebLink>News</WebLink>
+            <WebLink>Reports</WebLink>
+            <WebLink>Events</WebLink>
           </ContactLink>
           <ContactLink show>
-            <Title>Följ</Title>
+            <Title>Follow</Title>
             <WebLink>LinkedIn</WebLink>
             <WebLink>Twitter</WebLink>
             <WebLink>Facebook</WebLink>
             <WebLink>Youtube</WebLink>
-            <WebLink>nyhetsbrev</WebLink>
+            <WebLink>Newsletter</WebLink>
           </ContactLink>
           <ButtonGroup>
-            <UpArrow>&#8963;</UpArrow>
-            <ButtonText onClick={this.handleScrollToTop}>tillbaka till toppen</ButtonText>
+            <UpArrow onClick={this.handleScrollToTop}>&#8963;</UpArrow>
+            <ButtonText onClick={this.handleScrollToTop}>Return To Top</ButtonText>
             <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
           </ButtonGroup>
         </Container>
@@ -105,6 +105,14 @@ const Container = styled.div`
   box-sizing: border-box;
   display: grid;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 1rem;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 1fr 0.25fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem 2rem;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
@@ -113,7 +121,7 @@ const Container = styled.div`
     grid-template-rows: 1fr 1fr 0.25fr;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 6rem 1rem;
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 
@@ -236,6 +244,17 @@ const ButtonGroup = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    grid-row: 3;
+    grid-column: 1 / 5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
   @media screen and (min-width: 1025px) {
     grid-column: 1 / 5;
     margin: 0;
@@ -294,6 +313,7 @@ const ButtonText = styled.a`
   font-size: 1rem;
   color: #818181;
   text-decoration: none;
+  text-transform: capitalize;
   cursor: pointer;
 
   @media screen and (min-width: 1025px) {
@@ -307,6 +327,7 @@ const ButtonText = styled.a`
     font-weight: 300;
     line-height: 1.5rem;
     font-size: 1rem;
+    text-transform: capitalize;
     color: #818181;
     text-decoration: none;
     cursor: pointer;

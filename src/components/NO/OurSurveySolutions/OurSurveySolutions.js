@@ -10,18 +10,18 @@ class OurSurveySolutions extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>Våre velprøvde undersøkelsen løsninger</Title>
+            <Title>Our proven survey solutions</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Les den nye glex</ButtonDark>
+              <ButtonDark>Read the new glex</ButtonDark>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
             <OfferImg src={phoneApp} alt="phone" />
-            <OfferButton>Prøv vår undersøkelse prøveversjon</OfferButton>
+            <OfferButton>Try our survey trial version</OfferButton>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -54,6 +54,12 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0 0;
@@ -61,7 +67,7 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(6, 1fr);
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 
@@ -113,11 +119,21 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
-  overflow-wrap: break-word;
   color: black;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 2rem 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 2.75rem;
+    text-transform: uppercase;
+    color: black;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -128,10 +144,9 @@ const Title = styled.h1`
     box-sizing: border-box;
     position: unset;
     font-family: 'Roboto Slab', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3rem;
     text-transform: uppercase;
-    overflow-wrap: break-word;
     color: black;
   }
 `;
@@ -145,7 +160,6 @@ const Content = styled.p`
   font-weight: 100;
   font-size: 1rem;
   line-height: 1.5rem;
-  overflow-wrap: break-word;
   color: black;
 
   @media screen and (min-width: 1025px) {
@@ -159,7 +173,6 @@ const Content = styled.p`
     font-weight: 100;
     font-size: 1rem;
     line-height: 1.5rem;
-    overflow-wrap: break-word;
     color: black;
   }
 `;
@@ -169,11 +182,21 @@ const ButtonGroup = styled.div`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
   display: grid;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    grid-row: 3;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 0.5fr;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0;
@@ -224,7 +247,6 @@ const OfferButton = styled.button`
   font-weight: 300;
   color: black;
   text-transform: uppercase;
-  overflow-wrap: break-word;
   border: 1px solid black;
   border-radius: 50% 50%;
   background-color: transparent;
@@ -250,7 +272,6 @@ const OfferButton = styled.button`
     font-weight: 300;
     color: black;
     text-transform: uppercase;
-    overflow-wrap: break-word;
     border: 1px solid black;
     border-radius: 50% 50%;
     border-spacing: 1rem;

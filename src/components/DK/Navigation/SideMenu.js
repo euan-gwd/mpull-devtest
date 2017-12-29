@@ -26,7 +26,7 @@ const NavMenu = styled.nav`
   max-width: 70%;
   height: 100%;
   min-height: 100vh;
-  top: 46px;
+  top: 57px;
   left: 0;
   z-index: 10;
   background-color: #fff;

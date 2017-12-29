@@ -3,20 +3,20 @@ import styled from 'styled-components';
 import bdImage from './images/woman_telephone.png';
 import ButtonDark from '../Buttons/ButtonDark';
 
-class CustomerSurveySolutions extends Component {
+class ProvenSurveySolutions extends Component {
   state = {};
   render() {
     return (
       <BackDrop image={bdImage}>
         <Container>
-          <Title>Vi gjør bevist undersøkelse løsninger</Title>
+          <Title>We do Proven Survey Solutions</Title>
           <Content>
             Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere parior
             sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
           </Content>
           <ButtonGroup>
-            <ButtonDark>Les mer</ButtonDark>
-            <ButtonDark>kunde undersøkelse</ButtonDark>
+            <ButtonDark>Read More</ButtonDark>
+            <ButtonDark>Customer Survey</ButtonDark>
           </ButtonGroup>
         </Container>
       </BackDrop>
@@ -24,7 +24,7 @@ class CustomerSurveySolutions extends Component {
   }
 }
 
-export default CustomerSurveySolutions;
+export default ProvenSurveySolutions;
 
 const BackDrop = styled.section`
   margin: 0;
@@ -34,6 +34,16 @@ const BackDrop = styled.section`
   background-origin: border-box;
   background-size: cover;
   background-position: -3cm 0, center;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(${props => props.image}) no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    background-position: 0 0, center;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0;
@@ -55,6 +65,12 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   align-items: center;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
@@ -62,7 +78,7 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(6, 1fr);
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 
@@ -71,10 +87,14 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 2.75rem;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -84,7 +104,7 @@ const Title = styled.h1`
     padding: 0 6rem 0 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3rem;
     text-transform: uppercase;
     color: black;
@@ -122,12 +142,18 @@ const ButtonGroup = styled.div`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
   display: grid;
   grid-row-gap: 1rem;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1rem;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0;

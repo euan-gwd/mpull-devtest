@@ -6,28 +6,28 @@ const MobileNavItems = () => {
   return (
     <NavItemsList>
       <NavigationItem>
-        <a>løsninger</a>
+        <a>Solutions</a>
         <a>
           <img src={downarrow} alt="dropdown menu" />
         </a>
       </NavigationItem>
       <NavigationItem>
-        <a>sager</a>
+        <a>Cases</a>
       </NavigationItem>
       <NavigationItem>
-        <a>indsigter</a>
+        <a>Insights</a>
         <a>
           <img src={downarrow} alt="dropdown menu" />
         </a>
       </NavigationItem>
       <NavigationItem>
-        <a>om os</a>
+        <a>About Us</a>
         <a>
           <img src={downarrow} alt="dropdown menu" />
         </a>
       </NavigationItem>
       <NavigationItem>
-        <a>kontakt</a>
+        <a>Contact</a>
       </NavigationItem>
     </NavItemsList>
   );
@@ -56,10 +56,11 @@ const NavigationItem = styled.li`
     padding: 0;
     color: #000;
     font-family: 'Roboto Slab', serif;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
+    height: 50px;
     align-self: center;
     justify-self: start;
     box-sizing: border-box;

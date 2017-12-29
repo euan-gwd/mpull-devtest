@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 import DropDownMenu from './DropDownMenu';
 import NavBarLang from './NavBarLang';
 import NavBarSeek from './NavBarSeek';
@@ -63,36 +63,36 @@ class NavBar extends Component {
                 onClick={this.props.handleMenuToggle}
               />
             </MobileMenu>
-            <Logo href="/no/home">
+            <Logo href="/en/home">
               <img src={logo} className="logo" alt="logo" />
             </Logo>
             <NavigationItems>
               <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
-                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>løsninger</a>
+                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>Solutions</a>
                 <DropDownMenu show={this.state.showSolutionsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/no/home">saker</NavLink>
+                <NavLink to="/en/home">Cases</NavLink>
                 <div />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
-                <a onMouseEnter={this.handleInsightsDropMenuToggle}>innsikt</a>
+                <a onMouseEnter={this.handleInsightsDropMenuToggle}>Insights</a>
                 <DropDownMenu show={this.state.showInsightsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/no/home">om oss</NavLink>
+                <NavLink to="/en/home">About Us</NavLink>
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/no/home">kontakt</NavLink>
+                <NavLink to="/en/home">Contact</NavLink>
                 <div />
               </NavigationItem>
             </NavigationItems>
-            <LanguageBtn onClick={this.handleLanguageBtnClick}>
-              <img src={language} alt="change language" />
-            </LanguageBtn>
-            <SearchBtn onClick={this.handleSearchBtnClick}>
-              <img src={search} alt="search" />
-            </SearchBtn>
+            <LanguageBtn
+              onClick={this.handleLanguageBtnClick}
+              src={language}
+              alt="change language"
+            />
+            <SearchBtn onClick={this.handleSearchBtnClick} src={search} alt="search" />
           </MainNavigation>
         )}
         {showNav === 2 && <NavBarLang handleCloseBtnClick={this.handleCloseBtnClick} />}
@@ -127,6 +127,16 @@ const MainNavigation = styled.div`
   align-items: center;
   height: 56px;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    height: 56px;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 0;
@@ -135,7 +145,7 @@ const MainNavigation = styled.div`
     grid-template-columns: repeat(10, 1fr);
     align-items: center;
     height: 56px;
-    max-width: 1024px;
+    max-width: 1026px;
   }
 `;
 
@@ -155,11 +165,22 @@ const Logo = styled.a`
   justify-self: center;
   grid-column: 2 / span 2;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    grid-column: 4 / 6;
+    justify-self: center;
+  }
+
   @media screen and (min-width: 1025px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     grid-column: 1;
     justify-self: center;
     align-self: start;
-    padding: 1.4rem 0;
+    padding: 1.25rem 0;
   }
 `;
 
@@ -182,7 +203,7 @@ const NavigationItem = styled.div`
 
   @media screen and (min-width: 1025px) {
     margin: 0;
-    padding: 1.4rem 0;
+    padding: 1.25rem 0;
     box-sizing: border-box;
     align-self: stretch;
     justify-self: center;
@@ -209,30 +230,46 @@ const NavigationItem = styled.div`
   }
 `;
 
-const LanguageBtn = styled.a`
+const LanguageBtn = styled.img`
   @media screen and (max-width: 767px) {
     display: block;
     justify-self: end;
     cursor: pointer;
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    grid-column: 7;
+    justify-self: end;
+  }
+
   @media screen and (min-width: 1025px) {
-    grid-column: 9 / 10;
+    grid-column: 9;
     justify-self: end;
     align-self: start;
-    padding: 1.4rem 0;
+    margin: 0;
+    padding: 1.25rem 0;
   }
 `;
 
-const SearchBtn = styled.a`
+const SearchBtn = styled.img`
   @media screen and (max-width: 767px) {
     display: none;
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    grid-column: 8;
+    justify-self: end;
+  }
+
   @media screen and (min-width: 1025px) {
-    grid-column: 10 / 10;
+    margin: 0;
+    padding: 1.25rem 0;
+    grid-column: 10;
     justify-self: center;
     align-self: start;
-    padding: 1.4rem 0;
   }
 `;

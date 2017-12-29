@@ -7,13 +7,13 @@ class PositiveChange extends Component {
     return (
       <BackDrop>
         <Container>
-          <Title>vi kører positive forandringer</Title>
+          <Title>We drive positive change</Title>
           <Content>
-            Vi bemyndige organisationer og ledere til at forbedre den ansatte og kundeoplevelse
-            gennem bevist, koncis og engagerende rådgivende. Ennovas ISO-certifikat stiller store
-            krav til vores Udvikling og implementering af medarbejder- og kundeanalyser. Vi er meget
-            stolte af den certificering, som er i tråd med Ennova fortsatte ambition om at levere de
-            bedste løsninger på markedet.
+            We empower organizations and leaders to improve the employee and customer experience
+            through proven, concise and engaging advisory. Ennovas ISO certificate puts severe
+            demands to our Development and implementation of employee- and customer analysis. We are
+            very proud of the certification which is in line with Ennova‘s continued ambition to
+            deliver the best solutions in the market.
           </Content>
         </Container>
       </BackDrop>
@@ -32,13 +32,19 @@ const BackDrop = styled.section`
 `;
 
 const Container = styled.div`
-  margin: 3rem 1rem;
-  padding: 0;
+  margin: 0;
+  padding: 3rem 1rem;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 0.25fr 1fr;
   grid-template-columns: 1fr;
   align-items: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
@@ -47,7 +53,7 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(6, 1fr);
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 
@@ -56,10 +62,14 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 2.75rem;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -69,8 +79,8 @@ const Title = styled.h1`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    font-weight: 400;
-    font-size: 3.25rem;
+    font-weight: 300;
+    font-size: 3rem;
     text-transform: uppercase;
     color: black;
   }

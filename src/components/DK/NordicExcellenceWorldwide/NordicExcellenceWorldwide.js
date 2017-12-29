@@ -7,7 +7,7 @@ class NordicExcellenceWorldwide extends Component {
     return (
       <BackDrop>
         <Container>
-          <Title>Nordic ekspertise over hele verden</Title>
+          <Title>Nordic Excellence Worldwide</Title>
           <Content>
             Ennova leverer viden, der forandrer. Vi rådgiver gennem hele processen, så ny viden
             bliver forankret i virksomheden – og fører til den ønskede forandring.
@@ -37,6 +37,12 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   align-items: center;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
@@ -44,7 +50,7 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(6, 1fr);
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 
@@ -53,10 +59,21 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 2.75rem;
+    text-transform: uppercase;
+    color: black;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -66,8 +83,8 @@ const Title = styled.h1`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    font-weight: 400;
-    font-size: 1.5rem;
+    font-weight: 300;
+    font-size: 3rem;
     text-transform: uppercase;
     color: black;
   }

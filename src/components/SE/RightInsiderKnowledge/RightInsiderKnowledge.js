@@ -10,18 +10,18 @@ class RightInsiderKnowledge extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>Vi har rätt insider kunskap</Title>
+            <Title>We have the right insider Knowledge</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Läs den nya glex</ButtonDark>
+              <ButtonDark>Read the new glex</ButtonDark>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
             <OfferImg src={offerImage} alt="offerImage" />
-            <OfferButton>Få nya insikter i vår undersökning rapport</OfferButton>
+            <OfferButton>Get new insights in our survey rapport</OfferButton>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -46,6 +46,12 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
@@ -53,7 +59,7 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(6, 1fr);
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 
@@ -102,10 +108,21 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 2rem 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 2.75rem;
+    text-transform: uppercase;
+    color: black;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -115,7 +132,7 @@ const Title = styled.h1`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3rem;
     text-transform: uppercase;
     color: black;
@@ -152,11 +169,17 @@ const ButtonGroup = styled.div`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
   display: grid;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1rem;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0;
@@ -177,7 +200,7 @@ const OfferImg = styled.img`
   box-sizing: border-box;
   max-width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -198,10 +221,10 @@ const OfferButton = styled.button`
   width: 139px;
   height: 139px;
   margin: 0;
-  padding: 0.75rem;
+  padding: 0.5rem;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 300;
   color: black;
   text-transform: uppercase;
@@ -223,10 +246,10 @@ const OfferButton = styled.button`
     width: 139px;
     height: 139px;
     margin: 0;
-    padding: 0.75rem;
+    padding: 0.25rem;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 300;
     color: black;
     text-transform: uppercase;

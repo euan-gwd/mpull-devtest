@@ -13,13 +13,13 @@ class WhoWeWorkWith extends Component {
             <ImgTable src={clients} alt="offerImage" />
           </LeftColumn>
           <RightColumn>
-            <Title>Hvem jobber vi med</Title>
+            <Title>Who We Work With</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Les mer</ButtonDark>
+              <ButtonDark>Read more</ButtonDark>
             </ButtonGroup>
           </RightColumn>
         </Container>
@@ -57,6 +57,11 @@ const Container = styled.div`
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
@@ -64,16 +69,26 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(6, 1fr);
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 
 const LeftColumn = styled.div`
   grid-row: 1;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   height: 100%;
+  display: grid;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    grid-row: 1;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    display: grid;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -92,6 +107,16 @@ const RightColumn = styled.div`
   padding: 0;
   box-sizing: border-box;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    grid-row: 2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+  }
+
   @media screen and (min-width: 1025px) {
     grid-row: 1;
     grid-column: 4 / 7;
@@ -101,6 +126,7 @@ const RightColumn = styled.div`
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
   }
 `;
 
@@ -109,10 +135,24 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 2.75rem;
+    text-transform: uppercase;
+    color: black;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;
@@ -121,7 +161,7 @@ const Title = styled.h1`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 3rem;
     text-transform: uppercase;
     color: black;
@@ -157,11 +197,21 @@ const ButtonGroup = styled.div`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
   display: grid;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    grid-row: 3;
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 0.5fr;
+  }
 
   @media screen and (min-width: 1025px) {
     margin: 0;
@@ -182,7 +232,7 @@ const ImgTable = styled.img`
   box-sizing: border-box;
   max-width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 
   @media screen and (min-width: 1025px) {
     grid-row: 1;

@@ -3,7 +3,7 @@ import NavBar from './Navigation/NavBar';
 import SideMenu from './Navigation/SideMenu';
 import VideoFrame from './VideoFrame/VideoFrame';
 import PositiveChange from './PositiveChange/PositiveChange';
-import CustomerSurveySolutions from './CustomerSurveySolutions/CustomerSurveySolutions';
+import ProvenSurveySolutions from './ProvenSurveySolutions/ProvenSurveySolutions';
 import RightInsiderKnowledge from './RightInsiderKnowledge/RightInsiderKnowledge';
 import MeasureWorldWide from './MeasureWorldWide/MeasureWorldWide';
 import ProvenByCustomers from './ProvenByCustomers/ProvenByCustomers';
@@ -31,7 +31,7 @@ class HomeNO extends Component {
         <SideMenu open={this.state.showSideMenu} />
         <VideoFrame />
         <PositiveChange />
-        <CustomerSurveySolutions />
+        <ProvenSurveySolutions />
         <RightInsiderKnowledge />
         <MeasureWorldWide />
         <ProvenByCustomers />
