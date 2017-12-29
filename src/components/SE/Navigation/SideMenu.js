@@ -8,7 +8,7 @@ const SideMenu = props => {
     <NavMenu className={props.open ? `open` : `close`}>
       <MobileNavItems />
       <SearchBar>
-        <input type="search" placeholder="Type to search..." id="" />
+        <input type="search" placeholder="Skriv för att söka..." id="" />
         <a>
           <img src={search} alt="dropdown menu" />
         </a>

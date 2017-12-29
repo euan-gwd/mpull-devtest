@@ -10,7 +10,7 @@ import language from './images/language.svg';
 const NavBarLang = props => {
   return (
     <NavigationLanguage>
-      <Logo href="/">
+      <Logo href="/se/home">
         <img src={logo} className="logo" alt="logo" />
       </Logo>
       <LanguageNavItemList>
@@ -18,7 +18,7 @@ const NavBarLang = props => {
           <img src={language} alt="change language" />
         </LangIcon>
         <LanguageNavItem>
-          <NavLink to="/en/home">UK</NavLink>
+          <NavLink to="/se/home">UK</NavLink>
         </LanguageNavItem>
         <LanguageNavItem>
           <NavLink to="/dk/home">DK</NavLink>
@@ -31,7 +31,7 @@ const NavBarLang = props => {
         </LanguageNavItem>
       </LanguageNavItemList>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>
-        <img src={cross} alt="Back to Main Navigation" />
+        <img src={cross} alt="Tillbaka till huvudnavigering" />
       </CloseNavBtn>
     </NavigationLanguage>
   );

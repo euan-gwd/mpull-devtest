@@ -63,35 +63,31 @@ class NavBar extends Component {
                 onClick={this.props.handleMenuToggle}
               />
             </MobileMenu>
-            <Logo href="/en/home">
+            <Logo href="/se/home">
               <img src={logo} className="logo" alt="logo" />
             </Logo>
             <NavigationItems>
               <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
-                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>Solutions</a>
+                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>lösningar</a>
                 <DropDownMenu show={this.state.showSolutionsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/en/home">Cases</NavLink>
+                <NavLink to="/se/home">fall</NavLink>
                 <div />
               </NavigationItem>
               <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
-                <a onMouseEnter={this.handleInsightsDropMenuToggle}>Insights</a>
+                <a onMouseEnter={this.handleInsightsDropMenuToggle}>insikter</a>
                 <DropDownMenu show={this.state.showInsightsDropMenu} />
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/en/home">About Us</NavLink>
+                <NavLink to="/se/home">om oss</NavLink>
               </NavigationItem>
               <NavigationItem>
-                <NavLink to="/en/home">Contact</NavLink>
+                <NavLink to="/se/home">kontakta</NavLink>
                 <div />
               </NavigationItem>
             </NavigationItems>
-            <LanguageBtn
-              onClick={this.handleLanguageBtnClick}
-              src={language}
-              alt="change language"
-            />
+            <LanguageBtn onClick={this.handleLanguageBtnClick} src={language} alt="ändra språk" />
             <SearchBtn onClick={this.handleSearchBtnClick} src={search} alt="search" />
           </MainNavigation>
         )}

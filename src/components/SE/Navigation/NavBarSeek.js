@@ -9,14 +9,14 @@ import search from './images/search.svg';
 const NavBarSeek = props => {
   return (
     <NavigationSearch>
-      <Logo href="/">
+      <Logo href="/se/home">
         <img src={logo} className="logo" alt="logo" />
       </Logo>
       <SearchNavBar>
-        <SearchInput type="search" placeholder="Type to search..." icon={search} />
+        <SearchInput type="search" placeholder="Skriv för att söka..." icon={search} />
       </SearchNavBar>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>
-        <img src={cross} alt="Back to Main Navigation" />
+        <img src={cross} alt="Tillbaka till huvudnavigering" />
       </CloseNavBtn>
     </NavigationSearch>
   );

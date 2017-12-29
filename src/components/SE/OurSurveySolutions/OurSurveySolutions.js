@@ -10,18 +10,18 @@ class OurSurveySolutions extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>Our proven survey solutions</Title>
+            <Title>Våra beprövade enkätlösningar</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Read the new glex</ButtonDark>
+              <ButtonDark>Läs den nya glex</ButtonDark>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
             <OfferImg src={phoneApp} alt="phone" />
-            <OfferButton>Try our survey trial version</OfferButton>
+            <OfferButton>Testa vår undersökning testversion</OfferButton>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -115,7 +115,7 @@ const RightColumn = styled.div`
 
 const Title = styled.h1`
   align-self: center;
-  margin: 2rem 0;
+  margin: 2rem 0 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
@@ -125,7 +125,7 @@ const Title = styled.h1`
   color: black;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    margin: 2rem 0;
+    margin: 2rem 0 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
