@@ -81,7 +81,7 @@ const Logo = styled.a`
     justify-self: start;
     align-self: center;
     margin: 0;
-    padding: 1.4rem 0;
+    padding: 0;
     box-sizing: border-box;
     display: block;
   }
@@ -112,8 +112,10 @@ const SearchNavBar = styled.div`
   @media screen and (min-width: 1025px) {
     grid-column: 3 / 9;
     margin: 0;
-    padding: 0;
+    padding-top: 0.75rem;
+    padding-bottom: 0;
     padding-left: 1.5rem;
+    padding-right: 0;
     box-sizing: border-box;
     border: 0;
     border-left: 1px solid black;

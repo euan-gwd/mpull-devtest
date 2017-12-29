@@ -168,15 +168,19 @@ const Logo = styled.a`
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     grid-column: 4 / 6;
     justify-self: center;
   }
 
   @media screen and (min-width: 1025px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     grid-column: 1;
     justify-self: center;
     align-self: start;
-    padding: 1.4rem 0;
+    padding: 1.25rem 0;
   }
 `;
 
@@ -199,7 +203,7 @@ const NavigationItem = styled.div`
 
   @media screen and (min-width: 1025px) {
     margin: 0;
-    padding: 1.4rem 0;
+    padding: 1.25rem 0;
     box-sizing: border-box;
     align-self: stretch;
     justify-self: center;
@@ -245,7 +249,7 @@ const LanguageBtn = styled.img`
     justify-self: end;
     align-self: start;
     margin: 0;
-    padding: 1.4rem 0;
+    padding: 1.25rem 0;
   }
 `;
 
@@ -263,7 +267,7 @@ const SearchBtn = styled.img`
 
   @media screen and (min-width: 1025px) {
     margin: 0;
-    padding: 1.4rem 0;
+    padding: 1.25rem 0;
     grid-column: 10;
     justify-self: center;
     align-self: start;
