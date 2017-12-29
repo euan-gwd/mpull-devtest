@@ -105,6 +105,14 @@ const Container = styled.div`
   box-sizing: border-box;
   display: grid;
 
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    padding: 1rem;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 1fr 0.25fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem 2rem;
+  }
+
   @media screen and (min-width: 1025px) {
     margin: 0 auto;
     padding: 3rem 0;
@@ -113,7 +121,7 @@ const Container = styled.div`
     grid-template-rows: 1fr 1fr 0.25fr;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 6rem 1rem;
-    max-width: 1024px;
+    max-width: 1025px;
   }
 `;
 
@@ -213,7 +221,6 @@ const WebLink = styled.a`
   font-weight: 100;
   line-height: 1.5rem;
   font-size: 1rem;
-  text-transform: capitalize;
   display: block;
   color: black;
   cursor: pointer;
@@ -236,6 +243,17 @@ const ButtonGroup = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    grid-row: 3;
+    grid-column: 1 / 5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 
   @media screen and (min-width: 1025px) {
     grid-column: 1 / 5;
@@ -294,8 +312,8 @@ const ButtonText = styled.a`
   line-height: 1.5rem;
   font-size: 1rem;
   color: #818181;
-  text-transform: capitalize;
   text-decoration: none;
+  text-transform: capitalize;
   cursor: pointer;
 
   @media screen and (min-width: 1025px) {
@@ -309,8 +327,8 @@ const ButtonText = styled.a`
     font-weight: 300;
     line-height: 1.5rem;
     font-size: 1rem;
-    color: #818181;
     text-transform: capitalize;
+    color: #818181;
     text-decoration: none;
     cursor: pointer;
 
