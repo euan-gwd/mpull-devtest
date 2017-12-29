@@ -51,13 +51,14 @@ const BackDrop = styled.section`
 
 const Container = styled.div`
   margin: 0;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem 3rem;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
     padding: 2rem;
     box-sizing: border-box;
   }
@@ -131,7 +132,7 @@ const RightColumn = styled.div`
 `;
 
 const Title = styled.h1`
-  margin: 2rem 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;

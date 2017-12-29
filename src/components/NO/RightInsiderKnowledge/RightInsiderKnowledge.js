@@ -10,18 +10,18 @@ class RightInsiderKnowledge extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>We have the right insider Knowledge</Title>
+            <Title>Vi har rett innsidehandel kunnskap</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Read the new glex</ButtonDark>
+              <ButtonDark>Les den nye glex</ButtonDark>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
             <OfferImg src={offerImage} alt="offerImage" />
-            <OfferButton>Get new insights in our survey rapport</OfferButton>
+            <OfferButton>Få ny innsikt i vår undersøkelse rapport</OfferButton>
           </RightColumn>
         </Container>
       </BackDrop>
@@ -221,7 +221,7 @@ const OfferButton = styled.button`
   width: 139px;
   height: 139px;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.75rem;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
@@ -232,6 +232,7 @@ const OfferButton = styled.button`
   border-radius: 50% 50%;
   background-color: transparent;
   cursor: pointer;
+  overflow-wrap: break-word;
 
   &:hover {
     background-color: black;
@@ -246,7 +247,7 @@ const OfferButton = styled.button`
     width: 139px;
     height: 139px;
     margin: 0;
-    padding: 0.25rem;
+    padding: 0.75rem;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
     font-size: 1rem;
@@ -258,6 +259,7 @@ const OfferButton = styled.button`
     border-spacing: 1rem;
     background-color: transparent;
     cursor: pointer;
+    overflow-wrap: break-word;
 
     &:hover {
       background-color: black;

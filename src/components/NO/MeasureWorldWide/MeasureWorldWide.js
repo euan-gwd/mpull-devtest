@@ -10,17 +10,17 @@ class MeasureWorldWide extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <WorldButton>What Does it mean to you?</WorldButton>
+            <WorldButton>Hva betyr det for deg?</WorldButton>
             <WorldImg src={worldImage} alt="offerImage" />
           </LeftColumn>
           <RightColumn>
-            <Title>We measure worldwide</Title>
+            <Title>Vi måler hele verden</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Read more</ButtonDark>
+              <ButtonDark>Les mer</ButtonDark>
             </ButtonGroup>
           </RightColumn>
         </Container>
@@ -131,14 +131,14 @@ const Title = styled.h1`
   font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
-  text-align: center;
   color: black;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     grid-row: 1;
     grid-column: 1;
     align-self: center;
-    margin: 0;
+    justify-self: start;
+    start: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;

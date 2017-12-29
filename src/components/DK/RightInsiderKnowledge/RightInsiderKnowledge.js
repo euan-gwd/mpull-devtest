@@ -221,7 +221,7 @@ const OfferButton = styled.button`
   width: 139px;
   height: 139px;
   margin: 0;
-  padding: 0.5rem;
+  padding: 0.75rem;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
@@ -232,6 +232,7 @@ const OfferButton = styled.button`
   border-radius: 50% 50%;
   background-color: transparent;
   cursor: pointer;
+  overflow-wrap: break-word;
 
   &:hover {
     background-color: black;
@@ -246,7 +247,7 @@ const OfferButton = styled.button`
     width: 139px;
     height: 139px;
     margin: 0;
-    padding: 0.25rem;
+    padding: 0.75rem;
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
     font-size: 1rem;
@@ -258,6 +259,7 @@ const OfferButton = styled.button`
     border-spacing: 1rem;
     background-color: transparent;
     cursor: pointer;
+    overflow-wrap: break-word;
 
     &:hover {
       background-color: black;

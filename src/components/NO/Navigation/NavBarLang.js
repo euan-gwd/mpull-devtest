@@ -15,10 +15,10 @@ const NavBarLang = props => {
       </Logo>
       <LanguageNavItemList>
         <LangIcon>
-          <img src={language} alt="change language" />
+          <img src={language} alt="skifte språk" />
         </LangIcon>
         <LanguageNavItem>
-          <NavLink to="/en/home">UK</NavLink>
+          <NavLink to="/no/home">UK</NavLink>
         </LanguageNavItem>
         <LanguageNavItem>
           <NavLink to="/dk/home">DK</NavLink>
@@ -31,7 +31,7 @@ const NavBarLang = props => {
         </LanguageNavItem>
       </LanguageNavItemList>
       <CloseNavBtn onClick={props.handleCloseBtnClick}>
-        <img src={cross} alt="Back to Main Navigation" />
+        <img src={cross} alt="Tilbake til hovedmenyen" />
       </CloseNavBtn>
     </NavigationLanguage>
   );

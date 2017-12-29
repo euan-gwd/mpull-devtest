@@ -131,13 +131,13 @@ const Title = styled.h1`
   font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
-  text-align: center;
   color: black;
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     grid-row: 1;
     grid-column: 1;
     align-self: center;
+    justify-self: start;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

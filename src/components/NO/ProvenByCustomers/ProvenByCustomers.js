@@ -11,14 +11,14 @@ class ProvenByCustomers extends Component {
       <BackDrop image={bdImage}>
         <Container>
           <LeftColumn>
-            <Title>We are Proven by our customers</Title>
+            <Title>Vi er påvist av våre kunder</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonLight>Employee Survey</ButtonLight>
-              <ButtonLight>Customer Survey</ButtonLight>
+              <ButtonLight>Medarbeider undersøkelsen</ButtonLight>
+              <ButtonLight>Kunde undersøkelse</ButtonLight>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>

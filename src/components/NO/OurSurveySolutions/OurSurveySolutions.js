@@ -10,18 +10,18 @@ class OurSurveySolutions extends Component {
       <BackDrop>
         <Container>
           <LeftColumn>
-            <Title>Our proven survey solutions</Title>
+            <Title>våre velprøvde spørreundersøkelses løsninger</Title>
             <Content>
               Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
               parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
             </Content>
             <ButtonGroup>
-              <ButtonDark>Read the new glex</ButtonDark>
+              <ButtonDark>Les den nye glex</ButtonDark>
             </ButtonGroup>
           </LeftColumn>
           <RightColumn>
             <OfferImg src={phoneApp} alt="phone" />
-            <OfferButton>Try our survey trial version</OfferButton>
+            <OfferButton>Prøv vår undersøkelse prøveversjon</OfferButton>
           </RightColumn>
         </Container>
       </BackDrop>
