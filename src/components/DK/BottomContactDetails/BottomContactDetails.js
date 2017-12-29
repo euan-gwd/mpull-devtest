@@ -50,33 +50,33 @@ class BottomContactDetails extends Component {
             <CId>CVR. nr. 19587347</CId>
           </ContactCard>
           <ContactLink>
-            <Title>Company</Title>
-            <WebLink>About</WebLink>
-            <WebLink>Career</WebLink>
-            <WebLink>Press &amp; Media</WebLink>
-            <WebLink>Bloggers</WebLink>
-            <WebLink>Contact Us</WebLink>
+            <Title>Selskab</Title>
+            <WebLink>Om</WebLink>
+            <WebLink>Karriere</WebLink>
+            <WebLink>trykke &amp; medier</WebLink>
+            <WebLink>bloggere</WebLink>
+            <WebLink>Kontakt os</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>Terms</Title>
-            <WebLink>Data Security</WebLink>
-            <WebLink>Privacy Policy</WebLink>
-            <WebLink>Help &amp; Support</WebLink>
-            <WebLink>Site Map</WebLink>
+            <Title>Betingelser</Title>
+            <WebLink>Datasikkerhed</WebLink>
+            <WebLink>Fortrolighedspolitik</WebLink>
+            <WebLink>Hjælp &amp; støtte</WebLink>
+            <WebLink>websted kort</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>Knowledge</Title>
-            <WebLink>News</WebLink>
-            <WebLink>Reports</WebLink>
-            <WebLink>Events</WebLink>
+            <Title>Viden</Title>
+            <WebLink>nyheder</WebLink>
+            <WebLink>rapporter</WebLink>
+            <WebLink>begivenheder</WebLink>
           </ContactLink>
           <ContactLink show>
-            <Title>Follow</Title>
+            <Title>følge efter</Title>
             <WebLink>LinkedIn</WebLink>
             <WebLink>Twitter</WebLink>
             <WebLink>Facebook</WebLink>
             <WebLink>Youtube</WebLink>
-            <WebLink>Newsletter</WebLink>
+            <WebLink>nyhedsbrev</WebLink>
           </ContactLink>
           <ButtonGroup>
             <UpArrow onClick={this.handleScrollToTop}>&#8963;</UpArrow>
@@ -157,7 +157,7 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;

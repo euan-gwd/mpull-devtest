@@ -50,33 +50,33 @@ class BottomContactDetails extends Component {
             <CId>CVR. nr. 19587347</CId>
           </ContactCard>
           <ContactLink>
-            <Title>Company</Title>
-            <WebLink>About</WebLink>
-            <WebLink>Career</WebLink>
-            <WebLink>Press &amp; Media</WebLink>
-            <WebLink>Bloggers</WebLink>
-            <WebLink>Contact Us</WebLink>
+            <Title>företag</Title>
+            <WebLink>handla om</WebLink>
+            <WebLink>Karriär</WebLink>
+            <WebLink>Tryck &amp; Media</WebLink>
+            <WebLink>bloggare</WebLink>
+            <WebLink>Kontakta oss</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>Terms</Title>
-            <WebLink>Data Security</WebLink>
-            <WebLink>Privacy Policy</WebLink>
-            <WebLink>Help &amp; Support</WebLink>
-            <WebLink>Site Map</WebLink>
+            <Title>Villkor</Title>
+            <WebLink>Datasäkerhet</WebLink>
+            <WebLink>Integritetspolicy</WebLink>
+            <WebLink>hjälp &amp; Stöd</WebLink>
+            <WebLink>Webbplatskarta</WebLink>
           </ContactLink>
           <ContactLink>
-            <Title>Knowledge</Title>
-            <WebLink>News</WebLink>
-            <WebLink>Reports</WebLink>
-            <WebLink>Events</WebLink>
+            <Title>Kunskap</Title>
+            <WebLink>Nyheter</WebLink>
+            <WebLink>rapporter</WebLink>
+            <WebLink>evenemang</WebLink>
           </ContactLink>
           <ContactLink show>
-            <Title>Follow</Title>
+            <Title>Följ</Title>
             <WebLink>LinkedIn</WebLink>
             <WebLink>Twitter</WebLink>
             <WebLink>Facebook</WebLink>
             <WebLink>Youtube</WebLink>
-            <WebLink>Newsletter</WebLink>
+            <WebLink>nyhetsbrev</WebLink>
           </ContactLink>
           <ButtonGroup>
             <UpArrow onClick={this.handleScrollToTop}>&#8963;</UpArrow>
@@ -157,7 +157,7 @@ const Title = styled.h1`
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: black;
