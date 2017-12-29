@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { slideInRight, slideOutRight } from 'react-animations';
 import { NavLink } from 'react-router-dom';
 
 import cross from './images/cross.svg';
@@ -39,6 +40,9 @@ const NavBarLang = props => {
 export default NavBarLang;
 
 //Navigation Language Styles
+
+const slideInAnimation = keyframes`${slideInRight}`;
+const slideOutAnimation = keyframes`${slideOutRight}`;
 
 const NavigationLanguage = styled.div`
   margin: 0 auto;
@@ -116,6 +120,7 @@ const LanguageNavItemList = styled.div`
     grid-template-columns: repeat(5, 75px);
     border-left: 1px solid black;
     height: 56px;
+    animation: 0.3s ${slideInAnimation};
   }
 
   @media screen and (min-width: 1025px) {
@@ -128,6 +133,7 @@ const LanguageNavItemList = styled.div`
     border: 0;
     border-left: 1px solid black;
     height: 56px;
+    animation: 0.3s ${slideInAnimation};
   }
 `;
 
@@ -228,11 +234,13 @@ const CloseNavBtn = styled.a`
     grid-column: 8 / 8;
     justify-self: end;
     cursor: pointer;
+    animation: 0.3s ${slideOutAnimation};
   }
 
   @media screen and (min-width: 1025px) {
     justify-self: center;
     grid-column: 10 / 10;
     cursor: pointer;
+    animation: 0.3s ${slideOutAnimation};
   }
 `;

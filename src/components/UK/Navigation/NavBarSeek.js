@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { slideInRight, slideOutRight } from 'react-animations';
 
 import cross from './images/cross.svg';
 import logo from './images/logo.svg';
@@ -24,6 +25,9 @@ const NavBarSeek = props => {
 export default NavBarSeek;
 
 //Navigation Search Styles
+
+const slideInAnimation = keyframes`${slideInRight}`;
+const slideOutAnimation = keyframes`${slideOutRight}`;
 
 const NavigationSearch = styled.div`
   margin: 0 auto;
@@ -102,6 +106,7 @@ const SearchNavBar = styled.div`
     box-sizing: border-box;
     border-left: 1px solid black;
     height: 56px;
+    animation: 0.3s ${slideInAnimation};
   }
 
   @media screen and (min-width: 1025px) {
@@ -113,6 +118,7 @@ const SearchNavBar = styled.div`
     border: 0;
     border-left: 1px solid black;
     height: 56px;
+    animation: 0.3s ${slideInAnimation};
   }
 `;
 
@@ -161,11 +167,13 @@ const CloseNavBtn = styled.a`
     grid-column: 8 / 8;
     justify-self: end;
     cursor: pointer;
+    animation: 0.3s ${slideOutAnimation};
   }
 
   @media screen and (min-width: 1025px) {
     justify-self: center;
     grid-column: 10 / 10;
     cursor: pointer;
+    animation: 0.3s ${slideOutAnimation};
   }
 `;
