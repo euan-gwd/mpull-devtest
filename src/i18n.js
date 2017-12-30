@@ -12,7 +12,9 @@ i18n.use(reactI18nextModule).init({
         ContactMenu: 'contact',
         VideoFrameTitle: 'nordic excellence worldwide',
         WhoWeWorkWithTitle: 'Who We Work With',
-        ReadMoreBtn: 'Read More'
+        ReadMoreBtn: 'Read More',
+        ReadGlexBtn: 'Read the new glex',
+        CustomerSurveyBtn: 'Customer Survey'
       }
     },
     dk: {
@@ -22,7 +24,16 @@ i18n.use(reactI18nextModule).init({
         InsightsMenu: 'indsigter',
         AboutUsMenu: 'om os',
         ContactMenu: 'kontakt',
-        VideoFrameTitle: 'nordic ekspertise på verdensplan'
+        NEWTitle: 'nordic ekspertise på verdensplan',
+        WhoWeWorkWithTitle: 'Who We Work With',
+        RightInsiderKnowledgeTitle: 'Who We Work With',
+        ProvenSurveySolutionsTitle: 'Who We Work With',
+        ProvenByCustomersTitle: 'Who We Work With',
+        PositiveChangeTitle: 'Who We Work With',
+        OurSurveySolutionsTitle: 'Who We Work With',
+        ReadMoreBtn: 'Read More',
+        ReadGlexBtn: 'Read the new glex',
+        CustomerSurveyBtn: 'Customer Survey'
       }
     },
     no: {
@@ -32,7 +43,11 @@ i18n.use(reactI18nextModule).init({
         InsightsMenu: 'innsikt',
         AboutUsMenu: 'om oss',
         ContactMenu: 'kontakt',
-        VideoFrameTitle: 'nordic fortreffelighet over hele verden'
+        NEWTitle: 'nordic fortreffelighet over hele verden',
+        WhoWeWorkWithTitle: 'Who We Work With',
+        ReadMoreBtn: 'Read More',
+        ReadGlexBtn: 'Read the new glex',
+        CustomerSurveyBtn: 'Customer Survey'
       }
     },
     se: {
@@ -42,7 +57,11 @@ i18n.use(reactI18nextModule).init({
         InsightsMenu: 'insikter',
         AboutUsMenu: 'om oss',
         ContactMenu: 'kontakta',
-        VideoFrameTitle: 'nordic kompetens i hela världen'
+        NEWTitle: 'nordic kompetens i hela världen',
+        WhoWeWorkWithTitle: 'Who We Work With',
+        ReadMoreBtn: 'Read More',
+        ReadGlexBtn: 'Read the new glex',
+        CustomerSurveyBtn: 'Customer Survey'
       }
     }
   },
