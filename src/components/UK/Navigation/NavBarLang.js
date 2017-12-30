@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { slideInRight, slideOutRight } from 'react-animations';
 import { NavLink } from 'react-router-dom';
+import { I18n } from 'react-i18next';
 
 import cross from './images/cross.svg';
 import logo from './images/logo.svg';
@@ -9,31 +10,36 @@ import language from './images/language.svg';
 
 const NavBarLang = props => {
   return (
-    <NavigationLanguage>
-      <Logo href="/en/home">
-        <img src={logo} className="logo" alt="logo" />
-      </Logo>
-      <LanguageNavItemList>
-        <LangIcon>
-          <img src={language} alt="change language" />
-        </LangIcon>
-        <LanguageNavItem>
-          <NavLink to="/en/home">UK</NavLink>
-        </LanguageNavItem>
-        <LanguageNavItem>
-          <NavLink to="/dk/home">DK</NavLink>
-        </LanguageNavItem>
-        <LanguageNavItem>
-          <NavLink to="/no/home">NO</NavLink>
-        </LanguageNavItem>
-        <LanguageNavItem>
-          <NavLink to="/se/home">SE</NavLink>
-        </LanguageNavItem>
-      </LanguageNavItemList>
-      <CloseNavBtn onClick={props.handleCloseBtnClick}>
-        <img src={cross} alt="Back to Main Navigation" />
-      </CloseNavBtn>
-    </NavigationLanguage>
+    <I18n ns="translations">
+      {(t, { i18n }) => (
+        <NavigationLanguage>
+          <Logo href="/en/home">
+            <img src={logo} className="logo" alt="logo" />
+          </Logo>
+          <LanguageNavItemList>
+            <LangIcon>
+              <img src={language} alt="change language" />
+            </LangIcon>
+            <LanguageNavItem>
+              <a onClick={() => i18n.changeLanguage('en')}>UK</a>
+            </LanguageNavItem>
+            <LanguageNavItem>
+              {/* <NavLink to="/dk/home">DK</NavLink> */}
+              <a onClick={() => i18n.changeLanguage('dk')}>DK</a>
+            </LanguageNavItem>
+            <LanguageNavItem>
+              <NavLink to="/no/home">NO</NavLink>
+            </LanguageNavItem>
+            <LanguageNavItem>
+              <NavLink to="/se/home">SE</NavLink>
+            </LanguageNavItem>
+          </LanguageNavItemList>
+          <CloseNavBtn onClick={props.handleCloseBtnClick}>
+            <img src={cross} alt="Back to Main Navigation" />
+          </CloseNavBtn>
+        </NavigationLanguage>
+      )}
+    </I18n>
   );
 };
 

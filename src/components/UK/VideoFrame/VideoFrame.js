@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { I18n } from 'react-i18next';
 import styled from 'styled-components';
 import videoPlaceHolder from './images/man_tablet.png';
 import playIcon from './images/Play-ikon-white.svg';
@@ -10,19 +11,24 @@ class VideoFrame extends Component {
   state = {};
   render() {
     return (
-      <BackDrop image={videoPlaceHolder}>
-        <Container>
-          <Title>Nordic Excellence Worldwide</Title>
-          <PlayButtonGroup>
-            <PlayButton src={playIcon} alt="play video" />
-          </PlayButtonGroup>
-          <Logoer className="logoer">
-            <img src={iso} alt="isologo" />
-            <img src={aaa} alt="aaalogo" />
-            <img src={esomar} alt="esomarlogo" />
-          </Logoer>
-        </Container>
-      </BackDrop>
+      <I18n ns="translations">
+        {(t, { i18n }) => (
+          <BackDrop image={videoPlaceHolder}>
+            <Container>
+              {/* <Title>Nordic Excellence Worldwide</Title> */}
+              <Title>{t('videoFrameTitle')}</Title>
+              <PlayButtonGroup>
+                <PlayButton src={playIcon} alt="play video" />
+              </PlayButtonGroup>
+              <Logoer className="logoer">
+                <img src={iso} alt="isologo" />
+                <img src={aaa} alt="aaalogo" />
+                <img src={esomar} alt="esomarlogo" />
+              </Logoer>
+            </Container>
+          </BackDrop>
+        )}
+      </I18n>
     );
   }
 }
