@@ -10,7 +10,7 @@ class NordicExcellenceWorldwide extends Component {
         {(t, { i18n }) => (
           <BackDrop>
             <Container>
-              <Title>{t('NEWTitle')}</Title>
+              <Title>{t('NordicTitle')}</Title>
               <Content>
                 Ennova leverer viden, der forandrer. Vi rådgiver gennem hele processen, så ny viden
                 bliver forankret i virksomheden – og fører til den ønskede forandring.

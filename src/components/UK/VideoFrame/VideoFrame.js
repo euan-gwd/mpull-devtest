@@ -15,7 +15,7 @@ class VideoFrame extends Component {
         {(t, { i18n }) => (
           <BackDrop image={videoPlaceHolder}>
             <Container>
-              <Title>{t('NEWTitle')}</Title>
+              <Title>{t('NordicTitle')}</Title>
               <PlayButtonGroup>
                 <PlayButton src={playIcon} alt="play video" />
               </PlayButtonGroup>
