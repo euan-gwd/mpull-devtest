@@ -10,7 +10,7 @@ i18n.use(reactI18nextModule).init({
         InsightsMenu: 'insights',
         AboutUsMenu: 'about us',
         ContactMenu: 'contact',
-        VideoFrameTitle: 'Nordic Excellence Worldwide'
+        VideoFrameTitle: 'nordic excellence worldwide'
       }
     },
     dk: {
@@ -20,7 +20,7 @@ i18n.use(reactI18nextModule).init({
         InsightsMenu: 'Indsigter',
         AboutUsMenu: 'Om Os',
         ContactMenu: 'Kontakt',
-        VideoFrameTitle: 'Nordic Fortræffelighed I hele verden'
+        VideoFrameTitle: 'nordic ekspertise på verdensplan'
       }
     },
     no: {
