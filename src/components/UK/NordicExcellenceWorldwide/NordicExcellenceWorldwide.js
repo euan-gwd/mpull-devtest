@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 
 class NordicExcellenceWorldwide extends Component {
   state = {};
   render() {
     return (
-      <BackDrop>
-        <Container>
-          <Title>Nordic Excellence Worldwide</Title>
-          <Content>
-            Ennova leverer viden, der forandrer. Vi rådgiver gennem hele processen, så ny viden
-            bliver forankret i virksomheden – og fører til den ønskede forandring.
-          </Content>
-        </Container>
-      </BackDrop>
+      <I18n ns="translations">
+        {(t, { i18n }) => (
+          <BackDrop>
+            <Container>
+              <Title>Nordic Excellence Worldwide</Title>
+              <Content>
+                Ennova leverer viden, der forandrer. Vi rådgiver gennem hele processen, så ny viden
+                bliver forankret i virksomheden – og fører til den ønskede forandring.
+              </Content>
+            </Container>
+          </BackDrop>
+        )}
+      </I18n>
     );
   }
 }

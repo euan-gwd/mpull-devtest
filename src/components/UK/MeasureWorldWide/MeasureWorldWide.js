@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 import worldImage from './images/world.svg';
 import ButtonDark from '../Buttons/ButtonDark';
 
@@ -7,24 +8,28 @@ class MeasureWorldWide extends Component {
   state = {};
   render() {
     return (
-      <BackDrop>
-        <Container>
-          <LeftColumn>
-            <WorldButton>What Does it mean to you?</WorldButton>
-            <WorldImg src={worldImage} alt="offerImage" />
-          </LeftColumn>
-          <RightColumn>
-            <Title>We measure worldwide</Title>
-            <Content>
-              Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
-              parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
-            </Content>
-            <ButtonGroup>
-              <ButtonDark>Read more</ButtonDark>
-            </ButtonGroup>
-          </RightColumn>
-        </Container>
-      </BackDrop>
+      <I18n ns="translations">
+        {(t, { i18n }) => (
+          <BackDrop>
+            <Container>
+              <LeftColumn>
+                <WorldButton>What Does it mean to you?</WorldButton>
+                <WorldImg src={worldImage} alt="offerImage" />
+              </LeftColumn>
+              <RightColumn>
+                <Title>We measure worldwide</Title>
+                <Content>
+                  Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
+                  parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
+                </Content>
+                <ButtonGroup>
+                  <ButtonDark>Read more</ButtonDark>
+                </ButtonGroup>
+              </RightColumn>
+            </Container>
+          </BackDrop>
+        )}
+      </I18n>
     );
   }
 }

@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 
 class PositiveChange extends Component {
   state = {};
   render() {
     return (
-      <BackDrop>
-        <Container>
-          <Title>We drive positive change</Title>
-          <Content>
-            We empower organizations and leaders to improve the employee and customer experience
-            through proven, concise and engaging advisory. Ennovas ISO certificate puts severe
-            demands to our Development and implementation of employee- and customer analysis. We are
-            very proud of the certification which is in line with Ennova‘s continued ambition to
-            deliver the best solutions in the market.
-          </Content>
-        </Container>
-      </BackDrop>
+      <I18n ns="translations">
+        {(t, { i18n }) => (
+          <BackDrop>
+            <Container>
+              <Title>We drive positive change</Title>
+              <Content>
+                We empower organizations and leaders to improve the employee and customer experience
+                through proven, concise and engaging advisory. Ennovas ISO certificate puts severe
+                demands to our Development and implementation of employee- and customer analysis. We
+                are very proud of the certification which is in line with Ennova‘s continued
+                ambition to deliver the best solutions in the market.
+              </Content>
+            </Container>
+          </BackDrop>
+        )}
+      </I18n>
     );
   }
 }

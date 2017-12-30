@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 
 class BottomContactDetails extends Component {
   state = {};
@@ -11,80 +12,84 @@ class BottomContactDetails extends Component {
 
   render() {
     return (
-      <BackDrop>
-        <Container>
-          <ContactCard>
-            <Title>Copenhagen</Title>
-            <Address>
-              Store Kongensgade 81 <br /> DK-1264 Copenhagen K
-            </Address>
-            <Telephone>+45 86 20 21 20</Telephone>
-            <Email>email@ennova.com</Email>
-            <CId>CVR. nr. 19587347s</CId>
-          </ContactCard>
-          <ContactCard>
-            <Title>Oslo</Title>
-            <Address>
-              Kristian IVs gate 12 <br /> NO-0164 Oslo
-            </Address>
-            <Telephone>+47 95 83 78 45</Telephone>
-            <Email>email@ennova.com</Email>
-            <CId>Org. nr. 994 815 245</CId>
-          </ContactCard>
-          <ContactCard>
-            <Title>Stockholm</Title>
-            <Address>
-              Östermalmsgaten 87 b, 1 <br />SE-114 59 Stockholm
-            </Address>
-            <Telephone>+46 (0) 8 545 670 80</Telephone>
-            <Email>email@ennova.com</Email>
-            <CId>Org. nr. 556 732 9312</CId>
-          </ContactCard>
-          <ContactCard>
-            <Title>Aarhus</Title>
-            <Address>
-              Daugbjergvej 26 <br /> DK-8000 Aarhus C
-            </Address>
-            <Telephone>+45 86 20 21 20</Telephone>
-            <Email>email@ennova.com</Email>
-            <CId>CVR. nr. 19587347</CId>
-          </ContactCard>
-          <ContactLink>
-            <Title>Company</Title>
-            <WebLink>About</WebLink>
-            <WebLink>Career</WebLink>
-            <WebLink>Press &amp; Media</WebLink>
-            <WebLink>Bloggers</WebLink>
-            <WebLink>Contact Us</WebLink>
-          </ContactLink>
-          <ContactLink>
-            <Title>Terms</Title>
-            <WebLink>Data Security</WebLink>
-            <WebLink>Privacy Policy</WebLink>
-            <WebLink>Help &amp; Support</WebLink>
-            <WebLink>Site Map</WebLink>
-          </ContactLink>
-          <ContactLink>
-            <Title>Knowledge</Title>
-            <WebLink>News</WebLink>
-            <WebLink>Reports</WebLink>
-            <WebLink>Events</WebLink>
-          </ContactLink>
-          <ContactLink show>
-            <Title>Follow</Title>
-            <WebLink>LinkedIn</WebLink>
-            <WebLink>Twitter</WebLink>
-            <WebLink>Facebook</WebLink>
-            <WebLink>Youtube</WebLink>
-            <WebLink>Newsletter</WebLink>
-          </ContactLink>
-          <ButtonGroup>
-            <UpArrow onClick={this.handleScrollToTop}>&#8963;</UpArrow>
-            <ButtonText onClick={this.handleScrollToTop}>Return To Top</ButtonText>
-            <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
-          </ButtonGroup>
-        </Container>
-      </BackDrop>
+      <I18n ns="translations">
+        {(t, { i18n }) => (
+          <BackDrop>
+            <Container>
+              <ContactCard>
+                <Title>Copenhagen</Title>
+                <Address>
+                  Store Kongensgade 81 <br /> DK-1264 Copenhagen K
+                </Address>
+                <Telephone>+45 86 20 21 20</Telephone>
+                <Email>email@ennova.com</Email>
+                <CId>CVR. nr. 19587347s</CId>
+              </ContactCard>
+              <ContactCard>
+                <Title>Oslo</Title>
+                <Address>
+                  Kristian IVs gate 12 <br /> NO-0164 Oslo
+                </Address>
+                <Telephone>+47 95 83 78 45</Telephone>
+                <Email>email@ennova.com</Email>
+                <CId>Org. nr. 994 815 245</CId>
+              </ContactCard>
+              <ContactCard>
+                <Title>Stockholm</Title>
+                <Address>
+                  Östermalmsgaten 87 b, 1 <br />SE-114 59 Stockholm
+                </Address>
+                <Telephone>+46 (0) 8 545 670 80</Telephone>
+                <Email>email@ennova.com</Email>
+                <CId>Org. nr. 556 732 9312</CId>
+              </ContactCard>
+              <ContactCard>
+                <Title>Aarhus</Title>
+                <Address>
+                  Daugbjergvej 26 <br /> DK-8000 Aarhus C
+                </Address>
+                <Telephone>+45 86 20 21 20</Telephone>
+                <Email>email@ennova.com</Email>
+                <CId>CVR. nr. 19587347</CId>
+              </ContactCard>
+              <ContactLink>
+                <Title>Company</Title>
+                <WebLink>About</WebLink>
+                <WebLink>Career</WebLink>
+                <WebLink>Press &amp; Media</WebLink>
+                <WebLink>Bloggers</WebLink>
+                <WebLink>Contact Us</WebLink>
+              </ContactLink>
+              <ContactLink>
+                <Title>Terms</Title>
+                <WebLink>Data Security</WebLink>
+                <WebLink>Privacy Policy</WebLink>
+                <WebLink>Help &amp; Support</WebLink>
+                <WebLink>Site Map</WebLink>
+              </ContactLink>
+              <ContactLink>
+                <Title>Knowledge</Title>
+                <WebLink>News</WebLink>
+                <WebLink>Reports</WebLink>
+                <WebLink>Events</WebLink>
+              </ContactLink>
+              <ContactLink show>
+                <Title>Follow</Title>
+                <WebLink>LinkedIn</WebLink>
+                <WebLink>Twitter</WebLink>
+                <WebLink>Facebook</WebLink>
+                <WebLink>Youtube</WebLink>
+                <WebLink>Newsletter</WebLink>
+              </ContactLink>
+              <ButtonGroup>
+                <UpArrow onClick={this.handleScrollToTop}>&#8963;</UpArrow>
+                <ButtonText onClick={this.handleScrollToTop}>Return To Top</ButtonText>
+                <CopyRightFooter>© Ennova A/S 2017</CopyRightFooter>
+              </ButtonGroup>
+            </Container>
+          </BackDrop>
+        )}
+      </I18n>
     );
   }
 }

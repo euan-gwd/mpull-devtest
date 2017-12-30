@@ -10,7 +10,9 @@ i18n.use(reactI18nextModule).init({
         InsightsMenu: 'insights',
         AboutUsMenu: 'about us',
         ContactMenu: 'contact',
-        VideoFrameTitle: 'nordic excellence worldwide'
+        VideoFrameTitle: 'nordic excellence worldwide',
+        WhoWeWorkWithTitle: 'Who We Work With',
+        ReadMoreBtn: 'Read More'
       }
     },
     dk: {

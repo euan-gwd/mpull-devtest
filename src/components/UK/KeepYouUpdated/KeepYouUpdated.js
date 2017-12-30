@@ -1,35 +1,40 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 import ButtonLight from '../Buttons/ButtonLight';
 
 class KeepYouUpdated extends Component {
   state = {};
   render() {
     return (
-      <BackDrop>
-        <Container>
-          <LeftColumn>
-            <Title>We love to keep you updated</Title>
-          </LeftColumn>
-          <RightColumn>
-            <FormHeader>
-              We empower organizations and leaders to improve the employee and customer experience
-              through proven, concise and engaging advisory.
-            </FormHeader>
-            <FormInputGroup>
-              <FormInputLabel>Name</FormInputLabel>
-              <FormInput type="text" placeholder="Enter your name ..." />
-            </FormInputGroup>
-            <FormInputGroup>
-              <FormInputLabel>Email</FormInputLabel>
-              <FormInput type="email" placeholder="Enter your email ..." />
-            </FormInputGroup>
-            <ButtonGroup>
-              <ButtonLight>Submit</ButtonLight>
-            </ButtonGroup>
-          </RightColumn>
-        </Container>
-      </BackDrop>
+      <I18n ns="translations">
+        {(t, { i18n }) => (
+          <BackDrop>
+            <Container>
+              <LeftColumn>
+                <Title>We love to keep you updated</Title>
+              </LeftColumn>
+              <RightColumn>
+                <FormHeader>
+                  We empower organizations and leaders to improve the employee and customer
+                  experience through proven, concise and engaging advisory.
+                </FormHeader>
+                <FormInputGroup>
+                  <FormInputLabel>Name</FormInputLabel>
+                  <FormInput type="text" placeholder="Enter your name ..." />
+                </FormInputGroup>
+                <FormInputGroup>
+                  <FormInputLabel>Email</FormInputLabel>
+                  <FormInput type="email" placeholder="Enter your email ..." />
+                </FormInputGroup>
+                <ButtonGroup>
+                  <ButtonLight>Submit</ButtonLight>
+                </ButtonGroup>
+              </RightColumn>
+            </Container>
+          </BackDrop>
+        )}
+      </I18n>
     );
   }
 }

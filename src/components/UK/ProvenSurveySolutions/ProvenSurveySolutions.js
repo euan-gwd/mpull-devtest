@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 import bdImage from './images/woman_telephone.png';
 import ButtonDark from '../Buttons/ButtonDark';
 
@@ -7,19 +8,23 @@ class ProvenSurveySolutions extends Component {
   state = {};
   render() {
     return (
-      <BackDrop image={bdImage}>
-        <Container>
-          <Title>We do Proven Survey Solutions</Title>
-          <Content>
-            Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere parior
-            sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
-          </Content>
-          <ButtonGroup>
-            <ButtonDark>Read More</ButtonDark>
-            <ButtonDark>Customer Survey</ButtonDark>
-          </ButtonGroup>
-        </Container>
-      </BackDrop>
+      <I18n ns="translations">
+        {(t, { i18n }) => (
+          <BackDrop image={bdImage}>
+            <Container>
+              <Title>We do Proven Survey Solutions</Title>
+              <Content>
+                Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
+                parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
+              </Content>
+              <ButtonGroup>
+                <ButtonDark>Read More</ButtonDark>
+                <ButtonDark>Customer Survey</ButtonDark>
+              </ButtonGroup>
+            </Container>
+          </BackDrop>
+        )}
+      </I18n>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 import bdImage from './images/proven.png';
 import playIcon from './images/Play-ikon-white.svg';
 import ButtonLight from '../Buttons/ButtonLight';
@@ -8,26 +9,30 @@ class ProvenByCustomers extends Component {
   state = {};
   render() {
     return (
-      <BackDrop image={bdImage}>
-        <Container>
-          <LeftColumn>
-            <Title>We are Proven by our customers</Title>
-            <Content>
-              Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
-              parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
-            </Content>
-            <ButtonGroup>
-              <ButtonLight>Employee Survey</ButtonLight>
-              <ButtonLight>Customer Survey</ButtonLight>
-            </ButtonGroup>
-          </LeftColumn>
-          <RightColumn>
-            <PlayButtonGroup>
-              <PlayButton src={playIcon} alt="play video" />
-            </PlayButtonGroup>
-          </RightColumn>
-        </Container>
-      </BackDrop>
+      <I18n ns="translations">
+        {(t, { i18n }) => (
+          <BackDrop image={bdImage}>
+            <Container>
+              <LeftColumn>
+                <Title>We are Proven by our customers</Title>
+                <Content>
+                  Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
+                  parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
+                </Content>
+                <ButtonGroup>
+                  <ButtonLight>Employee Survey</ButtonLight>
+                  <ButtonLight>Customer Survey</ButtonLight>
+                </ButtonGroup>
+              </LeftColumn>
+              <RightColumn>
+                <PlayButtonGroup>
+                  <PlayButton src={playIcon} alt="play video" />
+                </PlayButtonGroup>
+              </RightColumn>
+            </Container>
+          </BackDrop>
+        )}
+      </I18n>
     );
   }
 }

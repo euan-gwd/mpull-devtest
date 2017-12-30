@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 import offerImage from './images/offer.png';
 import ButtonDark from '../Buttons/ButtonDark';
 
@@ -7,24 +8,28 @@ class RightInsiderKnowledge extends Component {
   state = {};
   render() {
     return (
-      <BackDrop>
-        <Container>
-          <LeftColumn>
-            <Title>We have the right insider Knowledge</Title>
-            <Content>
-              Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
-              parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
-            </Content>
-            <ButtonGroup>
-              <ButtonDark>Read the new glex</ButtonDark>
-            </ButtonGroup>
-          </LeftColumn>
-          <RightColumn>
-            <OfferImg src={offerImage} alt="offerImage" />
-            <OfferButton>Get new insights in our survey rapport</OfferButton>
-          </RightColumn>
-        </Container>
-      </BackDrop>
+      <I18n ns="translations">
+        {(t, { i18n }) => (
+          <BackDrop>
+            <Container>
+              <LeftColumn>
+                <Title>We have the right insider Knowledge</Title>
+                <Content>
+                  Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
+                  parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
+                </Content>
+                <ButtonGroup>
+                  <ButtonDark>Read the new glex</ButtonDark>
+                </ButtonGroup>
+              </LeftColumn>
+              <RightColumn>
+                <OfferImg src={offerImage} alt="offerImage" />
+                <OfferButton>Get new insights in our survey rapport</OfferButton>
+              </RightColumn>
+            </Container>
+          </BackDrop>
+        )}
+      </I18n>
     );
   }
 }
