@@ -15,11 +15,11 @@ i18n.use(reactI18nextModule).init({
     },
     dk: {
       translations: {
-        SolutionsMenu: 'Løsninger',
-        CasesMenu: 'Sager',
-        InsightsMenu: 'Indsigter',
-        AboutUsMenu: 'Om Os',
-        ContactMenu: 'Kontakt',
+        SolutionsMenu: 'løsninger',
+        CasesMenu: 'sager',
+        InsightsMenu: 'indsigter',
+        AboutUsMenu: 'om os',
+        ContactMenu: 'kontakt',
         VideoFrameTitle: 'nordic ekspertise på verdensplan'
       }
     },
