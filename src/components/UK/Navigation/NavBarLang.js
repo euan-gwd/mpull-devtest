@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { slideInRight, slideOutRight } from 'react-animations';
-import { NavLink } from 'react-router-dom';
 import { I18n } from 'react-i18next';
 
 import cross from './images/cross.svg';
@@ -24,14 +23,13 @@ const NavBarLang = props => {
               <a onClick={() => i18n.changeLanguage('en')}>UK</a>
             </LanguageNavItem>
             <LanguageNavItem>
-              {/* <NavLink to="/dk/home">DK</NavLink> */}
               <a onClick={() => i18n.changeLanguage('dk')}>DK</a>
             </LanguageNavItem>
             <LanguageNavItem>
-              <NavLink to="/no/home">NO</NavLink>
+              <a onClick={() => i18n.changeLanguage('no')}>NO</a>
             </LanguageNavItem>
             <LanguageNavItem>
-              <NavLink to="/se/home">SE</NavLink>
+              <a onClick={() => i18n.changeLanguage('se')}>SE</a>
             </LanguageNavItem>
           </LanguageNavItemList>
           <CloseNavBtn onClick={props.handleCloseBtnClick}>
