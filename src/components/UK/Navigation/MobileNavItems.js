@@ -1,35 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 import downarrow from './images/down-caret.svg';
 
 const MobileNavItems = () => {
   return (
-    <NavItemsList>
-      <NavigationItem>
-        <a>Solutions</a>
-        <a>
-          <img src={downarrow} alt="dropdown menu" />
-        </a>
-      </NavigationItem>
-      <NavigationItem>
-        <a>Cases</a>
-      </NavigationItem>
-      <NavigationItem>
-        <a>Insights</a>
-        <a>
-          <img src={downarrow} alt="dropdown menu" />
-        </a>
-      </NavigationItem>
-      <NavigationItem>
-        <a>About Us</a>
-        <a>
-          <img src={downarrow} alt="dropdown menu" />
-        </a>
-      </NavigationItem>
-      <NavigationItem>
-        <a>Contact</a>
-      </NavigationItem>
-    </NavItemsList>
+    <I18n ns="translations">
+      {(t, { i18n }) => (
+        <NavItemsList>
+          <NavigationItem>
+            <a>{t('SolutionsMenu')}</a>
+            <a>
+              <img src={downarrow} alt="dropdown menu" />
+            </a>
+          </NavigationItem>
+          <NavigationItem>
+            <a>{t('CasesMenu')}</a>
+          </NavigationItem>
+          <NavigationItem>
+            <a>{t('InsightsMenu')}</a>
+            <a>
+              <img src={downarrow} alt="dropdown menu" />
+            </a>
+          </NavigationItem>
+          <NavigationItem>
+            <a>{t('AboutUsMenu')}</a>
+            <a>
+              <img src={downarrow} alt="dropdown menu" />
+            </a>
+          </NavigationItem>
+          <NavigationItem>
+            <a>{t('ContactMenu')}</a>
+          </NavigationItem>
+        </NavItemsList>
+      )}
+    </I18n>
   );
 };
 

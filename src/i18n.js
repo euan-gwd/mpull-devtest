@@ -5,22 +5,42 @@ i18n.use(reactI18nextModule).init({
   resources: {
     en: {
       translations: {
-        videoFrameTitle: 'Nordic Excellence Worldwide'
+        SolutionsMenu: 'solutions',
+        CasesMenu: 'cases',
+        InsightsMenu: 'insights',
+        AboutUsMenu: 'about us',
+        ContactMenu: 'contact',
+        VideoFrameTitle: 'Nordic Excellence Worldwide'
       }
     },
     dk: {
       translations: {
-        videoFrameTitle: 'Nordic Fortræffelighed I hele verden'
+        SolutionsMenu: 'Løsninger',
+        CasesMenu: 'Sager',
+        InsightsMenu: 'Indsigter',
+        AboutUsMenu: 'Om Os',
+        ContactMenu: 'Kontakt',
+        VideoFrameTitle: 'Nordic Fortræffelighed I hele verden'
       }
     },
     no: {
       translations: {
-        videoFrameTitle: 'nordic fortreffelighet over hele verden'
+        SolutionsMenu: 'løsninger',
+        CasesMenu: 'saker',
+        InsightsMenu: 'innsikt',
+        AboutUsMenu: 'om oss',
+        ContactMenu: 'kontakt',
+        VideoFrameTitle: 'nordic fortreffelighet over hele verden'
       }
     },
     se: {
       translations: {
-        videoFrameTitle: 'nordic kompetens i hela världen'
+        SolutionsMenu: 'lösningar',
+        CasesMenu: 'fall',
+        InsightsMenu: 'insikter',
+        AboutUsMenu: 'om oss',
+        ContactMenu: 'kontakta',
+        VideoFrameTitle: 'nordic kompetens i hela världen'
       }
     }
   },

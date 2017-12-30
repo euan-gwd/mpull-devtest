@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 import DropDownMenu from './DropDownMenu';
 import NavBarLang from './NavBarLang';
 import NavBarSeek from './NavBarSeek';
@@ -55,45 +56,49 @@ class NavBar extends Component {
     return (
       <ToolBar>
         {showNav === 1 && (
-          <MainNavigation>
-            <MobileMenu>
-              <img
-                src={this.props.open ? cross : burger}
-                alt="mobile navigation menu"
-                onClick={this.props.handleMenuToggle}
-              />
-            </MobileMenu>
-            <Logo href="/en/home">
-              <img src={logo} className="logo" alt="logo" />
-            </Logo>
-            <NavigationItems>
-              <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
-                <a onMouseEnter={this.handleSolutionsDropMenuToggle}>Solutions</a>
-                <DropDownMenu show={this.state.showSolutionsDropMenu} />
-              </NavigationItem>
-              <NavigationItem>
-                <NavLink to="/en/home">Cases</NavLink>
-                <div />
-              </NavigationItem>
-              <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
-                <a onMouseEnter={this.handleInsightsDropMenuToggle}>Insights</a>
-                <DropDownMenu show={this.state.showInsightsDropMenu} />
-              </NavigationItem>
-              <NavigationItem>
-                <NavLink to="/en/home">About Us</NavLink>
-              </NavigationItem>
-              <NavigationItem>
-                <NavLink to="/en/home">Contact</NavLink>
-                <div />
-              </NavigationItem>
-            </NavigationItems>
-            <LanguageBtn
-              onClick={this.handleLanguageBtnClick}
-              src={language}
-              alt="change language"
-            />
-            <SearchBtn onClick={this.handleSearchBtnClick} src={search} alt="search" />
-          </MainNavigation>
+          <I18n ns="translations">
+            {(t, { i18n }) => (
+              <MainNavigation>
+                <MobileMenu>
+                  <img
+                    src={this.props.open ? cross : burger}
+                    alt="mobile navigation menu"
+                    onClick={this.props.handleMenuToggle}
+                  />
+                </MobileMenu>
+                <Logo href="/en/home">
+                  <img src={logo} className="logo" alt="logo" />
+                </Logo>
+                <NavigationItems>
+                  <NavigationItem onMouseLeave={this.handleSolutionsDropMenuClose}>
+                    <a onMouseEnter={this.handleSolutionsDropMenuToggle}>{t('SolutionsMenu')}</a>
+                    <DropDownMenu show={this.state.showSolutionsDropMenu} />
+                  </NavigationItem>
+                  <NavigationItem>
+                    <NavLink to="/en/home">{t('CasesMenu')}</NavLink>
+                    <div />
+                  </NavigationItem>
+                  <NavigationItem onMouseLeave={this.handleInsightsDropMenuClose}>
+                    <a onMouseEnter={this.handleInsightsDropMenuToggle}>{t('InsightsMenu')}</a>
+                    <DropDownMenu show={this.state.showInsightsDropMenu} />
+                  </NavigationItem>
+                  <NavigationItem>
+                    <NavLink to="/en/home">{t('AboutUsMenu')}</NavLink>
+                  </NavigationItem>
+                  <NavigationItem>
+                    <NavLink to="/en/home">{t('ContactMenu')}</NavLink>
+                    <div />
+                  </NavigationItem>
+                </NavigationItems>
+                <LanguageBtn
+                  onClick={this.handleLanguageBtnClick}
+                  src={language}
+                  alt="change language"
+                />
+                <SearchBtn onClick={this.handleSearchBtnClick} src={search} alt="search" />
+              </MainNavigation>
+            )}
+          </I18n>
         )}
         {showNav === 2 && <NavBarLang handleCloseBtnClick={this.handleCloseBtnClick} />}
         {showNav === 3 && <NavBarSeek handleCloseBtnClick={this.handleCloseBtnClick} />}
