@@ -62,8 +62,8 @@ class BottomContactDetails extends Component {
               </ContactLink>
               <ContactLink>
                 <Title>{t('Terms')}</Title>
-                <WebLink>{t('Data Security')}</WebLink>
-                <WebLink>{t('Privacy Policy')}</WebLink>
+                <WebLink>{t('DataSecurity')}</WebLink>
+                <WebLink>{t('PrivacyPolicy')}</WebLink>
                 <WebLink>{t('HelpSupport')}</WebLink>
                 <WebLink>{t('SiteMap')}</WebLink>
               </ContactLink>
@@ -229,6 +229,7 @@ const WebLink = styled.a`
   display: block;
   color: black;
   cursor: pointer;
+  text-transform: capitalize;
   height: 40px;
 
   &:hover {

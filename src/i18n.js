@@ -93,7 +93,7 @@ i18n.use(reactI18nextModule).init({
         Company: 'Selskab',
         About: 'Om',
         Career: 'Karriere',
-        PressMedia: 'trykke & medier',
+        PressMedia: 'Trykke & Medier',
         Bloggers: 'bloggere',
         ContactUs: 'Kontakt os',
         Terms: 'Betingelser',
