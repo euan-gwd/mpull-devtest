@@ -171,9 +171,8 @@ const Content = styled.p`
     grid-row: 3;
     grid-column: 1;
     margin: 0;
-    padding: 0 3.5rem 0 0;
+    padding: 0;
     box-sizing: border-box;
-    position: unset;
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
     font-size: 1rem;
