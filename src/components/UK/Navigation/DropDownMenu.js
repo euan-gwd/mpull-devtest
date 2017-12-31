@@ -1,18 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 
 const DropDownMenu = props => {
   return (
-    <NavMenu className={props.show ? `open` : `close`}>
-      <DropMenu>
-        <li>
-          <a href="/">Employee Experience</a>
-        </li>
-        <li>
-          <a href="/">Customer Experience</a>
-        </li>
-      </DropMenu>
-    </NavMenu>
+    <I18n ns="translations">
+      {(t, { i18n }) => (
+        <NavMenu className={props.show ? `open` : `close`}>
+          <DropMenu>
+            <li>
+              <a href="/">{t('EmployeeExperienceBtn')}</a>
+            </li>
+            <li>
+              <a href="/">{t('CustomerExperienceBtn')}</a>
+            </li>
+          </DropMenu>
+        </NavMenu>
+      )}
+    </I18n>
   );
 };
 

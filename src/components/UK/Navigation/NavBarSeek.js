@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { slideInRight, slideOutRight } from 'react-animations';
+import { I18n } from 'react-i18next';
 
 import cross from './images/cross.svg';
 import logo from './images/logo.svg';
@@ -8,17 +9,21 @@ import search from './images/search.svg';
 
 const NavBarSeek = props => {
   return (
-    <NavigationSearch>
-      <Logo href="/en/home">
-        <img src={logo} className="logo" alt="logo" />
-      </Logo>
-      <SearchNavBar>
-        <SearchInput type="search" placeholder="Type to search..." icon={search} />
-      </SearchNavBar>
-      <CloseNavBtn onClick={props.handleCloseBtnClick}>
-        <img src={cross} alt="Back to Main Navigation" />
-      </CloseNavBtn>
-    </NavigationSearch>
+    <I18n ns="translations">
+      {(t, { i18n }) => (
+        <NavigationSearch>
+          <Logo href="/en/home">
+            <img src={logo} className="logo" alt="logo" />
+          </Logo>
+          <SearchNavBar>
+            <SearchInput type="search" placeholder={t('SearchPlaceholder')} icon={search} />
+          </SearchNavBar>
+          <CloseNavBtn onClick={props.handleCloseBtnClick}>
+            <img src={cross} alt={t('NavReturnTitle')} />
+          </CloseNavBtn>
+        </NavigationSearch>
+      )}
+    </I18n>
   );
 };
 

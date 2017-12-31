@@ -1,19 +1,23 @@
 import React from 'react';
 import MobileNavItems from './MobileNavItems';
 import styled from 'styled-components';
+import { I18n } from 'react-i18next';
 import search from './images/search.svg';
 
 const SideMenu = props => {
   return (
-    <NavMenu className={props.open ? `open` : `close`}>
-      <MobileNavItems />
-      <SearchBar>
-        <input type="search" placeholder="Type to search..." id="" />
-        <a>
-          <img src={search} alt="dropdown menu" />
-        </a>
-      </SearchBar>
-    </NavMenu>
+    <I18n ns="translations">
+      {(t, { i18n }) => (
+        <NavMenu className={props.open ? `open` : `close`}>
+          <MobileNavItems />
+          <SearchBar>
+            <SearchBar>
+              <SearchInput type="search" placeholder={t('SearchPlaceholder')} icon={search} />
+            </SearchBar>
+          </SearchBar>
+        </NavMenu>
+      )}
+    </I18n>
   );
 };
 
@@ -66,5 +70,37 @@ const SearchBar = styled.div`
     align-self: center;
     justify-self: end;
     cursor: pointer;
+  }
+`;
+
+const SearchInput = styled.input`
+  margin: 0;
+  padding: 0;
+  padding-left: 2.25rem;
+  box-sizing: border-box;
+  height: 80%;
+  width: auto;
+  transition: width 0.4s ease-in-out;
+  background-image: url(${props => props.icon});
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 0.5rem;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5rem;
+  border: 0;
+
+  &:focus {
+    outline: 0;
+    width: 100%;
+  }
+
+  &::placeholder {
+    font-size: 0.75rem;
+  }
+
+  &::-moz-placeholder {
+    font-size: 0.75rem;
   }
 `;

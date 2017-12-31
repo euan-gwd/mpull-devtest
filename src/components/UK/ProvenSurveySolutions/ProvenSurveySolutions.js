@@ -19,7 +19,7 @@ class ProvenSurveySolutions extends Component {
               </Content>
               <ButtonGroup>
                 <ButtonDark>{t('ReadMoreBtn')}</ButtonDark>
-                <ButtonDark>Customer Survey</ButtonDark>
+                <ButtonDark>{t('CustomerSurveyBtn')}</ButtonDark>
               </ButtonGroup>
             </Container>
           </BackDrop>
