@@ -23,7 +23,7 @@ class MeasureWorldWide extends Component {
                   parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
                 </Content>
                 <ButtonGroup>
-                  <ButtonDark>Read more</ButtonDark>
+                  <ButtonDark>{t('ReadMoreBtn')}</ButtonDark>
                 </ButtonGroup>
               </RightColumn>
             </Container>

@@ -12,13 +12,13 @@ class ProvenSurveySolutions extends Component {
         {(t, { i18n }) => (
           <BackDrop image={bdImage}>
             <Container>
-              <Title>We do Proven Survey Solutions</Title>
+              <Title>{t('ProvenSurveySolutionsTitle')}</Title>
               <Content>
                 Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
                 parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
               </Content>
               <ButtonGroup>
-                <ButtonDark>Read More</ButtonDark>
+                <ButtonDark>{t('ReadMoreBtn')}</ButtonDark>
                 <ButtonDark>Customer Survey</ButtonDark>
               </ButtonGroup>
             </Container>

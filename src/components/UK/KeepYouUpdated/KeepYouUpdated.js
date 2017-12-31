@@ -12,7 +12,7 @@ class KeepYouUpdated extends Component {
           <BackDrop>
             <Container>
               <LeftColumn>
-                <Title>We love to keep you updated</Title>
+                <Title>{t('KeepYouUpdatedTitle')}</Title>
               </LeftColumn>
               <RightColumn>
                 <FormHeader>
@@ -28,7 +28,7 @@ class KeepYouUpdated extends Component {
                   <FormInput type="email" placeholder="Enter your email ..." />
                 </FormInputGroup>
                 <ButtonGroup>
-                  <ButtonLight>Submit</ButtonLight>
+                  <ButtonLight>{t('SubmitBtn')}</ButtonLight>
                 </ButtonGroup>
               </RightColumn>
             </Container>
