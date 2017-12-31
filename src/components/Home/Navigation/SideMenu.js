@@ -11,9 +11,8 @@ const SideMenu = props => {
         <NavMenu className={props.open ? `open` : `close`}>
           <MobileNavItems />
           <SearchBar>
-            <SearchBar>
-              <SearchInput type="search" placeholder={t('SearchPlaceholder')} icon={search} />
-            </SearchBar>
+            <SearchInput type="search" placeholder={t('SearchPlaceholder')} />
+            <SearchBtn src={search} alt="" />
           </SearchBar>
         </NavMenu>
       )}
@@ -27,10 +26,10 @@ const NavMenu = styled.nav`
   position: fixed;
   width: 280px;
   min-width: 190px;
-  max-width: 70%;
+  max-width: 80%;
   height: 100%;
   min-height: 100vh;
-  top: 57px;
+  top: 56px;
   left: 0;
   z-index: 10;
   background-color: #fff;
@@ -53,38 +52,23 @@ const NavMenu = styled.nav`
 `;
 
 const SearchBar = styled.div`
-  margin-top: 3rem;
-  font-size: 0.75rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  height: 56px;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  input[type='search'] {
-    border: none;
-    outline: none;
-
-    font-family: 'Roboto Slab', serif;
-    font-weight: 100;
-  }
-
-  a {
-    align-self: center;
-    justify-self: end;
-    cursor: pointer;
-  }
+  grid-template-column: 2fr 1fr;
+  grid-row-gap: 2rem;
 `;
 
 const SearchInput = styled.input`
+  grid-column: 1;
   margin: 0;
   padding: 0;
-  padding-left: 2.25rem;
+  padding-right: 0;
   box-sizing: border-box;
-  height: 80%;
-  width: auto;
-  transition: width 0.4s ease-in-out;
-  background-image: url(${props => props.icon});
-  background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: 0.5rem;
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: 100;
@@ -95,12 +79,18 @@ const SearchInput = styled.input`
     outline: 0;
     width: 100%;
   }
+`;
 
-  &::placeholder {
-    font-size: 0.75rem;
-  }
-
-  &::-moz-placeholder {
-    font-size: 0.75rem;
-  }
+const SearchBtn = styled.img`
+  grid-column: 2;
+  margin: 0;
+  padding: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.5rem;
+  border: 0;
+  cursor: pointer;
 `;

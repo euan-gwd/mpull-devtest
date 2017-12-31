@@ -247,6 +247,7 @@ const LanguageBtn = styled.img`
     padding: 0;
     grid-column: 7;
     justify-self: end;
+    cursor: pointer;
   }
 
   @media screen and (min-width: 1025px) {
@@ -255,6 +256,7 @@ const LanguageBtn = styled.img`
     align-self: start;
     margin: 0;
     padding: 1.25rem 0;
+    cursor: pointer;
   }
 `;
 
@@ -268,6 +270,7 @@ const SearchBtn = styled.img`
     padding: 0;
     grid-column: 8;
     justify-self: end;
+    cursor: pointer;
   }
 
   @media screen and (min-width: 1025px) {
@@ -276,5 +279,6 @@ const SearchBtn = styled.img`
     grid-column: 10;
     justify-self: center;
     align-self: start;
+    cursor: pointer;
   }
 `;

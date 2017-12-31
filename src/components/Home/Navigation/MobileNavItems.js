@@ -65,7 +65,7 @@ const NavigationItem = styled.li`
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
-    height: 50px;
+    height: 40px;
     align-self: center;
     justify-self: start;
     box-sizing: border-box;
