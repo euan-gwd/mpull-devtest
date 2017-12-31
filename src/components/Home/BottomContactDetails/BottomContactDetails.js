@@ -53,33 +53,33 @@ class BottomContactDetails extends Component {
                 <CId>CVR. nr. 19587347</CId>
               </ContactCard>
               <ContactLink>
-                <Title>Company</Title>
-                <WebLink>About</WebLink>
-                <WebLink>Career</WebLink>
-                <WebLink>Press &amp; Media</WebLink>
-                <WebLink>Bloggers</WebLink>
-                <WebLink>Contact Us</WebLink>
+                <Title>{t('Company')}</Title>
+                <WebLink>{t('About')}</WebLink>
+                <WebLink>{t('Career')}</WebLink>
+                <WebLink>{t('PressMedia')}</WebLink>
+                <WebLink>{t('Bloggers')}</WebLink>
+                <WebLink>{t('ContactUs')}</WebLink>
               </ContactLink>
               <ContactLink>
-                <Title>Terms</Title>
-                <WebLink>Data Security</WebLink>
-                <WebLink>Privacy Policy</WebLink>
-                <WebLink>Help &amp; Support</WebLink>
-                <WebLink>Site Map</WebLink>
+                <Title>{t('Terms')}</Title>
+                <WebLink>{t('Data Security')}</WebLink>
+                <WebLink>{t('Privacy Policy')}</WebLink>
+                <WebLink>{t('HelpSupport')}</WebLink>
+                <WebLink>{t('SiteMap')}</WebLink>
               </ContactLink>
               <ContactLink>
-                <Title>Knowledge</Title>
-                <WebLink>News</WebLink>
-                <WebLink>Reports</WebLink>
-                <WebLink>Events</WebLink>
+                <Title>{t('Knowledge')}</Title>
+                <WebLink>{t('News')}</WebLink>
+                <WebLink>{t('Reports')}</WebLink>
+                <WebLink>{t('Events')}</WebLink>
               </ContactLink>
               <ContactLink show>
-                <Title>Follow</Title>
+                <Title>{t('Follow')}</Title>
                 <WebLink>LinkedIn</WebLink>
                 <WebLink>Twitter</WebLink>
                 <WebLink>Facebook</WebLink>
                 <WebLink>Youtube</WebLink>
-                <WebLink>Newsletter</WebLink>
+                <WebLink>{t('Newsletter')}</WebLink>
               </ContactLink>
               <ButtonGroup>
                 <UpArrow onClick={this.handleScrollToTop}>&#8963;</UpArrow>
