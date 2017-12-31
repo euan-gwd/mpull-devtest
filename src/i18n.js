@@ -30,7 +30,8 @@ i18n.use(reactI18nextModule).init({
         OfferBtnTrialTitle: 'Try our survey trial version',
         SearchPlaceholder: 'Type to search...',
         ChangeIconTitle: 'change language',
-        NavReturnTitle: 'Back to Main Navigation'
+        NavReturnTitle: 'Back to Main Navigation',
+        ReturnToTopBtn: 'Return To Top'
       }
     },
     dk: {
@@ -60,7 +61,8 @@ i18n.use(reactI18nextModule).init({
         OfferBtnTrialTitle: 'Try our survey trial version',
         SearchPlaceholder: 'Type to search...',
         ChangeIconTitle: 'change language',
-        NavReturnTitle: 'Back to Main Navigation'
+        NavReturnTitle: 'Back to Main Navigation',
+        ReturnToTopBtn: 'Return To Top'
       }
     },
     no: {
@@ -90,7 +92,8 @@ i18n.use(reactI18nextModule).init({
         OfferBtnTrialTitle: 'Try our survey trial version',
         SearchPlaceholder: 'Type to search...',
         ChangeIconTitle: 'change language',
-        NavReturnTitle: 'Back to Main Navigation'
+        NavReturnTitle: 'Back to Main Navigation',
+        ReturnToTopBtn: 'Return To Top'
       }
     },
     se: {
@@ -120,7 +123,8 @@ i18n.use(reactI18nextModule).init({
         OfferBtnTrialTitle: 'Try our survey trial version',
         SearchPlaceholder: 'Type to search...',
         ChangeIconTitle: 'change language',
-        NavReturnTitle: 'Back to Main Navigation'
+        NavReturnTitle: 'Back to Main Navigation',
+        ReturnToTopBtn: 'Return To Top'
       }
     }
   },
