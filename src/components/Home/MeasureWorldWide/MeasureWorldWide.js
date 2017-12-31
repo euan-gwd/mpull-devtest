@@ -13,7 +13,7 @@ class MeasureWorldWide extends Component {
           <BackDrop>
             <Container>
               <LeftColumn>
-                <WorldButton>What Does it mean to you?</WorldButton>
+                <WorldButton>{t('WorldBtnTitle')}</WorldButton>
                 <WorldImg src={worldImage} alt="offerImage" />
               </LeftColumn>
               <RightColumn>
