@@ -17,7 +17,7 @@ class MeasureWorldWide extends Component {
                 <WorldImg src={worldImage} alt="offerImage" />
               </LeftColumn>
               <RightColumn>
-                <Title>We measure worldwide</Title>
+                <Title>{t('MeasureWorldWideTitle')}</Title>
                 <Content>
                   Ro officiae conem facest, corporerum dolore, eribusd andamus voluptatem con rere
                   parior sit officae. Aximagn ienimol orporem perum, aritis modiorp ostiam fa.
