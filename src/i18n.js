@@ -12,6 +12,11 @@ i18n.use(reactI18nextModule).init({
         ContactMenu: 'contact',
         NordicTitle: 'nordic excellence worldwide',
         PositiveChangeTitle: 'We drive positive change',
+        PositiveChangeContent: `We empower organizations and leaders to improve the employee and customer experience
+        through proven, concise and engaging advisory. Ennovas ISO certificate puts severe
+        demands to our Development and implementation of employee- and customer analysis. We
+        are very proud of the certification which is in line with Ennova‘s continued
+        ambition to deliver the best solutions in the market.`,
         ProvenSurveySolutionsTitle: 'We do proven survey solutions',
         RightInsiderKnowledgeTitle: 'We have the right insider Knowledge',
         MeasureWorldWideTitle: 'We measure worldwide',
@@ -19,6 +24,8 @@ i18n.use(reactI18nextModule).init({
         WhoWeWorkWithTitle: 'Who we work with',
         OurSurveySolutionsTitle: 'Our proven survey solutions',
         KeepYouUpdatedTitle: 'We love to keep you updated',
+        KeepYouUpdatedFormHeader: `We empower organizations and leaders to improve the employee and customer
+        experience through proven, concise and engaging advisory.`,
         ReadMoreBtn: 'Read More',
         ReadNewGlexBtn: 'Read the new glex',
         NameLabel: 'Name',
@@ -65,6 +72,7 @@ i18n.use(reactI18nextModule).init({
         ContactMenu: 'kontakt',
         NordicTitle: 'nordisk excellence over hele verden',
         PositiveChangeTitle: 'Vi kører positive forandringer',
+        PositiveChangeContent: `Vi bemyndige organisationer og ledere til at forbedre den ansatte og kundeoplevelse gennem bevist, koncis og engagerende rådgivende. Ennovas ISO-certifikat stiller store krav til vores Udvikling og implementering af medarbejder- og kundeanalyser. Vi er meget stolte af den certificering, som er i tråd med Ennova fortsatte ambition om at levere de bedste løsninger på markedet.`,
         ProvenSurveySolutionsTitle: 'Vi har bevist undersøgelsen løsninger',
         RightInsiderKnowledgeTitle: 'Vi har ret til insider-viden',
         MeasureWorldWideTitle: 'Vi måler på verdensplan',
@@ -72,6 +80,7 @@ i18n.use(reactI18nextModule).init({
         WhoWeWorkWithTitle: 'hvem vi arbejder med',
         OurSurveySolutionsTitle: 'Vores gennemprøvede undersøgelsen løsninger',
         KeepYouUpdatedTitle: 'Vi elsker at holde dig opdateret',
+        KeepYouUpdatedFormHeader: `Vi bemyndige organisationer og ledere til at forbedre den ansatte og kundeoplevelse gennem bevist, koncis og engagerende rådgivende.`,
         ReadMoreBtn: 'Læs mere',
         ReadNewGlexBtn: 'Læs den nye glex',
         NameLabel: 'Navn',
@@ -118,6 +127,7 @@ i18n.use(reactI18nextModule).init({
         ContactMenu: 'kontakt',
         NordicTitle: 'nordisk fortreffelighet over hele verden',
         PositiveChangeTitle: 'i kjører positiv endring',
+        PositiveChangeContent: `Vi styrke organisasjoner og ledere til å forbedre den ansatte og kundeopplevelsen gjennom utprøvd, konsis og engasjerende rådgivende. Ennovas ISO sertifikat setter store krav til vår utvikling og implementering av ansatte og kundeanalyse. Vi er veldig stolte av sertifiseringen som er i tråd med Ennova fortsatte ambisjon om å levere de beste løsningene i markedet.`,
         ProvenSurveySolutionsTitle: 'Vi gjør bevist undersøkelsesløsninger',
         RightInsiderKnowledgeTitle: 'Vi har rett innsiden Kunnskap',
         MeasureWorldWideTitle: 'Vi måler over hele verden',
@@ -125,6 +135,8 @@ i18n.use(reactI18nextModule).init({
         WhoWeWorkWithTitle: 'Hvem vi jobber med',
         OurSurveySolutionsTitle: 'Våre påviste undersøkelsesløsninger',
         KeepYouUpdatedTitle: 'Vi elsker å holde deg oppdatert',
+        KeepYouUpdatedFormHeader: `
+        Vi styrke organisasjoner og ledere til å forbedre den ansatte og kundeopplevelsen gjennom utprøvd, konsis og engasjerende rådgivende.`,
         ReadMoreBtn: 'Les mer',
         ReadNewGlexBtn: 'Les den nye glexen',
         NameLabel: 'Navn',
@@ -171,6 +183,7 @@ i18n.use(reactI18nextModule).init({
         ContactMenu: 'kontakta',
         NordicTitle: 'nordisk excellens över hela världen',
         PositiveChangeTitle: 'Vi driver positiv förändring',
+        PositiveChangeContent: `Vi ger organisationer och ledare för att förbättra den anställde och kundupplevelsen genom beprövade, koncis och engagerande rådgivande. Ennovas ISO-certifikat ställer stora krav på vår utveckling och genomförande av medarbetar- och kundanalys. Vi är mycket stolta över certifieringen vilket är i linje med Ennova fortsatta ambition att leverera de bästa lösningarna på marknaden.`,
         ProvenSurveySolutionsTitle: 'Vi gör bevisade undersökningslösningar',
         RightInsiderKnowledgeTitle: 'Vi har rätt insider Kunskap',
         MeasureWorldWideTitle: 'Vi mäter världen över',
@@ -178,6 +191,7 @@ i18n.use(reactI18nextModule).init({
         WhoWeWorkWithTitle: 'Vem vi jobbar med',
         OurSurveySolutionsTitle: 'Våra bevisade undersöknings lösningar',
         KeepYouUpdatedTitle: 'Vi älskar att hålla dig uppdaterad',
+        KeepYouUpdatedFormHeader: `Vi ger organisationer och ledare för att förbättra den anställde och kundupplevelsen genom beprövade, koncis och engagerande rådgivande.`,
         ReadMoreBtn: 'Läs mer',
         ReadNewGlexBtn: 'Läs den nya glexen',
         NameLabel: 'namn',

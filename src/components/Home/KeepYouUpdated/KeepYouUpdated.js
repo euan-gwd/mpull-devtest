@@ -15,10 +15,7 @@ class KeepYouUpdated extends Component {
                 <Title>{t('KeepYouUpdatedTitle')}</Title>
               </LeftColumn>
               <RightColumn>
-                <FormHeader>
-                  We empower organizations and leaders to improve the employee and customer
-                  experience through proven, concise and engaging advisory.
-                </FormHeader>
+                <FormHeader>{t('KeepYouUpdatedFormHeader')}</FormHeader>
                 <FormInputGroup>
                   <FormInputLabel>{t('NameLabel')}</FormInputLabel>
                   <FormInput type="text" placeholder={t('NamePlaceholder')} />
