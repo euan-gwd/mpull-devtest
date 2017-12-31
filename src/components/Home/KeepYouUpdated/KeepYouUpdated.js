@@ -20,12 +20,12 @@ class KeepYouUpdated extends Component {
                   experience through proven, concise and engaging advisory.
                 </FormHeader>
                 <FormInputGroup>
-                  <FormInputLabel>Name</FormInputLabel>
-                  <FormInput type="text" placeholder="Enter your name ..." />
+                  <FormInputLabel>{t('NameLabel')}</FormInputLabel>
+                  <FormInput type="text" placeholder={t('NamePlaceholder')} />
                 </FormInputGroup>
                 <FormInputGroup>
-                  <FormInputLabel>Email</FormInputLabel>
-                  <FormInput type="email" placeholder="Enter your email ..." />
+                  <FormInputLabel>{t('EmailLabel')}</FormInputLabel>
+                  <FormInput type="email" placeholder={t('EmailPlaceholder')} />
                 </FormInputGroup>
                 <ButtonGroup>
                   <ButtonLight>{t('SubmitBtn')}</ButtonLight>
