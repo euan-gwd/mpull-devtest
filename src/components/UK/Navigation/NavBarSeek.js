@@ -12,7 +12,7 @@ const NavBarSeek = props => {
     <I18n ns="translations">
       {(t, { i18n }) => (
         <NavigationSearch>
-          <Logo href="/en/home">
+          <Logo href="/">
             <img src={logo} className="logo" alt="logo" />
           </Logo>
           <SearchNavBar>
